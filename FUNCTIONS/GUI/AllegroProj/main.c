@@ -1,27 +1,25 @@
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_native_dialog.h>
-#include "UI_struct.h"
+#include "AL_general.h"
+#include "config_struct.h"
 
 int main()
 {
 
+    CONFIG config;
 
-    Config config;
+    al_setup();
 
+    if( ! configUI(&config) )
+        return 0;
 
-    al_init(); /* initialize Allegro */
-    al_install_keyboard(); /* install the keyboard for Allegro to use */
-    al_install_mouse();
-    al_init_image_addon();
-    al_init_primitives_addon();
-    al_init_font_addon();
-    al_init_ttf_addon();
+    ALLEGRO_DISPLAY *display=al_create_display(config.unit*160,config.unit*90);
 
+    al_clear_to_color(al_map_rgb(150,150,150));
+    al_flip_display();
 
+    system("pause");
+    al_destroy_display(display);
 
-    configUI(&config);
-
-
+    al_cleanup();
 
 
 return 0;
