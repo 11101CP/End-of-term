@@ -316,7 +316,7 @@
 1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_primitives.h
 	<allegro5/allegro.h>
 
-1672327696 source:c:\users\yu\downloads\end-of-term\functions\game_frame\game_frame.c
+1672329267 source:c:\users\yu\downloads\end-of-term\functions\game_frame\game_frame.c
 	"Common.h"
 	"AL_general.h"
 	"GAME_frame.h"
@@ -326,10 +326,14 @@
 	<stdlib.h>
 	<stdbool.h>
 
-1672327124 c:\users\yu\downloads\end-of-term\functions\game_frame\game_frame.h
+1672329148 c:\users\yu\downloads\end-of-term\functions\game_frame\game_frame.h
+	"common.h"
 
-1672325171 source:c:\users\yu\downloads\end-of-term\functions\game_frame\main.c
+1672328255 source:c:\users\yu\downloads\end-of-term\functions\game_frame\main.c
 	"Common.h"
 	"AL_general.h"
+	"Game_frame.h"
+
+1672329664 source:c:\users\yu\downloads\end-of-term\functions\game_frame\stage1.c
 	"Game_frame.h"
 

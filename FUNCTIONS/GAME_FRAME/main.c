@@ -12,9 +12,11 @@ int main()
     CONFIG config;
     config.unit=12;
 
+    ALLEGRO_DISPLAY *display=al_create_display(160*config.unit,90*config.unit);
+
     Game(&config);
 
-
+    al_destroy_display(display);
 
 
 

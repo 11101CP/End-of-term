@@ -1,5 +1,6 @@
 #ifndef GAME_FRAME_H_
 #define GAME_FRAME_H_
+#include "common.h"
 
 
 typedef enum
@@ -7,7 +8,8 @@ typedef enum
 
 STATIONARY,
 MOVEABLE,
-DAMAGE
+DAMAGE,
+BLOCK
 
 }STATE;
 

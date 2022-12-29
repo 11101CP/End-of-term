@@ -9,6 +9,18 @@ bool Game(CONFIG *config)
     BOX ***box;
     buildBox (&box,9,8);
     loadBox  (box, 9 , 8 , unit);
+    stage1 (box);
+
+    al_clear_to_color(al_map_rgb(250,250,250));
+    al_draw_filled_rectangle(40*unit,9*unit,121*unit,81*unit,al_map_rgb(50,50,50));
+
+    for (int x=0;x<9;x++)
+        for(int y=0;y<8;y++)
+            switch(box[x][y]->state)
+            {case BLOCK:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(150,50,50));
+            }
+    al_flip_display();
 
     system("pause");
 
@@ -50,7 +62,7 @@ void loadBox  (BOX ***box,int x,int y,int unit) //stage 1
         for(j=0;j<y;j++)
         {
             box[i][j]->x= (40+9*i)*unit;
-            box[i][j]->y= (8+9*j)*unit;
+            box[i][j]->y= (9+9*j)*unit;
             //box[i][j]->state=DAMAGE;
         }
 
