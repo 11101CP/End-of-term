@@ -1,0 +1,77 @@
+stdio    D         file_stdio.c:110  file_stdio_fopen                 [   0.00000] opening C:\Users\YU\Downloads\End-of-term\FUNCTIONS\GAME_FRAME\bin\Debug\allegro5.cfg r
+system   D            wsystem.c:889  _al_win_safe_load_library        [   0.00000] PathFindOnPath found: C:\Windows\system32\shcore.dll
+system   D            wsystem.c:795  load_library_at_path             [   0.00000] Calling LoadLibrary C:\Windows\system32\shcore.dll
+system   I            wsystem.c:798  load_library_at_path             [   0.00000] Loaded C:\Windows\system32\shcore.dll
+system   I             system.c:271  al_install_system                [   0.00000] Allegro version: 5.2.8
+audio-dsound I           dsound.cpp:275  _dsound_open                     [   0.00039] Starting DirectSound...
+audio-dsound D           dsound.cpp:288  _dsound_open                     [   0.04129] DirectSoundCreate8 succeeded
+audio-dsound I           dsound.cpp:77   get_window                       [   0.04134] Using desktop window: 0000000000010010
+audio    I              audio.c:391  do_install_audio                 [   0.04149] Using DirectSound driver
+audio-dsound D           dsound.cpp:322  _dsound_allocate_voice           [   0.04160] Allocating voice
+audio-dsound D           dsound.cpp:381  _dsound_allocate_voice           [   0.04163] Allocated voice
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04166] added dtor for voice 000001f58219d250, func 00007fff37b35312
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04169] added dtor for mixer 000001f58219d390, func 00007fff37b3050f
+audio-dsound D           dsound.cpp:477  _dsound_start_voice              [   0.04172] Starting voice
+audio-dsound D           dsound.cpp:505  _dsound_start_voice              [   0.04174] CreateSoundBuffer
+audio-dsound D           dsound.cpp:513  _dsound_start_voice              [   0.04651] CreateSoundBuffer succeeded
+audio-dsound D           dsound.cpp:519  _dsound_start_voice              [   0.04657] Starting _dsound_update thread
+audio-dsound I           dsound.cpp:529  _dsound_start_voice              [   0.04666] Voice started
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04671] added dtor for sample_instance 000001f58219d8b0, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04675] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04678] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04680] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04684] added dtor for sample_instance 000001f58219d9d0, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04696] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04699] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04701] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04703] added dtor for sample_instance 000001f58219d620, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04705] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04707] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04709] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04711] added dtor for sample_instance 000001f58219d740, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04713] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04715] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04717] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04719] added dtor for sample_instance 000001f58219de80, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04721] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04729] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04731] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04734] added dtor for sample_instance 000001f58219dfa0, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04736] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04738] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04740] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04742] added dtor for sample_instance 000001f58219e0c0, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04744] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04746] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04747] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04749] added dtor for sample_instance 000001f58219e1e0, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04751] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04753] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04755] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04757] added dtor for sample_instance 000001f58219e410, func 00007fff37b290dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04759] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04761] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04763] 
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30284] removed dtor for sample_instance 000001f58219d8b0
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30289] removed dtor for sample_instance 000001f58219d9d0
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30291] removed dtor for sample_instance 000001f58219d620
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30293] removed dtor for sample_instance 000001f58219d740
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30295] removed dtor for sample_instance 000001f58219de80
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30297] removed dtor for sample_instance 000001f58219dfa0
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30299] removed dtor for sample_instance 000001f58219e0c0
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30301] removed dtor for sample_instance 000001f58219e1e0
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30303] removed dtor for sample_instance 000001f58219e410
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30305] removed dtor for mixer 000001f58219d390
+audio-dsound D           dsound.cpp:539  _dsound_stop_voice               [   1.30307] Stopping voice
+audio-dsound D           dsound.cpp:556  _dsound_stop_voice               [   1.30309] Joining thread
+audio-dsound D           dsound.cpp:562  _dsound_stop_voice               [   1.30726] Joined thread
+audio-dsound D           dsound.cpp:564  _dsound_stop_voice               [   1.30732] Destroying thread
+audio-dsound D           dsound.cpp:566  _dsound_stop_voice               [   1.30735] Thread destroyed
+audio-dsound D           dsound.cpp:573  _dsound_stop_voice               [   1.30737] Releasing buffer
+audio-dsound I           dsound.cpp:577  _dsound_stop_voice               [   1.30739] Voice stopped
+dtor     D               dtor.c:227  _al_unregister_destructor        [   1.30741] removed dtor for voice 000001f58219d250
+audio-dsound D           dsound.cpp:391  _dsound_deallocate_voice         [   1.30744] Deallocating voice
+audio-dsound D           dsound.cpp:396  _dsound_deallocate_voice         [   1.30746] Deallocated voice
+audio-dsound D           dsound.cpp:304  _dsound_close                    [   1.30749] Releasing device
+audio-dsound D           dsound.cpp:309  _dsound_close                    [   1.31097] Released device
+audio-dsound I           dsound.cpp:310  _dsound_close                    [   1.31103] DirectSound closed
