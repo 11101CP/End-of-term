@@ -9,7 +9,13 @@ typedef enum
 STATIONARY,
 MOVEABLE,
 DAMAGE,
-BLOCK
+EMPTY,
+BLOCK,
+CHARC,
+BRICK,
+MONSTER,
+SPIKE,
+EXIT,
 
 }STATE;
 
@@ -21,6 +27,15 @@ int width;
 int height;
 STATE state;
 }BOX;
+
+typedef struct
+{
+float x;
+float y;
+float width;
+float height;
+STATE state;
+}Charc_State;
 
 bool Game(CONFIG *config);
 void buildBox (BOX ****box,int x,int y);

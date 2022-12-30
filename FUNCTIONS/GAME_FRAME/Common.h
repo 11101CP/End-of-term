@@ -22,4 +22,5 @@ bool fullscreen;
 }CONFIG;
 
 
+
 #endif // _COMMON_H_

@@ -14,15 +14,35 @@ bool Game(CONFIG *config)
     al_clear_to_color(al_map_rgb(250,250,250));
     al_draw_filled_rectangle(40*unit,9*unit,121*unit,81*unit,al_map_rgb(50,50,50));
 
+            al_rest(0.05);
     for (int x=0;x<9;x++)
         for(int y=0;y<8;y++)
             switch(box[x][y]->state)
-            {case BLOCK:
-            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(150,50,50));
+            {
+            case CHARC:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(255,0,0));
+            break;
+            case BLOCK:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(0,0,0));
+            break;
+            case EMPTY:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(255,255,255));
+            break;
+            case MONSTER:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(255,165,0));
+            break;
+            case BRICK:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(50,150,0));
+            break;
+            case EXIT:
+            al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+9*unit,box[x][y]->y+9*unit,al_map_rgb(255,215,0));
+            break;
             }
+
+
     al_flip_display();
 
-    system("pause");
+    //system("pause");
 
     freeBox (box,9,8);
 

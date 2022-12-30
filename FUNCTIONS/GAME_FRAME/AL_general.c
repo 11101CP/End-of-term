@@ -23,4 +23,3 @@ void al_cleanup(void)
     al_uninstall_mouse();
     al_uninstall_audio();
 }
-
