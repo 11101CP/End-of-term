@@ -381,7 +381,7 @@
 
 1672233263 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\configuration.h
 
-1672238920 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.h
+1672384989 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.h
 	"AL_general.h"
 	"common.h"
 
@@ -409,7 +409,7 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1672238920 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.c
+1672384989 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.c
 	"AL_general.h"
 	"GUI_general.h"
 	"Common.h"
@@ -418,13 +418,13 @@
 	"config_struct.h"
 	"GUI_general.h"
 
-1672238920 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_draw.c
+1672384843 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_draw.c
 	"AL_general.h"
 	"config_struct.h"
 	"GUI_general.h"
 	"Common.h"
 
-1672240892 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_window.c
+1672241070 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_window.c
 	"AL_general.h"
 	"config_struct.h"
 	"GUI_general.h"

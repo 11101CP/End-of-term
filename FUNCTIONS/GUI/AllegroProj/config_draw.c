@@ -28,7 +28,7 @@ void drawConfigMenu(UIResource *UIres,UIButton *button,DropDownMenu *menu)
     reg.x=3*unit;
     reg.y=3*unit;
 
-    drawCenterdBitmap(UIres->thumbnail , &reg);
+    drawCenteredBitmap(UIres->thumbnail , &reg);
     drawframe(unit);
     drawList(UIres->font,&button[RESOLUTION],menu,unit);
     drawCheckBox (UIres->font,&button[FULLSCREEN],unit,"Full Screen");

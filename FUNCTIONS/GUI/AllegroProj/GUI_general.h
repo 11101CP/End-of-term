@@ -24,6 +24,7 @@ char **item;
 }DropDownMenu;
 
 /***GUI_general.h***/
+void  drawCenteredBitmap(ALLEGRO_BITMAP *bmp , REGION *reg);
 void drawList     (ALLEGRO_FONT *font,UIButton *button,DropDownMenu *menu,int unit);
 void drawCheckBox (ALLEGRO_FONT *font,UIButton *button,int unit, char *s);
 void drawButton   (ALLEGRO_FONT *font,UIButton *button,int unit, char *s);

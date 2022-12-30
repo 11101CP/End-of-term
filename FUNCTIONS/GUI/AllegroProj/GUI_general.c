@@ -3,7 +3,7 @@
 #include"Common.h"
 
 
-void  drawCenterdBitmap(ALLEGRO_BITMAP *bmp , REGION *reg) //several possible cases
+void  drawCenteredBitmap(ALLEGRO_BITMAP *bmp , REGION *reg) //several possible cases
 {
     float bmpW=al_get_bitmap_width(bmp);
     float bmpH=al_get_bitmap_height(bmp);
