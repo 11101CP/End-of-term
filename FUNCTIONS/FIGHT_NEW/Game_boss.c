@@ -12,13 +12,12 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     int unit=config->unit;
     bool exit=false;
     bool shift=true;
-    CHARA chara;
-    chara.x=4;
-    chara.y=4;
-    chara.facingRight=0;
-    chara.step=0;
-    chara.state=CH_STAY;
-    chara.life=3;
+
+    loadChara (stage);
+    CHARA *chara = stage->chara;
+
+
+
 
     ALLEGRO_TIMER* timer = NULL;
     ALLEGRO_TIMER* refresh = NULL;
@@ -26,16 +25,18 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     ALLEGRO_EVENT events;
     ALLEGRO_EVENT_QUEUE* event_queue = NULL;
 
-//    buildchara (&chara,*config);
+//    buildchara (chara,*config);
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0 /60);//CONTROL MOVEMENT          24 frame per sec
     refresh = al_create_timer(1.0/18 );//refresh
 
-    attack = al_create_timer(1 );
+    attack = al_create_timer(1.0 );
 
 
     al_register_event_source(event_queue, al_get_keyboard_event_source());
-    al_register_event_source(event_queue, al_get_display_event_source(res->display));
+
+  //  al_register_event_source(event_queue, al_get_display_event_source(res->display));
+
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
     al_register_event_source(event_queue, al_get_timer_event_source(refresh));
     al_register_event_source(event_queue, al_get_timer_event_source(attack));
@@ -54,13 +55,13 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
             {
 
 
-                if(chara.life>0)
+                if(chara->life>0)
                 switch(events.type)
                 {
                 case ALLEGRO_EVENT_KEY_DOWN:
-                    moveChara(&chara,stage,&events.keyboard);
+                    moveChara(chara,stage,&events.keyboard);
                     if (events.keyboard.keycode==ALLEGRO_KEY_ESCAPE)
-                        boxShift(stage,res,config);
+
                     break;//SETTING;
 
                     break;
@@ -75,16 +76,16 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     {
                     drawMap(stage,res,config);
                     drawObject(stage,res,config);
-                    drawChara(&chara,stage,res,config);
-                    detectCharaDamage(&chara,stage);
+                    drawChara(chara,stage,res,config);
+                    detectCharaDamage(chara,stage);
                     printf("1");
                     drawAttack(stage,res,config);
 
 
 
 
-                    //al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
-                    //al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
+                    al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
+                    al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
@@ -95,9 +96,9 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     //boxShift(stage,res,config);
                     printf("\nboing\n");
 
-                    if(++chara.step==14)
-                        {chara.step=0;
-                        chara.state=CH_STAY;}
+                    if(++chara->step==14)
+                        {chara->step=0;
+                        chara->state=CH_STAY;}
                     }
 
 
@@ -132,15 +133,15 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                         al_flip_display();
                         al_rest(2);
                         printf("restart");
-                        chara.life=10;
+                        chara->life=10;
                          al_pause_event_queue(event_queue,false);
-                         if(++chara.y>8)
-                            chara.y=0;
-                          if(++chara.y>8)
-                            chara.y=0;
-                             if(++chara.y>8)
-                            chara.y=0;
-                         chara.x=4;
+                         if(++chara->y>8)
+                            chara->y=0;
+                          if(++chara->y>8)
+                            chara->y=0;
+                             if(++chara->y>8)
+                            chara->y=0;
+                         chara->x=4;
                         }
 
 

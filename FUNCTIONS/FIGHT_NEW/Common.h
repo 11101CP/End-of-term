@@ -20,6 +20,7 @@ float musicGain;
 float soundGain;
 bool fullscreen;
 int stage;
+int unlock;
 }CONFIG;
 
 

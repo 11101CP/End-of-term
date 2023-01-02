@@ -14,10 +14,10 @@ int main()
   //  (config,);
     RESOURCE res;
     res.display=al_create_display(160*config.unit,90*config.unit);
-    res.background=al_load_bitmap("./beartrap.png");
-    res.belt=al_load_bitmap("./belt.png");
-    res.chara=al_load_bitmap("./duck.png");
-    res.death=al_load_bitmap("./death.png");
+    res.background=al_load_bitmap("./assets/beartrap.png");
+    res.belt=al_load_bitmap("./assets/belt.png");
+    res.chara=al_load_bitmap("./assets/duck.png");
+    res.death=al_load_bitmap("./assets/death.png");
 
 
     gameSetUp(&config,&res);

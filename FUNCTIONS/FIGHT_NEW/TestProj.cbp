@@ -87,6 +87,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game_attack.h" />
+		<Unit filename="Game_boss.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game_chara.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game_death.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -100,10 +106,10 @@
 		<Unit filename="Game_load.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Game_playing.c">
+		<Unit filename="Game_misc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="bossFight.c">
+		<Unit filename="Game_playing.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.c">

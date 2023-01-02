@@ -34,10 +34,12 @@ typedef struct
 int x;
 int y;
 int life;
-CHARA_STATE state;
 int point;
 bool facingRight;
+bool vulnerable;
 int step;
+CHARA_STATE state;
+ALLEGRO_TIMER *timer;
 
 }CHARA;
 typedef enum
@@ -59,12 +61,13 @@ DAMAGE damage ;
 typedef struct
 {
 int stage;
-
+int progess;
 BOX ***box;
 int length; //box edge
 int boxNumX;
 int boxNumY;
 AttackModule *attack;
+CHARA *chara;
 }STAGE;
 
 

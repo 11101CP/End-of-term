@@ -2,74 +2,84 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Game_frame.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="Game_death.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="71" topLine="26" />
+			<Cursor1 position="245" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_playing.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="149" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_frame.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1045" topLine="63" />
+		</Cursor>
+	</File>
+	<File name="Game_misc.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="175" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_chara.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="329" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Game_attack.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="208" topLine="1" />
+			<Cursor1 position="267" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="AL_general.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Common.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="401" topLine="6" />
+			<Cursor1 position="281" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Game_load.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Game_boss.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="2318" topLine="75" />
 		</Cursor>
 	</File>
-	<File name="Game_attack.c" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2575" topLine="98" />
-		</Cursor>
-	</File>
-	<File name="Game_frame.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1625" topLine="85" />
-		</Cursor>
-	</File>
-	<File name="Game_death.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Game_draw.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="411" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Common.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="291" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="temp.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="342" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AL_general.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="AL_general.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="143" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Game_playing.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="19" topLine="0" />
+			<Cursor1 position="458" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="bossFight.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="Game_draw.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2912" topLine="30" />
+			<Cursor1 position="151" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="AL_general.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="401" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_load.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="104" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_frame.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="244" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Game_attack.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3206" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="temp.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="106" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
