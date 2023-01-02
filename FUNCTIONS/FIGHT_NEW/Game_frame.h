@@ -38,6 +38,8 @@ int point;
 bool facingRight;
 bool vulnerable;
 int step;
+int offsetY;
+int offsetX;
 CHARA_STATE state;
 ALLEGRO_TIMER *timer;
 
@@ -56,6 +58,7 @@ int x;
 int y;
 STATE state;
 DAMAGE damage ;
+
 }BOX;
 
 typedef struct
@@ -91,7 +94,7 @@ void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config );
 void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config );
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config );
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
-void detectCharaDamage(CHARA *chara,STAGE *stage);
+void detectCharaDamage(CHARA *chara,STAGE *stage,CONFIG *config);
 
 /** Game_death.c**/
 int death(RESOURCE* res,STAGE *stage ,CONFIG *config);

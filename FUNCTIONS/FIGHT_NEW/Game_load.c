@@ -13,5 +13,6 @@ void loadChara (STAGE *stage)
     stage->chara->life=3;
     stage->chara->timer=al_create_timer(1.5);
     stage->chara->vulnerable=true;
-
+    stage->chara->offsetX=0;
+    stage->chara->offsetY=0;
 }

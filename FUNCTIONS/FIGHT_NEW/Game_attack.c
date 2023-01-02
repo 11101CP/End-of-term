@@ -42,13 +42,13 @@ for (int i=0;i<4;i++)
     {
         if (now->step%3==2)
     {
-    al_draw_line(box[0][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
+    al_draw_line(box[1][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=HURT;
     }
     else if (now->step%3==1)
     {
-    al_draw_line(box[0][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgba(100,100,100,1),3*config->unit);
+    al_draw_line(box[1][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgba(100,100,100,1),3*config->unit);
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=NO;
     }

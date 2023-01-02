@@ -2,14 +2,14 @@
 #include "AL_general.h"
 #include "Game_frame.h"
 
-void detectCharaDamage(CHARA *chara,STAGE *stage)
+void detectCharaDamage(CHARA *chara,STAGE *stage,CONFIG *config)
 {
     if(al_get_timer_count(chara->timer))
        {chara->vulnerable=true;
         al_stop_timer(chara->timer);
 
        }
-    if(stage->box[chara->x][chara->y]->damage==DEATH)
+    if(stage->box[chara->x][chara->y]->y<22*config->unit||stage->box[chara->x][chara->y]->y>68*config->unit)
         chara->life=0;
 
 if(stage->box[chara->x][chara->y]->damage==HURT&&chara->vulnerable)
@@ -22,18 +22,20 @@ if(stage->box[chara->x][chara->y]->damage==HURT&&chara->vulnerable)
 
 
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
-{
+{ //if(chara->state==CH_STAY)
     switch(keyboard->keycode)
     {
     case ALLEGRO_KEY_UP:
         if (--chara->y<0)
         chara->y=stage->boxNumY-1;
         chara->state=CH_MOVE;
+        chara->offsetY=stage->length;
         break;
     case ALLEGRO_KEY_DOWN:
         if (++chara->y==stage->boxNumY)
         chara->y=0;
         chara->state=CH_MOVE;
+        chara->offsetY=-stage->length;
         break;
     case ALLEGRO_KEY_LEFT:
         if (--chara->x<0)
@@ -42,6 +44,7 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->x++;
         chara->facingRight=1;
         chara->state=CH_MOVE;
+        chara->offsetX=stage->length;
 
         break;
     case ALLEGRO_KEY_RIGHT:
@@ -51,6 +54,7 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->x--;
         chara->facingRight=0;
         chara->state=CH_MOVE;
+        chara->offsetX=-stage->length;
         break;
 
     }

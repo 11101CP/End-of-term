@@ -22,6 +22,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     ALLEGRO_TIMER* timer = NULL;
     ALLEGRO_TIMER* refresh = NULL;
     ALLEGRO_TIMER* attack = NULL;
+    ALLEGRO_TIMER* move=NULL;
     ALLEGRO_EVENT events;
     ALLEGRO_EVENT_QUEUE* event_queue = NULL;
 
@@ -29,20 +30,24 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0 /60);//CONTROL MOVEMENT          24 frame per sec
     refresh = al_create_timer(1.0/18 );//refresh
+    move=al_create_timer(1.0/30);
+
 
     attack = al_create_timer(1.0 );
 
 
     al_register_event_source(event_queue, al_get_keyboard_event_source());
 
-  //  al_register_event_source(event_queue, al_get_display_event_source(res->display));
+    //al_register_event_source(event_queue, al_get_display_event_source(res->display));
 
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
     al_register_event_source(event_queue, al_get_timer_event_source(refresh));
     al_register_event_source(event_queue, al_get_timer_event_source(attack));
+    al_register_event_source(event_queue, al_get_timer_event_source(move));
 
     al_start_timer(timer);
     al_start_timer(refresh);
+    al_start_timer(move);
 
 
 
@@ -77,28 +82,48 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     drawMap(stage,res,config);
                     drawObject(stage,res,config);
                     drawChara(chara,stage,res,config);
-                    detectCharaDamage(chara,stage);
+                    detectCharaDamage(chara,stage,config);
                     printf("1");
                     drawAttack(stage,res,config);
+                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*13,stage->length*7,stage->length,0);
+                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*68,stage->length*7,stage->length,0);
 
 
 
 
-                    al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
-                    al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
+
+
+                    al_draw_filled_rectangle(0,0,160*config->unit,17*config->unit,al_map_rgb(0,0,0));
+                    al_draw_filled_rectangle(0,72*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
                     {
+
+
                         if (events.timer.count==32)
                             al_start_timer(attack);
 
-                    //boxShift(stage,res,config);
+                        if(events.timer.count<200)
+                            boxShift(stage,res,config);
                     printf("\nboing\n");
 
-                    if(++chara->step==14)
+
+                    }
+                    if(events.timer.source==move)
+                    {
+                        if(chara->offsetX>0)
+                                chara->offsetX-=config->unit;
+                            else if (chara->offsetX<0)
+                                chara->offsetX+=config->unit;
+                            if(chara->offsetY>0)
+                                chara->offsetY-=config->unit;
+                            else if (chara->offsetY<0)
+                                chara->offsetY+=config->unit;
+                                if(++chara->step==14)
                         {chara->step=0;
                         chara->state=CH_STAY;}
+
                     }
 
 
