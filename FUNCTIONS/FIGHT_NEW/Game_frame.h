@@ -35,6 +35,8 @@ int y;
 int life;
 CHARA_STATE state;
 int point;
+bool facingRight;
+int step;
 
 }CHARA;
 typedef enum

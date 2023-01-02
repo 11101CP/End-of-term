@@ -316,7 +316,7 @@
 1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_primitives.h
 	<allegro5/allegro.h>
 
-1672590670 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\bossfight.c
+1672640396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\bossfight.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -333,11 +333,11 @@
 	"AL_general.h"
 	"Game_frame.h"
 
-1672588699 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.h
+1672640045 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.h
 	"AL_general.h"
 	"common.h"
 
-1672590534 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_draw.c
+1672640752 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_draw.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -347,7 +347,7 @@
 	"AL_general.h"
 	"Game_frame.h"
 
-1672590397 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\main.c
+1672640591 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\main.c
 	"Common.h"
 	"AL_general.h"
 

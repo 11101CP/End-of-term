@@ -6,10 +6,10 @@ void detectCharaDamage(CHARA *chara,STAGE *stage)
 {
 switch(stage->box[chara->x][chara->y]->state)
 case BLOCK:
-al_draw_filled_rectangle(stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,stage->box[chara->x][chara->y]->x+stage->length,
-                         stage->box[chara->x][chara->y]->y+stage->length,al_map_rgb(100,0,100));
+//al_draw_filled_rectangle(stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,stage->box[chara->x][chara->y]->x+stage->length,
+//                         stage->box[chara->x][chara->y]->y+stage->length,al_map_rgb(100,0,100));
 
-
+break;
 }
 
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
@@ -19,16 +19,20 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
     case ALLEGRO_KEY_UP:
         if (--chara->y<0)
         chara->y=stage->boxNumY-1;
+        chara->state=CH_MOVE;
         break;
     case ALLEGRO_KEY_DOWN:
         if (++chara->y==stage->boxNumY)
         chara->y=0;
+        chara->state=CH_MOVE;
         break;
     case ALLEGRO_KEY_LEFT:
         if (--chara->x<0)
         chara->x=stage->boxNumX-1;
         else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
         chara->x++;
+        chara->facingRight=1;
+        chara->state=CH_MOVE;
 
         break;
     case ALLEGRO_KEY_RIGHT:
@@ -36,6 +40,8 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->x=0;
         else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
         chara->x--;
+        chara->facingRight=0;
+        chara->state=CH_MOVE;
         break;
 
     }
@@ -46,9 +52,8 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 
 void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config)
 {
-al_draw_filled_rectangle(stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,stage->box[chara->x][chara->y]->x+stage->length,
-                         stage->box[chara->x][chara->y]->y+stage->length,al_map_rgba(0,0,100,5));
-
+al_draw_scaled_bitmap(res->chara,180*chara->step,0,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
+                      stage->length,stage->length,chara->facingRight);
 }
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 {BOX*** box=stage->box;

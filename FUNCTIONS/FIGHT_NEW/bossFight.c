@@ -14,7 +14,8 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     CHARA chara;
     chara.x=4;
     chara.y=4;
-
+    chara.facingRight=0;
+    chara.step=0;
 
     ALLEGRO_TIMER* timer = NULL;
     ALLEGRO_TIMER* refresh = NULL;
@@ -25,7 +26,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 //    buildchara (&chara,*config);
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0 /60);//CONTROL MOVEMENT          24 frame per sec
-    refresh = al_create_timer(0.1 );//refresh
+    refresh = al_create_timer(1.0/18 );//refresh
 
     attack = al_create_timer(1.0 );
 
@@ -77,13 +78,15 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
 
 
-                    al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
-                    al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
+                    //al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
+                    //al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
                     {printf("\nboing\n");
-                    boxShift(stage,res,config);
+                    //boxShift(stage,res,config);
+                    if(++chara.step==14)
+                        chara.step=0;
                     }
 
 
