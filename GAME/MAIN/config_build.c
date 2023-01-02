@@ -34,12 +34,16 @@ void loadUIResource(UIResource *UIres)
 UIres->font=al_load_font("./assets/arial.ttf",UIres->unit*3,0);
 UIres->thumbnail=al_load_bitmap("./assets/thumbnail.jpg");
 UIres->icon=al_load_bitmap("./assets/icon.jpg");
+UIres->quack=al_load_sample("./assets/Quack.wav");
 }
 
 void destroyUIResource(UIResource *UIres)
 {
 al_destroy_font(UIres->font);
 al_destroy_bitmap(UIres->thumbnail);
+al_destroy_bitmap(UIres->icon);
+al_destroy_sample(UIres->quack);
+al_destroy_display(UIres->display);
 }
 
 void buildDropDownMenu(DropDownMenu *menu,int number)

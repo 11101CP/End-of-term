@@ -39,7 +39,7 @@ while(1)
                 switch(events.type)
                 {
                 case ALLEGRO_EVENT_MOUSE_BUTTON_DOWN:
-
+                    al_play_sample(UIres.quack,1,0,1,ALLEGRO_PLAYMODE_ONCE,NULL);
                     if(menu.drop)
                         getMenuClick(&events.mouse,&menu,&button[RESOLUTION]);
                     else
@@ -57,13 +57,11 @@ while(1)
                             case PLAY:
                                 config->unit=(menu.choice+4) * 2;
                                 config->fullscreen=button[FULLSCREEN].active;
-                                al_destroy_display(UIres.display);
                                 destroyUIResource(&UIres);
                                 destroyDropDownMenu(&menu);
                                 return true;
 
                             case QUIT:
-                                al_destroy_display(UIres.display);
                                 destroyUIResource(&UIres);
                                 destroyDropDownMenu(&menu);
                                 return false;
@@ -71,7 +69,6 @@ while(1)
 
                     break;
                     case ALLEGRO_EVENT_DISPLAY_CLOSE:
-                        al_destroy_display(UIres.display);
                         destroyUIResource(&UIres);
                         destroyDropDownMenu(&menu);
                         return false;

@@ -461,7 +461,7 @@
 	"GUI_general.h"
 	"Common.h"
 
-1672496396 c:\users\yu\downloads\end-of-term\master\game\main\config_struct.h
+1672675272 c:\users\yu\downloads\end-of-term\master\game\main\config_struct.h
 	"AL_general.h"
 	"common.h"
 	"GUI_general.h"
@@ -475,7 +475,7 @@
 	"AL_general.h"
 	"common.h"
 
-1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\config_window.c
+1672675420 source:c:\users\yu\downloads\end-of-term\master\game\main\config_window.c
 	"AL_general.h"
 	"config_struct.h"
 	"GUI_general.h"
@@ -494,7 +494,7 @@
 	"AL_general.h"
 	"config_struct.h"
 
-1672674633 source:c:\users\yu\downloads\end-of-term\master\game\main\config_build.c
+1672675420 source:c:\users\yu\downloads\end-of-term\master\game\main\config_build.c
 	"config_struct.h"
 	"GUI_general.h"
 

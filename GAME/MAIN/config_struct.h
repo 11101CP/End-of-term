@@ -19,6 +19,7 @@ ALLEGRO_DISPLAY *display;
 ALLEGRO_BITMAP *thumbnail;
 ALLEGRO_BITMAP *icon;
 ALLEGRO_FONT *font;
+ALLEGRO_SAMPLE *quack;
 
 int unit;
 }UIResource;
