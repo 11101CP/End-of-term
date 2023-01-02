@@ -3,6 +3,7 @@
 
 #include "AL_general.h"
 #include "common.h"
+#include "Game_attack.h"
 
 
 typedef enum
@@ -63,7 +64,7 @@ BOX ***box;
 int length; //box edge
 int boxNumX;
 int boxNumY;
-
+AttackModule *attack;
 }STAGE;
 
 
@@ -88,6 +89,13 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config );
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config );
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
 void detectCharaDamage(CHARA *chara,STAGE *stage);
+
+/** Game_death.c**/
+int death(RESOURCE* res,STAGE *stage ,CONFIG *config);
+
+/** Game_attack.c**/
+void drawAttack(STAGE *stage,RESOURCE *res,CONFIG *config);
+void loadAttack(STAGE *stage);
 
 
 

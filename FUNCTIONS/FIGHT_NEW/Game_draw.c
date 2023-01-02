@@ -9,7 +9,9 @@ case BLOCK:
 //al_draw_filled_rectangle(stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,stage->box[chara->x][chara->y]->x+stage->length,
 //                         stage->box[chara->x][chara->y]->y+stage->length,al_map_rgb(100,0,100));
 
-break;
+chara->life--;
+if(stage->box[chara->x][chara->y]->damage==HURT)
+    chara->life--;
 }
 
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
@@ -45,6 +47,7 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         break;
 
     }
+    chara->step=0;
 }
 
 
@@ -52,9 +55,19 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 
 void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config)
 {
+
+if(chara->state==CH_MOVE)
 al_draw_scaled_bitmap(res->chara,180*chara->step,0,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
                       stage->length,stage->length,chara->facingRight);
+
+else if (chara->state==CH_STAY)
+al_draw_scaled_bitmap(res->chara,180*chara->step,180,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
+                      stage->length,stage->length,chara->facingRight);
+
 }
+
+
+
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 {BOX*** box=stage->box;
     int x,y;

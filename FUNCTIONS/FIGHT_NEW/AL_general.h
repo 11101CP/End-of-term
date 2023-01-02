@@ -20,6 +20,7 @@ ALLEGRO_DISPLAY *display;
 ALLEGRO_BITMAP *background;
 ALLEGRO_BITMAP *belt;
 ALLEGRO_BITMAP *chara;
+ALLEGRO_BITMAP *death;
 
 }RESOURCE;
 

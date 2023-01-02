@@ -4,9 +4,10 @@
 
 
 
+
 bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 {
-
+    loadAttack(stage);
     int i=0,j=0;
     int unit=config->unit;
     bool exit=false;
@@ -16,6 +17,8 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     chara.y=4;
     chara.facingRight=0;
     chara.step=0;
+    chara.state=CH_STAY;
+    chara.life=3;
 
     ALLEGRO_TIMER* timer = NULL;
     ALLEGRO_TIMER* refresh = NULL;
@@ -28,7 +31,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     timer = al_create_timer(1.0 /60);//CONTROL MOVEMENT          24 frame per sec
     refresh = al_create_timer(1.0/18 );//refresh
 
-    attack = al_create_timer(1.0 );
+    attack = al_create_timer(1 );
 
 
     al_register_event_source(event_queue, al_get_keyboard_event_source());
@@ -39,7 +42,6 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
     al_start_timer(timer);
     al_start_timer(refresh);
-    al_start_timer(attack);
 
 
 
@@ -50,8 +52,9 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
         {
             while(al_get_next_event(event_queue, &events))
             {
-                drawMap(stage,res,config);
 
+
+                if(chara.life>0)
                 switch(events.type)
                 {
                 case ALLEGRO_EVENT_KEY_DOWN:
@@ -75,6 +78,8 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     drawChara(&chara,stage,res,config);
                     detectCharaDamage(&chara,stage);
                     printf("1");
+                    drawAttack(stage,res,config);
+
 
 
 
@@ -83,15 +88,27 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
-                    {printf("\nboing\n");
+                    {
+                        if (events.timer.count==32)
+                            al_start_timer(attack);
+
                     //boxShift(stage,res,config);
+                    printf("\nboing\n");
+
                     if(++chara.step==14)
-                        chara.step=0;
+                        {chara.step=0;
+                        chara.state=CH_STAY;}
                     }
 
 
                     if(events.timer.source==attack)
+                    {
+                        //loadAttack;
+                    //stage->
+                    addAttack(stage);
+
                     printf("\naddAttackObject\n");
+                    }
 
 
 
@@ -107,7 +124,26 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
                     break;
 
-                }
+                }  //end of switch
+                    else
+                        {
+                        al_pause_event_queue(event_queue,true);
+                        death(res,stage ,config);
+                        al_flip_display();
+                        al_rest(2);
+                        printf("restart");
+                        chara.life=10;
+                         al_pause_event_queue(event_queue,false);
+                         if(++chara.y>8)
+                            chara.y=0;
+                          if(++chara.y>8)
+                            chara.y=0;
+                             if(++chara.y>8)
+                            chara.y=0;
+                         chara.x=4;
+                        }
+
+
 
 
 

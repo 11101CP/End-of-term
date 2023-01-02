@@ -83,7 +83,13 @@
 		</Unit>
 		<Unit filename="AL_general.h" />
 		<Unit filename="Common.h" />
+		<Unit filename="Game_attack.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game_attack.h" />
+		<Unit filename="Game_death.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game_draw.c">
 			<Option compilerVar="CC" />
 		</Unit>

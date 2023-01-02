@@ -2,6 +2,7 @@
 #include "AL_general.h"
 #include "Game_frame.h"
 
+
 void stageBOSS (BOX ***box);
 void loadStage(STAGE *stage ,CONFIG *config);
 void loadBox  (BOX ***box,int x,int y,int unit);

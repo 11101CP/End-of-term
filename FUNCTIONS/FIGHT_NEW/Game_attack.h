@@ -13,16 +13,16 @@ AREA
 }ATTACKTYPE;
 
 
-typedef struct AttackModule1
+typedef struct AttackModule
 {
 
 int x;
 int y;
 int dx;
 int dy;
-ATTACKTYPE;
+ATTACKTYPE type;
 int step;  // self destruct
-struct *AttackModule1;
+struct AttackModule *next;
 
 }AttackModule;
 
