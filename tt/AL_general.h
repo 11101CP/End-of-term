@@ -29,15 +29,13 @@ typedef struct Resource
     ALLEGRO_FONT* font;
     ALLEGRO_MOUSE_CURSOR *cursor;
     miscData data;
-    ALLEGRO_MOUSE_STATE mouseState;
+    ALLEGRO_KEYBOARD_STATE KBstate;
 } Resource;
 
-int mouseRegionDetect(ALLEGRO_MOUSE_STATE *msestate,int startX,int startY,int deltaX,int deltaY);
-void mousedetect(Resource *res, CONFIG *config);
-void drawMenu( Resource *res, CONFIG *config);
+void drawMenu( Resource *res, CONFIG *config,unsigned short control);
 void drawStageMenu( Resource *res, CONFIG *config);
 void drawSettingPage(Resource *res, CONFIG *config);
-
+bool KeyboardDetect(Resource *res,CONFIG *config);
 
 
 

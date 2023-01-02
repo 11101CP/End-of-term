@@ -1,5 +1,5 @@
 #include "AL_general.h"
-void drawMenu( Resource *res, CONFIG *config)
+void drawMenu(Resource *res, CONFIG *config, unsigned short control)
 {
     int unit;
     unit=config->unit;
@@ -9,16 +9,15 @@ void drawMenu( Resource *res, CONFIG *config)
     ALLEGRO_BITMAP* exitbutton = al_load_bitmap("./image/ExitButton.png");
     ALLEGRO_BITMAP* pressedexit =al_load_bitmap("./image/PressedExit.png");
     al_draw_scaled_bitmap(coverbitmap, 0, 0,al_get_bitmap_width(coverbitmap),al_get_bitmap_height(coverbitmap),0 ,0,160*unit,90*unit,0);
-    if(pressedexit==NULL)
-        printf("123");
 
+        if(control%2==0)
         al_draw_scaled_bitmap(pressedplay,0, 0, 210, 120, (unit*160/2)-unit*15, (unit*90/5)*3, unit*30,unit*9, 0);
+        else al_draw_scaled_bitmap(playbutton,0, 0, 210, 120, (unit*160/2)-unit*15, (unit*90/5)*3, unit*30,unit*9, 0);
+        if(control%2==1)
         al_draw_scaled_bitmap(pressedexit,0, 0, 210, 120, (unit*160/2)-unit*15, (unit*90/5)*4, unit*30,unit*9, 0);
+        else al_draw_scaled_bitmap(exitbutton,0, 0, 210, 120, (unit*160/2)-unit*15, (unit*90/5)*4, unit*30,unit*9, 0);
 
-
-
-    al_flip_display();
-   system("pause");
+//   system("pause");
     al_destroy_bitmap(coverbitmap);
     al_destroy_bitmap(playbutton);
     al_destroy_bitmap(pressedplay);
@@ -32,20 +31,11 @@ void drawStageMenu( Resource *res, CONFIG *config)
     int unit;
     unit=config->unit;
     al_setup();
-    ALLEGRO_BITMAP* coverbitmap = NULL;
-    ALLEGRO_BITMAP* stage1button = NULL;
-    ALLEGRO_BITMAP* stage2button = NULL;
-    ALLEGRO_BITMAP* stage3button = NULL;
-    ALLEGRO_BITMAP* stage4button = NULL;
-
-
-
-    // Load bitmap
-    coverbitmap = al_load_bitmap("./image/cover.png");
-    stage1button = al_load_bitmap("./image/Stage1Button.png");
-    stage2button = al_load_bitmap("./image/Stage2Button.png");
-    stage3button = al_load_bitmap("./image/Stage3Button.png");
-    stage4button = al_load_bitmap("./image/Stage4Button.png");
+    ALLEGRO_BITMAP* coverbitmap =al_load_bitmap("./image/cover.png");
+    ALLEGRO_BITMAP* stage1button=al_load_bitmap("./image/Stage1Button.png");
+    ALLEGRO_BITMAP* stage2button=al_load_bitmap("./image/Stage2Button.png");
+    ALLEGRO_BITMAP* stage3button=al_load_bitmap("./image/Stage3Button.png");
+    ALLEGRO_BITMAP* stage4button=al_load_bitmap("./image/Stage4Button.png");
 
     al_draw_scaled_bitmap(coverbitmap, 0, 0,al_get_bitmap_width(coverbitmap),al_get_bitmap_height(coverbitmap),0 ,0,160*unit,90*unit,0);
     al_draw_scaled_bitmap(stage1button, 0, 0, 90, 120, 1*(unit*160)/5, unit*90-unit*16, unit*12, unit*16,0);
@@ -71,7 +61,7 @@ void drawSettingPage(Resource *res, CONFIG *config)
 
     if(font==NULL)
         puts("!!!!!");
-    ALLEGRO_DISPLAY * display=al_create_display(160*unit,90*unit);
+
 
     al_clear_to_color(al_map_rgb(150,150,150));
 
@@ -95,4 +85,40 @@ void drawSettingPage(Resource *res, CONFIG *config)
         al_flip_display();
         system("pause");
         al_destroy_font(res->font);
+}
+
+bool KeyboardDetect(Resource *res, CONFIG *config)
+{
+
+    unsigned short control = 0;
+    ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
+    al_register_event_source(event_queue, al_get_keyboard_event_source());
+ALLEGRO_EVENT events;
+drawMenu(res, config, control);
+al_flip_display();
+    while (events.keyboard.keycode!=ALLEGRO_KEY_ESCAPE)
+    {
+
+        al_wait_for_event(event_queue, &events);
+        if(events.type==ALLEGRO_EVENT_KEY_DOWN)
+            {
+        if (events.keyboard.keycode == ALLEGRO_KEY_DOWN)
+            control += 1;
+        if (events.keyboard.keycode == ALLEGRO_KEY_UP)
+            control -= 1;
+        if (events.keyboard.keycode == ALLEGRO_KEY_ENTER)
+            if(control%2==0)
+            return true;
+        else
+            return false;
+            }
+
+        al_clear_to_color(al_map_rgb(0, 0, 0)); // 清除畫面
+        drawMenu(res, config, control);
+        printf("%d\n",control);
+
+        al_flip_display();
+       // al_rest(0.2);
+    }
+    return false;
 }

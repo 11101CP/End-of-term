@@ -11,8 +11,9 @@ int main()
     ALLEGRO_DISPLAY*display=al_create_display(160*config.unit,90*config.unit);
     while(res.data.state!=EXIT)
     {
-        drawMenu(&res,&config);
-        drawStageMenu(&res,&config);
+       if( KeyboardDetect(&res,&config))
+          drawStageMenu(&res,&config);
+        else res.data.state=EXIT;
     }
     al_cleanup();
     return 0;
