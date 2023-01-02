@@ -1,0 +1,500 @@
+# depslib dependency file v1.0
+1671904711 source:c:\users\yu\downloads\gui\allegroproj\main.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	"UI_struct.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/clipboard.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/cpu.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/haptic.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/render_state.h"
+	"allegro5/shader.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/touch_input.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alandroidcfg.h"
+	"allegro5/platform/alraspberrypicfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/allegro_sdl_config.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\alplatf.h
+
+1668416458 c:\allegrolib_5.2.8\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\alandroidcfg.h
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\alraspberrypicfg.h
+	<fcntl.h>
+	<unistd.h>
+	<sys/types.h>
+
+1668416458 c:\allegrolib_5.2.8\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1668416458 c:\allegrolib_5.2.8\include\allegro5\platform\alunix.h
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\platform\allegro_sdl_config.h
+	<fcntl.h>
+	<unistd.h>
+
+1668416458 c:\allegrolib_5.2.8\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+	<limits.h>
+
+1668416458 c:\allegrolib_5.2.8\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\color.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\path.h
+	"allegro5/base.h"
+	"allegro5/utf8.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\blender.h
+	"allegro5/base.h"
+	"allegro5/color.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\clipboard.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/utf8.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\config.h
+	"allegro5/file.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\cpu.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\error.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1668416457 c:\allegrolib_5.2.8\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\fullscreen_mode.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\haptic.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/events.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/mouse.h"
+	"allegro5/touch_input.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\keycodes.h
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\touch_input.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\memory.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\monitor.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\render_state.h
+	"allegro5/base.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\shader.h
+	"allegro5/base.h"
+	"allegro5/transformations.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\timer.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1668416455 c:\allegrolib_5.2.8\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\alcompat.h
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_native_dialog.h
+	"allegro5/allegro.h"
+
+1671886243 source:c:\users\yu\downloads\gui\allegroproj\gui.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+	"UI_struct.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1671890910 source:c:\users\yu\downloads\gui\allegroproj\gui_1.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+
+1671898911 source:c:\users\yu\downloads\gui\allegroproj\interactive.c
+	"UI_struct.h"
+
+1671902965 c:\users\yu\downloads\gui\allegroproj\ui_struct.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_font.h>
+
+1671897010 source:c:\users\yu\downloads\gui\allegroproj\configui.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+	"UI_struct.h"
+
+1671904949 source:c:\users\yu\downloads\gui\allegroproj\ui_draw.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+	"UI_struct.h"
+
+1671904877 source:c:\users\yu\downloads\gui\allegroproj\ui_config.c
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+	"UI_struct.h"
+
+1671902783 source:c:\users\yu\downloads\gui\allegroproj\ui_load&bulid.c
+	"UI_struct.h"
+
+1671904666 source:c:\users\yu\downloads\gui\allegroproj\ui_mouse.c
+	<allegro5/allegro.h>
+	"UI_struct.h"
+
+1672235206 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_1.c
+	"AL_general.h"
+
+1672239879 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\main.c
+	"AL_general.h"
+	"config_struct.h"
+
+1672233864 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\ui_struct.h
+	"AL_general.h"
+	"common.h"
+
+1672233961 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\ui_draw.c
+	"AL_general.h"
+	"UI_struct.h"
+	"GUI_general.h"
+	"common.h"
+
+1672227884 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\ui_load&bulid.c
+	"UI_struct.h"
+
+1672233974 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\ui_mouse.c
+	"AL_general.h"
+	"UI_struct.h"
+	"GUI_general.h"
+
+1672232659 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\ui_config.c
+	"AL_general.h"
+	"UI_struct.h"
+	"configuration.h"
+	"GUI_general.h"
+
+1672239418 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672233263 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\configuration.h
+
+1672384989 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1672239339 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_image.h
+	"allegro5/base.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1668416454 c:\allegrolib_5.2.8\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1672384989 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672238751 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+
+1672384843 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672241070 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672240796 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1672238920 c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI_general.h"
+
+1672239708 source:c:\users\yu\downloads\end-of-term\functions\gui\allegroproj\al_general.c
+	"AL_general.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\al_general.c
+	"AL_general.h"
+
+1672496396 c:\users\yu\downloads\end-of-term\master\game\main\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 c:\users\yu\downloads\end-of-term\master\game\main\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI_general.h"
+
+1672496396 c:\users\yu\downloads\end-of-term\master\game\main\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672496396 c:\users\yu\downloads\end-of-term\master\game\main\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\master\game\main\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1672674856 source:c:\users\yu\downloads\end-of-term\master\game\main\main.c
+	"AL_general.h"
+	"config_struct.h"
+
+1672674633 source:c:\users\yu\downloads\end-of-term\master\game\main\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+
