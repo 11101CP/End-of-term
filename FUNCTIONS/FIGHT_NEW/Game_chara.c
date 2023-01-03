@@ -15,6 +15,7 @@ void detectCharaDamage(CHARA *chara,STAGE *stage,CONFIG *config)
 if(stage->box[chara->x][chara->y]->damage==HURT&&chara->vulnerable)
     {chara->life--;
     al_start_timer(chara->timer);
+    al_set_timer_count(chara->timer,0);
     chara->vulnerable=false;
 
     }

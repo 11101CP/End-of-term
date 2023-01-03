@@ -29,7 +29,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 //    buildchara (chara,*config);
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0 /60);//CONTROL MOVEMENT          24 frame per sec
-    refresh = al_create_timer(1.0/18 );//refresh
+    refresh = al_create_timer(1.0/9 );//refresh
     move=al_create_timer(1.0/30);
 
 
@@ -80,22 +80,32 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     if(events.timer.source==timer)
                     {
                     drawMap(stage,res,config);
+                    al_draw_scaled_bitmap(res->belt,0,0,400,748,stage->box[1][0]->x,(13-al_get_timer_count(refresh)%10)*unit,stage->length*7,stage->length*8,0);
+                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*13,stage->length*7,stage->length,0);
+                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*68,stage->length*7,stage->length,0);
+                    al_draw_scaled_bitmap(res->layer,0,0,960,540,0,0,160*config->unit,90*config->unit,0);
                     drawObject(stage,res,config);
                     drawChara(chara,stage,res,config);
                     detectCharaDamage(chara,stage,config);
                     printf("1");
                     drawAttack(stage,res,config);
-                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*13,stage->length*7,stage->length,0);
-                    al_draw_scaled_bitmap(res->saw,0,600*(al_get_timer_count(refresh)%2),1688,600,config->unit*49,config->unit*68,stage->length*7,stage->length,0);
+                    drawLifaIndicate (stage,res,config );
 
 
 
 
 
 
-                    al_draw_filled_rectangle(0,0,160*config->unit,17*config->unit,al_map_rgb(0,0,0));
-                    al_draw_filled_rectangle(0,72*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
+
+
+
+                   // al_draw_filled_rectangle(0,0,160*config->unit,17*config->unit,al_map_rgb(0,0,0));
+                    //al_draw_filled_rectangle(0,72*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
+                    al_draw_filled_rectangle(stage->box[0][0]->x,stage->box[0][0]->y,stage->box[1][1]->x,stage->box[1][1]->y,al_map_rgb(255,0,0));
+                    al_draw_line(0,4*config->unit,160*config->unit,4*config->unit,al_map_rgb(255,255,255),1);
+
                     al_flip_display();
+
                     }
                     if(events.timer.source==refresh)
                     {
@@ -104,12 +114,13 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                         if (events.timer.count==32)
                             al_start_timer(attack);
 
-                        if(events.timer.count<200)
+                        if(al_get_timer_count(refresh)<244)
                             boxShift(stage,res,config);
+                        else al_stop_timer(refresh);
                     printf("\nboing\n");
 
 
-                    }
+                    }//end of timer.source==refresh
                     if(events.timer.source==move)
                     {
                         if(chara->offsetX>0)
@@ -124,7 +135,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                         {chara->step=0;
                         chara->state=CH_STAY;}
 
-                    }
+                    }//end of timer.source==move
 
 
                     if(events.timer.source==attack)
@@ -134,19 +145,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     addAttack(stage);
 
                     printf("\naddAttackObject\n");
-                    }
-
-
-
-
-
-
-
-
-
-                  //  if (shift)
-                        //drawSheftObjext(&stage);
-                    //else
+                    }//end of timer.source==attack
 
                     break;
 
@@ -155,18 +154,21 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                         {
                         al_pause_event_queue(event_queue,true);
                         death(res,stage ,config);
+                        //al_draw_text(res->font,al_map_rgb(255,0,0),unit*80,unit*10,ALLEGRO_ALIGN_CENTER,"YOU DEAD");
+
                         al_flip_display();
                         al_rest(2);
                         printf("restart");
-                        chara->life=10;
-                         al_pause_event_queue(event_queue,false);
-                         if(++chara->y>8)
-                            chara->y=0;
-                          if(++chara->y>8)
-                            chara->y=0;
-                             if(++chara->y>8)
-                            chara->y=0;
-                         chara->x=4;
+                        al_destroy_event_queue(event_queue);
+                        al_destroy_timer(timer);
+                        al_destroy_timer(refresh);
+                        al_destroy_timer(attack);
+                        al_destroy_timer(move);
+                        al_stop_timer(chara->timer);
+
+
+                        return false;
+
                         }
 
 

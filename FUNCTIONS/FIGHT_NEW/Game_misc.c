@@ -23,7 +23,6 @@ for (x=0;x<stage->boxNumX;x++)
                 {box[x][y]->state=BLOCK;
                 box[x][y]->damage=DEATH;}
 
-
             }
 
 

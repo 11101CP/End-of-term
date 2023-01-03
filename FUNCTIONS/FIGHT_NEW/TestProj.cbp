@@ -109,9 +109,6 @@
 		<Unit filename="Game_misc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Game_playing.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

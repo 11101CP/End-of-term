@@ -4,32 +4,36 @@
 
 
 void stageBOSS (BOX ***box);
-void loadStage(STAGE *stage ,CONFIG *config);
+void loadStage(STAGE *stage ,CONFIG *config,int stageChoose);
 void loadBox  (BOX ***box,int x,int y,int unit);
 void buildBox (BOX ****box,int x,int y);
 
 
-bool gameSetUp(CONFIG *config,RESOURCE *res)
+bool gameSetUp(CONFIG *config,RESOURCE *res,int stageChoose)
 {
     STAGE stage;
-    loadStage(&stage,config);
+    stage.progess=0;
+
     //loadStageRes
 
     bool mode=true;
-    stageBOSS (stage.box);
 
+loadStage(&stage,config,stageChoose);
 
+while(1)
+{
     if (mode)
-        Fight(config,&stage,res);
-
+        if( Fight(config,&stage,res) ) //return true if end
+        break;
     else
-        Game(config,&stage,res);
+        break;
+}
 
     //destroyStageRes
     //destroyStage
 }
 
-void loadStage(STAGE *stage ,CONFIG *config)
+void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
 {
 
     //Åª¨ú .dat ±q config->stage
@@ -39,6 +43,9 @@ void loadStage(STAGE *stage ,CONFIG *config)
     stage->length=config->unit*9;
     buildBox(&stage->box,stage->boxNumX,stage->boxNumY);
     loadBox (stage->box,stage->boxNumX,stage->boxNumY,config->unit);
+    stage->progess=0;
+
+    stageBOSS (stage->box);
 
 }
 
