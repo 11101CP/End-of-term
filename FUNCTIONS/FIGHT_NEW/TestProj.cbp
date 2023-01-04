@@ -109,10 +109,12 @@
 		<Unit filename="Game_misc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="main.c">
+		<Unit filename="Game_playerEvent.h" />
+		<Unit filename="Loading_assets.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="temp.c">
+		<Unit filename="Loading_enum.h" />
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

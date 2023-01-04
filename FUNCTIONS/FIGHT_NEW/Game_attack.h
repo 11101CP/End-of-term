@@ -3,12 +3,11 @@
 
 typedef enum
 {
+
 HORIZON,
 VERTIC,
 POINT,
 AREA
-
-
 
 }ATTACKTYPE;
 

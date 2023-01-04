@@ -19,7 +19,13 @@ if(stage->box[chara->x][chara->y]->damage==HURT&&chara->vulnerable)
     chara->vulnerable=false;
 
     }
+
+    if (chara->life==0)
+
+
 }
+
+
 
 
 void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)

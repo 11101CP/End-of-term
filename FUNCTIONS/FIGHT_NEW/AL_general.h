@@ -16,16 +16,29 @@ void destroy_al(void);
 
 typedef struct
 {
+
 ALLEGRO_DISPLAY *display;
-ALLEGRO_BITMAP *background;
-ALLEGRO_BITMAP *belt;
-ALLEGRO_BITMAP *chara;
-ALLEGRO_BITMAP *death;
-ALLEGRO_FONT *font;
-ALLEGRO_BITMAP *saw;
-ALLEGRO_BITMAP *layer;
-ALLEGRO_BITMAP *life;
+ALLEGRO_EVENT_QUEUE *queues;
+
+
+ALLEGRO_BITMAP **bitmaps;
+ALLEGRO_FONT **fonts;
+ALLEGRO_SAMPLE **samples;
+ALLEGRO_TIMER **timers;
+
 }RESOURCE;
+
+typedef struct
+{
+int progress;
+
+}GAMEDATA;
+
+
+
+
+
+
 
 
 #endif // AL_GENERAL_H_

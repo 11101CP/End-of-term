@@ -2,7 +2,7 @@
 1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\al_general.c
 	"AL_general.h"
 
-1672721719 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\al_general.h
+1672849403 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\al_general.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<allegro5/allegro_audio.h>
@@ -326,7 +326,7 @@
 	<stdlib.h>
 	<stdbool.h>
 
-1672721983 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_load.c
+1672848451 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_load.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -336,52 +336,62 @@
 	"AL_general.h"
 	"Game_frame.h"
 
-1672721719 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.h
+1672834347 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.h
 	"AL_general.h"
 	"common.h"
 	"Game_attack.h"
 
-1672722225 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_draw.c
+1672847540 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+	"Loading_enum.h"
+
+1672833277 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1672715788 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_frame.c
-	"Common.h"
-	"AL_general.h"
-	"Game_frame.h"
-
-1672722012 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\main.c
+1672847935 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\main.c
 	"Common.h"
 	"AL_general.h"
 
 1672665871 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\temp.c
 	"Game_frame.h"
 
-1672668952 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_death.c
+1672847548 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_death.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
+	"Loading_enum.h"
 
-1672663997 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.h
+1672834669 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.h
 
 1672671702 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1672721983 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_boss.c
+1672849699 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_boss.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+	"Loading_enum.h"
+
+1672831109 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_chara.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1672722302 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_chara.c
+1672848451 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_misc.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1672682005 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_misc.c
-	"Common.h"
+1672849546 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\loading_enum.h
+
+1672850146 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\loading_assets.c
 	"AL_general.h"
 	"Game_frame.h"
+	"Loading_enum.h"
 

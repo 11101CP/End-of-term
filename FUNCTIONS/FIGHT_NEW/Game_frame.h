@@ -34,7 +34,7 @@ typedef struct
 int x;
 int y;
 int life;
-int point;
+uint32_t point;
 bool facingRight;
 bool vulnerable;
 int step;
@@ -76,7 +76,8 @@ CHARA *chara;
 
 
 
-
+/** Game_load **/
+void loadBossFightResource(RESOURCE *res);
 
 /** Game_playing.c **/
 bool Game (CONFIG *config,STAGE *stage,RESOURCE *res);
@@ -85,8 +86,9 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res);
 
 /** Game_frame.c **/
 void buildBox (BOX ****box,int x,int y);
-void loadBox  (BOX ***box,int x,int y,int unit);
 void freeBox (BOX ***box,int x,int y);
+void loadBox  (BOX ***box,int x,int y,int unit);
+
 void buildchara (CHARA* chara,int stage);
 
 /** Game_draw.c **/

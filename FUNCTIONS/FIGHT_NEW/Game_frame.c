@@ -14,23 +14,31 @@ bool gameSetUp(CONFIG *config,RESOURCE *res,int stageChoose)
     STAGE stage;
     stage.progess=0;
 
+
+
     //loadStageRes
 
     bool mode=true;
 
-loadStage(&stage,config,stageChoose);
+
+loadBossFightResource(res);
+loadAttack(&stage);
 
 while(1)
 {
+
+loadStage(&stage,config,stageChoose);
     if (mode)
         if( Fight(config,&stage,res) ) //return true if end
         break;
     else
         break;
+
+freeBox(stage.box,stage.boxNumX,stage.boxNumY);
 }
 
-    //destroyStageRes
-    //destroyStage
+//    destroyStageRes
+//    destroyStage
 }
 
 void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
@@ -89,3 +97,18 @@ void buildBox (BOX ****box,int x,int y)
 
     *box=row;
 }
+
+void freeBox (BOX ***box,int x,int y)
+{int i,j;
+    for (i=0;i<x;i++)
+    {
+        for(j=0;j<y;j++)
+        {
+        free(box[i][j]);
+        }
+        free(box[i]);
+    }
+    free(box);
+
+}
+

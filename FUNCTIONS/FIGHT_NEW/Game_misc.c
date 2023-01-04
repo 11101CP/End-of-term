@@ -24,9 +24,6 @@ for (x=0;x<stage->boxNumX;x++)
                 box[x][y]->damage=DEATH;}
 
             }
-
-
-
         if(box[x][y]->y<0)
             {
                 stage->box[x][y]->y=stage->box[x][y]->y+config->unit*81;
