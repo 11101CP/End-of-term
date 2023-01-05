@@ -21,24 +21,33 @@ bool gameSetUp(CONFIG *config,RESOURCE *res,int stageChoose)
     bool mode=true;
 
 
-loadBossFightResource(res);
+loadBossFightResource(res,config);
 loadAttack(&stage);
+
+
 
 while(1)
 {
 
 loadStage(&stage,config,stageChoose);
-    if (mode)
-        if( Fight(config,&stage,res) ) //return true if end
-        break;
-    else
-        break;
 
-freeBox(stage.box,stage.boxNumX,stage.boxNumY);
+
+
+Fight(config,&stage,res ); //return true if end
+
+clearStage(&stage);
+
+
+
 }
 
-//    destroyStageRes
-//    destroyStage
+}
+
+
+void clearStage(STAGE *stage)
+{
+    freeBox(stage->box,stage->boxNumX,stage->boxNumY);
+
 }
 
 void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
@@ -46,14 +55,20 @@ void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
 
     //Åª¨ú .dat ±q config->stage
 
+    stage->boxStartX = 40*config->unit;
+    stage->boxStartY = 4*config->unit ;
     stage->boxNumX=9;
     stage->boxNumY=9;
     stage->length=config->unit*9;
+
     buildBox(&stage->box,stage->boxNumX,stage->boxNumY);
     loadBox (stage->box,stage->boxNumX,stage->boxNumY,config->unit);
     stage->progess=0;
 
     stageBOSS (stage->box);
+
+
+    loadChara (stage);
 
 }
 
@@ -67,8 +82,6 @@ void loadBox  (BOX ***box,int x,int y,int unit) //stage 1
             box[i][j]->y= (4+9*j)*unit;
             //box[i][j]->state=DAMAGE;
         }
-
-
 
 }
 
@@ -109,6 +122,6 @@ void freeBox (BOX ***box,int x,int y)
         free(box[i]);
     }
     free(box);
-
+    *box=NULL;
 }
 

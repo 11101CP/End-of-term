@@ -20,6 +20,7 @@ typedef enum
 FPS,
 AttackTime,
 Refresh,
+Secend,
 BossTimerNumber
 
 } BOSS_TIMER;

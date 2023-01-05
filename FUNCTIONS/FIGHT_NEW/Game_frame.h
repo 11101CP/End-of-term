@@ -4,6 +4,7 @@
 #include "AL_general.h"
 #include "common.h"
 #include "Game_attack.h"
+#include "Game_playerEvent.h"
 
 
 typedef enum
@@ -22,7 +23,7 @@ typedef enum
 {
 CH_STAY,
 CH_MOVE,
-CH_ATTAK,
+CH_ATTACK,
 CH_HRUT,
 CH_WIN
 
@@ -68,16 +69,20 @@ int stage;
 int progess;
 BOX ***box;
 int length; //box edge
+
+int boxStartX;
+int boxStartY;
 int boxNumX;
 int boxNumY;
 AttackModule *attack;
 CHARA *chara;
+
 }STAGE;
 
 
 
 /** Game_load **/
-void loadBossFightResource(RESOURCE *res);
+void loadBossFightResource(RESOURCE *res,CONFIG *config);
 
 /** Game_playing.c **/
 bool Game (CONFIG *config,STAGE *stage,RESOURCE *res);
@@ -86,19 +91,23 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res);
 
 /** Game_frame.c **/
 void buildBox (BOX ****box,int x,int y);
-void freeBox (BOX ***box,int x,int y);
+void freeBox  (BOX ***box,int x,int y);
 void loadBox  (BOX ***box,int x,int y,int unit);
+void clearStage(STAGE *stage);
 
 void buildchara (CHARA* chara,int stage);
 
 /** Game_draw.c **/
-void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config);
+void drawChara (STAGE *stage,RESOURCE *res,CONFIG *config);
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config );
 void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config );
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config );
-void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
-void detectCharaDamage(CHARA *chara,STAGE *stage,CONFIG *config);
 void drawLifaIndicate (STAGE *stage,RESOURCE *res,CONFIG *config );
+
+/** Game_chara.c **/
+void controlChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
+void detectCharaDamage(STAGE *stage,RESOURCE *res);
+
 
 /** Game_death.c**/
 int death(RESOURCE* res,STAGE *stage ,CONFIG *config);

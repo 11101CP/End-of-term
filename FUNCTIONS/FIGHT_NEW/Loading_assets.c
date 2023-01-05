@@ -3,7 +3,7 @@
 #include "Loading_enum.h"
 
 
-void loadBossFightResource(RESOURCE *res)
+void loadBossFightResource(RESOURCE *res,CONFIG *config)
 {
 
     res->bitmaps=calloc(BossBitmapsNumber,sizeof(ALLEGRO_BITMAP*));
@@ -16,7 +16,7 @@ void loadBossFightResource(RESOURCE *res)
     res->bitmaps[Life]=al_load_bitmap("./assets/life.png");
 
     res->fonts=calloc(1,sizeof(ALLEGRO_FONT*));
-   // res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config.unit*15,0);
+    res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config->unit*15,0);
 
 
 
@@ -24,9 +24,10 @@ void loadBossFightResource(RESOURCE *res)
 
     res->timers=calloc(BossTimerNumber,sizeof(ALLEGRO_TIMER*));
     res->timers[FPS]=al_create_timer(1.0 /60);
-    res->timers[AttackTime] = al_create_timer(1.0/9 );//refresh
+    res->timers[AttackTime] = al_create_timer(1.0 );//refresh
     res->timers[Refresh]=al_create_timer(1.0/9);
 
+    res->user_src=calloc(1,sizeof(ALLEGRO_EVENT_SOURCE));
 
 
 }

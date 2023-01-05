@@ -20,11 +20,12 @@ typedef struct
 ALLEGRO_DISPLAY *display;
 ALLEGRO_EVENT_QUEUE *queues;
 
-
 ALLEGRO_BITMAP **bitmaps;
-ALLEGRO_FONT **fonts;
+ALLEGRO_FONT   **fonts;
 ALLEGRO_SAMPLE **samples;
-ALLEGRO_TIMER **timers;
+ALLEGRO_TIMER  **timers;
+
+ALLEGRO_EVENT_SOURCE *user_src;
 
 }RESOURCE;
 
