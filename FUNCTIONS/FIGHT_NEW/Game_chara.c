@@ -18,32 +18,34 @@ void charaOperate(STAGE *stage,CONFIG *config)
     else if (stage->chara->offsetY<0)
     stage->chara->offsetY+=config->unit;
 
-    switch(stage->chara->state)
+    if (stage->chara->offsetX==0&stage->chara->offsetY==0)
+        stage->chara->controllable=true;
+
+}
+
+void nextCharaFrame(CHARA *chara)
+{
+    switch(chara->state)
     {
     case CH_ATTACK:
-        if(++stage->chara->step==10)
+        if(++chara->step==10)
         {
-            stage->chara->step=0;
-            stage->chara->state=CH_STAY;
+            chara->step=0;
+            chara->state=CH_STAY;
         }
         break;
     case CH_STAY:
-        if(++stage->chara->step==14)
-            stage->chara->step=0;
+        if(++chara->step==14)
+            chara->step=0;
         break;
     case CH_MOVE:
-         if(++stage->chara->step==14)
+         if(++chara->step==14)
         {
-            stage->chara->step=0;
-            stage->chara->state=CH_STAY;
+            chara->step=0;
+            chara->state=CH_STAY;
         }
         break;
-
     }
-
-
-
-
 }
 
 void detectCharaDamage(STAGE *stage,RESOURCE *res)
@@ -56,8 +58,8 @@ void detectCharaDamage(STAGE *stage,RESOURCE *res)
         al_stop_timer(chara->timer);
        }
 
-    if(stage->box[chara->x][chara->y]->y<(stage->boxStartY+2*stage->length)||
-       stage->box[chara->x][chara->y]->y>(stage->boxStartY+7*stage->length))
+    if( stage->box[chara->x][chara->y]->y <= (stage->boxStartY+2*stage->length)||
+        stage->box[chara->x][chara->y]->y >= (stage->boxStartY+7*stage->length))
         chara->life=0;      //fatal saw
 
     if(stage->box[chara->x][chara->y]->damage==HURT&&chara->vulnerable)
@@ -67,52 +69,83 @@ void detectCharaDamage(STAGE *stage,RESOURCE *res)
         chara->vulnerable=false;
         }
 
-
-
 }
 
 
 void controlChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 {
     CHARA* chara =stage->chara;
+    int x=chara->x;
+    int y=chara->y;
+    int nextX;
+    int nextY;
+    int nextNextX;
+    int nextNextY;
+    int offsetX=0;
+    int offsetY=0;
 
-    if(chara->state==CH_STAY||chara->step>9) //only controllable when state is stay
+    if(chara->controllable)
+    {
     switch(keyboard->keycode)
     {
     case ALLEGRO_KEY_UP:
-        if (--chara->y<0)
-        chara->y=stage->boxNumY-1;
-        chara->state=CH_MOVE;
-        chara->offsetY=stage->length;
+        nextX=x;
+        nextY=y-1;
+        offsetY=stage->length;
         break;
     case ALLEGRO_KEY_DOWN:
-        if (++chara->y==stage->boxNumY)
-        chara->y=0;
-        chara->state=CH_MOVE;
-        chara->offsetY=-stage->length;
+        nextX=x;
+        nextY=y+1;
+        offsetY=-stage->length;
         break;
     case ALLEGRO_KEY_LEFT:
-
-        if(stage->box[chara->x-1][chara->y]->state==BOUNDARY)
-            return 0;
-        chara->x--;
+        nextX=x-1;
+        nextY=y;
         chara->facingRight=1;
-        chara->state=CH_MOVE;
-        chara->step=0;
-        chara->offsetX=stage->length;
+        offsetX=stage->length;
 
         break;
     case ALLEGRO_KEY_RIGHT:
-
-
-        if(stage->box[chara->x+1][chara->y]->state==BOUNDARY)
-            return 0;
-        chara->x++;
+        nextX=x+1;
+        nextY=y;
         chara->facingRight=0;
-        chara->state=CH_MOVE;
-        chara->offsetX=-stage->length;
-        break;
+        offsetX=-stage->length;
 
+        break;
     }
-    chara->step=0;
+
+    if(nextY<0)     //crossing shifted box
+        nextY=8;
+    else if(nextY>8)
+        nextY=0;
+
+    switch ( stage->box[nextX][nextY]->state )//decide movement
+    {
+        case EMPTY:         //move character
+            chara->x=nextX;
+            chara->y=nextY;
+            chara->state=CH_MOVE;
+            chara->step=0;
+            chara->offsetX=offsetX;
+            chara->offsetY=offsetY;
+            chara->controllable=false;
+            break;
+
+        case BOUNDARY:      //don't move
+            //do nothing
+
+            break;
+
+        case MONSTER:          //attack
+            chara->state=CH_ATTACK;
+            chara->step=0;
+            chara->controllable=false;
+
+
+            break;
+
+        }
+
+    } //end of if(chara->controllable)
+
 }

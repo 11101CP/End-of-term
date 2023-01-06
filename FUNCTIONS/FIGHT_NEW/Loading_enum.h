@@ -7,10 +7,11 @@ typedef enum
 Background,
 Belt,
 Chara,
-Death,
 Saw,
 Layer,
 Life,
+Death,
+Death1,
 BossBitmapsNumber
 
 } BOSS_BITMAPS;
@@ -20,7 +21,8 @@ typedef enum
 FPS,
 AttackTime,
 Refresh,
-Secend,
+Second,
+BeltSheft,
 BossTimerNumber
 
 } BOSS_TIMER;

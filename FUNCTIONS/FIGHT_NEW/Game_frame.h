@@ -7,16 +7,7 @@
 #include "Game_playerEvent.h"
 
 
-typedef enum
-{
 
-STATIONARY,
-MOVEABLE,
-BLOCK,
-BOUNDARY,
-CHARACTER
-
-}STATE;
 
 
 typedef enum
@@ -37,7 +28,8 @@ int y;
 int life;
 uint32_t point;
 bool facingRight;
-bool vulnerable;
+bool vulnerable;  // also used as an indicator of whether the character possesses the key
+bool controllable;
 int step;
 int offsetY;
 int offsetX;
@@ -48,23 +40,49 @@ ALLEGRO_TIMER *timer;
 
 typedef enum
 {
+
 NO,
 HURT,
 DEATH
 
 }DAMAGE;
 
+
+typedef enum
+{
+
+EMPTY=0,
+BLOCK,
+BOUNDARY,
+MONSTER,
+DOOR,
+EXIT
+
+}STATE; // barrier object
+
+typedef enum
+{
+
+KEY = 1,
+TRAP
+
+}ELEMENT; // reactive object
+
+
 typedef struct
 {
+
 int x;
 int y;
 STATE state;
-DAMAGE damage ;
+ELEMENT element;
+bool damage;
 
 }BOX;
 
 typedef struct
 {
+
 int stage;
 int progess;
 BOX ***box;
@@ -107,6 +125,7 @@ void drawLifaIndicate (STAGE *stage,RESOURCE *res,CONFIG *config );
 /** Game_chara.c **/
 void controlChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
 void detectCharaDamage(STAGE *stage,RESOURCE *res);
+void nextCharaFrame(CHARA *chara);
 
 
 /** Game_death.c**/

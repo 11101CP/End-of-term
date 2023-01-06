@@ -10,8 +10,8 @@ typedef struct MyCharaEvent
 
 enum
 {
-CharaDeath = ALLEGRO_GET_EVENT_TYPE('D', 'E', 'A', 'D'),
-DIE
+CharaDeath  = ALLEGRO_GET_EVENT_TYPE('D', 'E', 'A', 'D'),
+GameRestart = ALLEGRO_GET_EVENT_TYPE('R', 'E', 'S', 'T'),
 };
 
 

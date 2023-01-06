@@ -1,6 +1,7 @@
 #include "AL_general.h"
 #include "Game_frame.h"
 #include "Loading_enum.h"
+#include "common.h"
 
 
 void loadBossFightResource(RESOURCE *res,CONFIG *config)
@@ -10,10 +11,11 @@ void loadBossFightResource(RESOURCE *res,CONFIG *config)
     res->bitmaps[Background]=al_load_bitmap("./assets/freakinghigh.png");
     res->bitmaps[Belt]=al_load_bitmap("./assets/belt.png");
     res->bitmaps[Chara]=al_load_bitmap("./assets/duck.png");
-    res->bitmaps[Death]=al_load_bitmap("./assets/death.png");
     res->bitmaps[Saw]=al_load_bitmap("./assets/saw.png");
     res->bitmaps[Layer]=al_load_bitmap("./assets/layer.png");
     res->bitmaps[Life]=al_load_bitmap("./assets/life.png");
+    res->bitmaps[Death]=al_load_bitmap("./assets/death.png");
+    res->bitmaps[Death1]=al_load_bitmap("./assets/death1.png");
 
     res->fonts=calloc(1,sizeof(ALLEGRO_FONT*));
     res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config->unit*15,0);
@@ -24,8 +26,11 @@ void loadBossFightResource(RESOURCE *res,CONFIG *config)
 
     res->timers=calloc(BossTimerNumber,sizeof(ALLEGRO_TIMER*));
     res->timers[FPS]=al_create_timer(1.0 /60);
-    res->timers[AttackTime] = al_create_timer(1.0 );//refresh
-    res->timers[Refresh]=al_create_timer(1.0/9);
+    res->timers[AttackTime] = al_create_timer(1.0/3 );//refresh
+    res->timers[Refresh]=al_create_timer(1.0/24);
+    res->timers[Second]=al_create_timer(1.0);
+    res->timers[BeltSheft]=al_create_timer(1.0/9);
+
 
     res->user_src=calloc(1,sizeof(ALLEGRO_EVENT_SOURCE));
 

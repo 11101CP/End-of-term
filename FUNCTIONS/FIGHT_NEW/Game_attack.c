@@ -55,19 +55,19 @@ for (int i=0;i<4;i++)
 {
     if(now->type==HORIZON)
     {
-        if (now->step%3==2)
+        if (now->step%4==3)
     {
-    al_draw_line(box[1][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
+    al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=HURT;
     }
-    else if (now->step%3==1)
+    else if (now->step%4==1)
     {
-    al_draw_line(box[1][0]->x,box[0][now->y]->y+stage->length/2,box[8][0]->x,box[0][now->y]->y+stage->length/2,al_map_rgba(100,100,100,1),3*config->unit);
+    al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgba(150,10,10,1),3*config->unit);
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=NO;
     }
-    else
+    else if (now->step%4==0)
     {
 
         for(int y=0;y<9;y++)
@@ -86,19 +86,19 @@ for (int i=0;i<4;i++)
 
     if(now->type==VERTIC)
     {
-        if (now->step%3==2)
+        if (now->step%4==3)
     {
-    al_draw_line(box[now->x][0]->x+stage->length/2,box[0][0]->y,box[now->x][0]->x+stage->length/2,box[0][8]->y,al_map_rgb(255,255,255),3*config->unit);
+    al_draw_line(box[now->x][0]->x+stage->length/2,0,box[now->x][0]->x+stage->length/2,90*config->unit,al_map_rgb(255,255,255),3*config->unit);
     for(int y=0;y<9;y++)
     box[now->x][y]->damage=HURT;
     }
-    else if (now->step%3==1)
+    else if (now->step%4==1)
     {
-    al_draw_line(box[now->x][0]->x+stage->length/2,box[0][0]->y,box[now->x][0]->x+stage->length/2,box[0][8]->y,al_map_rgba(100,100,100,1),3*config->unit);
+    al_draw_line(box[now->x][0]->x+stage->length/2,0,box[now->x][0]->x+stage->length/2,90*config->unit,al_map_rgba(150,10,10,1),3*config->unit);
     for(int y=0;y<9;y++)
     box[now->x][y]->damage=NO;
     }
-    else
+    else if(now->step%4==0)
     {
     for(int y=0;y<9;y++)
     box[now->x][y]->damage=NO;
@@ -114,17 +114,17 @@ for (int i=0;i<4;i++)
     }
      if(now->type==POINT)
      {
-          if (now->step%3==2)
+          if (now->step%4==3)
     {
     al_draw_filled_circle(box[now->x][now->y]->x+stage->length/2,box[now->x][now->y]->y+stage->length/2,config->unit*3,al_map_rgb(255,255,255));
     box[now->x][now->y]->damage=HURT;
     }
-    else if (now->step%3==1)
+    else if (now->step%4==1)
     {
-    al_draw_filled_circle(box[now->x][now->y]->x+stage->length/2,box[now->x][now->y]->y+stage->length/2,config->unit*3,al_map_rgba(100,100,100,1));
+    al_draw_filled_circle(box[now->x][now->y]->x+stage->length/2,box[now->x][now->y]->y+stage->length/2,config->unit*3,al_map_rgba(150,10,10,1));
     box[now->x][now->y]->damage=NO;
     }
-    else
+    else if (now->step%4==0)
     {
 
         box[now->x][now->y]->damage=NO;
