@@ -17,37 +17,165 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
     switch(keyboard->keycode)
     {
     case ALLEGRO_KEY_UP:
-        if (--chara->y<0)
-        chara->y=stage->boxNumY-1;
-        else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
-        chara->y++;
-        chara->state=CH_MOVE;
+        if(stage->box[chara->x][chara->y-1]->state)
+        switch(stage->box[chara->x][chara->y-1]->state)
+        {
+        case BOUNDARY:
+        return 0;
         break;
-    case ALLEGRO_KEY_DOWN:
-        if (++chara->y==stage->boxNumY)
-        chara->y=0;
-        else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
+        case MONSTER:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_UP:
+                if(stage->box[chara->x][chara->y-2]->state==EMPTY)
+                {
+                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 stage->box[chara->x][chara->y-2]->state=MONSTER;
+                }
+                else
+                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 return 0;
+                break;
+        }
+        break;
+        case BLOCK:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_UP:
+                if(stage->box[chara->x][chara->y-2]->state==EMPTY)
+                {
+                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 stage->box[chara->x][chara->y-2]->state=BLOCK;
+                }
+                else if(stage->box[chara->x][chara->y-2]->state)
+                 return 0;
+                else
+                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 return 0;
+                break;
+        }
+        }
         chara->y--;
         chara->state=CH_MOVE;
+        chara->step=0;
+        break;/******************************/
+    case ALLEGRO_KEY_DOWN:
+        if(stage->box[chara->x][chara->y+1]->state)
+        switch(stage->box[chara->x][chara->y+1]->state)
+        {
+        case BOUNDARY:
+        return 0;
         break;
+        case MONSTER:
+                if(stage->box[chara->x][chara->y+2]->state==EMPTY)
+                {
+                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 stage->box[chara->x][chara->y+2]->state=MONSTER;
+                }
+                else
+                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 return 0;
+                break;
+        case BLOCK:
+                if(stage->box[chara->x][chara->y+2]->state==EMPTY)
+                {
+                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 stage->box[chara->x][chara->y+2]->state=BLOCK;
+                }
+                else if(stage->box[chara->x][chara->y+2]->state)
+                 return 0;
+                else
+                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 return 0;
+                break;
+        }
+        chara->y++;
+        chara->state=CH_MOVE;
+        chara->step=0;
+        break;/******************************/
     case ALLEGRO_KEY_LEFT:
-        if (--chara->x<0)
-        chara->x=stage->boxNumX-1;
-        else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
-        chara->x++;
+        if(stage->box[chara->x-1][chara->y]->state)
+            switch(stage->box[chara->x-1][chara->y]->state)
+            {
+            case BOUNDARY:
+                return 0;
+                break;
+            case MONSTER:
+                if(stage->box[chara->x-2][chara->y]->state==EMPTY)
+                {
+                    stage->box[chara->x-1][chara->y]->state=EMPTY;
+                    stage->box[chara->x-2][chara->y]->state=MONSTER;
+                }
+                else
+                    stage->box[chara->x-1][chara->y]->state=EMPTY;
+                return 0;
+                break;
+            case BLOCK:
+                switch(keyboard->keycode)
+                {
+                case ALLEGRO_KEY_LEFT:
+                    if(stage->box[chara->x-2][chara->y]->state==EMPTY)
+                    {
+                    stage->box[chara->x-1][chara->y]->state=EMPTY;
+                    stage->box[chara->x-2][chara->y]->state=BLOCK;
+                    }
+                    else if(stage->box[chara->x-2][chara->y]->state)
+                        return 0;
+                    else
+                        //stage->box[chara->x-1][chara->y]->state=EMPTY;
+                    return 0;
+                    break;
+            }
+        }
+        chara->x--;
         chara->facingRight=1;
         chara->state=CH_MOVE;
-
-        break;
+        chara->step=0;
+        break;/******************************/
     case ALLEGRO_KEY_RIGHT:
-        if (++chara->x==stage->boxNumX)
-        chara->x=0;
-        else if(stage->box[chara->x][chara->y]->state==BOUNDARY)
-        chara->x--;
+        if(stage->box[chara->x+1][chara->y]->state)
+        switch(stage->box[chara->x+1][chara->y]->state)
+        {
+    case BOUNDARY:
+        return 0;
+        break;
+    case MONSTER:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_RIGHT:
+                if(stage->box[chara->x+2][chara->y]->state==EMPTY)
+                {
+                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 stage->box[chara->x+2][chara->y]->state=MONSTER;
+                }
+                else
+                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 return 0;
+                break;
+        }
+        break;
+    case BLOCK:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_RIGHT:
+                if(stage->box[chara->x+2][chara->y]->state==EMPTY)
+                {
+                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 stage->box[chara->x+2][chara->y]->state=BLOCK;
+                }
+                else if(stage->box[chara->x+2][chara->y]->state)
+                 return 0;
+                else
+                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 return 0;
+                break;
+        }
+        }
+        chara->x++;
         chara->facingRight=0;
         chara->state=CH_MOVE;
+        chara->step=0;
         break;
-
     }
 }
 
@@ -59,6 +187,7 @@ void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config)
 al_draw_scaled_bitmap(res->chara,180*chara->step,0,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
                       stage->length,stage->length,chara->facingRight);
 }
+
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 {BOX*** box=stage->box;
     int x,y;
@@ -85,8 +214,15 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
 for (x=0;x<stage->boxNumX;x++)
     for(y=0;y<stage->boxNumY;y++)
     {
-        if(box[x][y]->damage==HURT)
-            al_draw_scaled_bitmap(res->trap,0,0,1000,1000,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
+        switch(box[x][y]->element)
+        {
+            case KEY:
+                al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgb(255,215,0));
+                break;
+            case TRAP:
+                al_draw_scaled_bitmap(res->trap,0,0,1000,1000,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
+                break;
+    }
         switch(box[x][y]->state)
         {
             case BOUNDARY:
@@ -98,21 +234,18 @@ for (x=0;x<stage->boxNumX;x++)
             case MONSTER:
                 al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgba(255,0,0,5));
                 break;
+            case EXIT:
+                al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgb(255,255,255));
+                break;
             case DOOR:
                 al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgba(0,105,255,5));
                 break;
-            case KEY:
-                al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgb(255,215,0));
-                break;
-            case EXIT:
-                al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgb(255,255,255));
-
-
         }
-    }
 
 
 
+
+}
 }
 
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config )

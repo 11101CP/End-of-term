@@ -8,17 +8,23 @@
 typedef enum
 {
 
+EMPTY=0,
 BLOCK,
 BOUNDARY,
-CHARACTER,
-KEY,
-DOOR,
 MONSTER,
-TRAP,
-EMPTY,
+DOOR,
 EXIT
 
 }STATE;
+
+typedef enum
+{
+
+KEY=1,
+
+TRAP
+
+}ELEMENT;
 
 
 typedef enum
@@ -41,8 +47,10 @@ CHARA_STATE state;
 int point;
 bool facingRight;
 int step;
+bool vulnerable; // also used as an indicator of whether possesses the key.
 
 }CHARA;
+
 typedef enum
 {
 NO,
@@ -56,6 +64,7 @@ typedef struct
 int x;
 int y;
 STATE state;
+ELEMENT element;
 DAMAGE damage ;
 }BOX;
 

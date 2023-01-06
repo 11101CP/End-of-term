@@ -12,8 +12,8 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     bool exit=false;
     bool shift=true;
     CHARA chara;
-    chara.x=6;/**start**/
-    chara.y=1;
+    chara.x=1;/**start**/
+    chara.y=5;
     chara.facingRight=0;
     chara.step=0;
 

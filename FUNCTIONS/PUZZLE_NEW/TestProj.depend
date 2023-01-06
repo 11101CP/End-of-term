@@ -709,3 +709,105 @@
 1672652503 source:c:\users\user\desktop\school shit\hongan\final-allegro\0102pico\end-of-term\functions\fight_new\temp.c
 	"Game_frame.h"
 
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\al_general.c
+	"AL_general.h"
+
+1672647423 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1672653620 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\bossfight.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672640941 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672650345 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\game_frame.h
+	"AL_general.h"
+	"common.h"
+
+1672650345 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672653620 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\game_frame.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\game_load.c
+
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\game_playing.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672647423 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\main.c
+	"Common.h"
+	"AL_general.h"
+
+1672652503 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term\functions\puzzle_new\temp.c
+	"Game_frame.h"
+
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\al_general.c
+	"AL_general.h"
+
+1672647423 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1673016269 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\bossfight.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672640941 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1673015709 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.h
+	"AL_general.h"
+	"common.h"
+
+1673016339 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1673016269 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_load.c
+
+1672640941 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_playing.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672647423 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\main.c
+	"Common.h"
+	"AL_general.h"
+
+1673013509 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\temp.c
+	"Game_frame.h"
+

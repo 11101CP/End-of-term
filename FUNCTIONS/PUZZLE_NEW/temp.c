@@ -90,12 +90,12 @@ void stage2(BOX ***box)
     for(x=5;x<8;x++)
         box[x][3]->state=BLOCK;
     box[5][6]->state=EXIT;
-    box[2][3]->damage=HURT;
-    box[4][2]->damage=HURT;
-    box[5][2]->damage=HURT;
-    box[5][3]->damage=HURT;
-    box[6][3]->damage=HURT;
-    box[6][4]->damage=HURT;
+    box[2][3]->element=TRAP;
+    box[4][2]->element=TRAP;
+    box[5][2]->element=TRAP;
+    box[5][3]->element=TRAP;
+    box[6][3]->element=TRAP;
+    box[6][4]->element=TRAP;
 
 }
 void stage3(BOX ***box)
@@ -129,18 +129,18 @@ void stage3(BOX ***box)
     box[4][6]->state=BOUNDARY;
     box[6][4]->state=BOUNDARY;
     box[6][6]->state=BOUNDARY;
-    box[3][4]->damage=HURT;
-    box[4][3]->damage=HURT;
-    box[5][3]->damage=HURT;
-    box[5][4]->damage=HURT;
-    box[3][6]->damage=HURT;
-    box[5][6]->damage=HURT;
-    box[6][5]->damage=HURT;
-    box[7][5]->damage=HURT;
+    box[3][4]->element=TRAP;
+    box[4][3]->element=TRAP;
+    box[5][3]->element=TRAP;
+    box[5][4]->element=TRAP;
+    box[3][6]->element=TRAP;
+    box[5][6]->element=TRAP;
+    box[6][5]->element=TRAP;
+    box[7][5]->element=TRAP;
     box[5][5]->state=MONSTER;
     box[6][7]->state=MONSTER;
-    box[7][2]->state=DOOR;
-    box[1][6]->state=KEY;
+    box[7][2]->element=DOOR;
+    box[1][6]->element=KEY;
     box[4][1]->state=EXIT;
 
 }
@@ -178,10 +178,10 @@ void stage4(BOX ***box)
     box[6][3]->state=BLOCK;
     box[6][4]->state=BLOCK;
     box[7][4]->state=BLOCK;
-    box[3][2]->damage=HURT;
-    box[4][2]->damage=HURT;
-    box[3][1]->state=KEY;
-    box[6][2]->state=DOOR;
+    box[3][2]->element=TRAP;
+    box[4][2]->element=TRAP;
+    box[3][1]->element=KEY;
+    box[6][2]->element=DOOR;
     box[8][3]->state=EXIT;
 }
 void stage9(BOX ***box)
@@ -235,7 +235,7 @@ void stage9(BOX ***box)
     box[7][6]->state=BLOCK;
     box[7][7]->state=BLOCK;
     box[8][6]->state=BLOCK;
-    box[9][5]->state=KEY;
-    box[5][3]->state=DOOR;
+    box[9][5]->element=KEY;
+    box[5][3]->element=DOOR;
     box[5][1]->state=EXIT;
 }

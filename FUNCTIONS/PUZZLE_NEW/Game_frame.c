@@ -15,9 +15,9 @@ bool gameSetUp(CONFIG *config,RESOURCE *res)
     //loadStageRes
 
     bool mode=true;
-    //stageBOSS (stage.box);
-    stage1(stage.box);/**start (6,1) stage 9x8**/
-    //stage2(stage.box);/**start (1,5) stage 9x8**/
+    //stageBOSS (stage.box);/**start(4,4) stage9x9**/
+    //stage1(stage.box);/**start (6,1) stage 9x8**/
+    stage2(stage.box);/**start (1,5) stage 9x8**/
     //stage3(stage.box);/**start (8,3) stage 10x10**/
     //stage4(stage.box);/**start (1,1) stage 10x7**/
     //stage9(stage.box);/**start (2,7) stage 11x9**/
