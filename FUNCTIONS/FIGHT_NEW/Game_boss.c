@@ -13,14 +13,17 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     int unit=config->unit;
     bool exit=false;
 
+    puts("\ncheck1");
 
     ALLEGRO_EVENT events;
 
+    puts("check2");
     al_init_user_event_source(res->user_src);
-
-
+    puts("check3");
 
     res->queues=al_create_event_queue();
+
+    puts("check4");
 
     al_register_event_source(res->queues, al_get_keyboard_event_source());
 
@@ -28,10 +31,10 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     al_register_event_source(res->queues, al_get_timer_event_source(res->timers[FPS]));
     al_register_event_source(res->queues, al_get_timer_event_source(res->timers[Refresh]));
     al_register_event_source(res->queues, al_get_timer_event_source(res->timers[AttackTime]));
-   // al_register_event_source(res->queues, al_get_display_event_source(res->display));
+    al_register_event_source(res->queues, al_get_display_event_source(res->display));
     al_register_event_source(res->queues, res->user_src);
 
-
+    puts("check5");
     al_start_timer(res->timers[FPS]);
     al_start_timer(res->timers[Refresh]);
 
@@ -117,22 +120,19 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
                     case CharaDeath:
 
+                        al_destroy_user_event_source(res->user_src);
                         al_destroy_event_queue(res->queues);
-                        al_destroy_timer(res->timers[0]);
-                        al_destroy_timer(res->timers[1]);
-                        al_destroy_timer(res->timers[2]);
-                        al_destroy_timer(res->timers[3]);
+                        for (i=0;i<3;i++)
+                        {
+                        al_stop_timer(res->timers[i]);
+                        al_set_timer_count(res->timers[i],0);
+                        }
+
 
                         death(res,stage ,config);
 
-
-                        al_rest(2);
-
                         al_stop_timer(stage->chara->timer);
 
-                        freeBox(stage->box,9,9);
-
-                        printf("%x",stage->box);
 
                         return 0;
 

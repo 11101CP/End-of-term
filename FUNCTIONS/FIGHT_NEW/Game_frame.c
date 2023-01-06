@@ -22,7 +22,7 @@ bool gameSetUp(CONFIG *config,RESOURCE *res,int stageChoose)
 
 
 loadBossFightResource(res,config);
-loadAttack(&stage);
+
 
 
 
@@ -32,21 +32,29 @@ while(1)
 loadStage(&stage,config,stageChoose);
 
 
-
 Fight(config,&stage,res ); //return true if end
-
 clearStage(&stage);
 
-
-
 }
+destroyBossFightResource(res);
 
 }
 
 
 void clearStage(STAGE *stage)
 {
+
+
     freeBox(stage->box,stage->boxNumX,stage->boxNumY);
+    stage->box=NULL;
+    clearAttack(stage);
+    stage->attack=NULL;
+    printf("here");
+
+    stage->boxNumX=0;
+    stage->boxStartX=0;
+    stage->boxStartY=0;
+    stage->length=0;
 
 }
 
@@ -66,8 +74,7 @@ void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
     stage->progess=0;
 
     stageBOSS (stage->box);
-
-
+    loadAttack(stage);
     loadChara (stage);
 
 }

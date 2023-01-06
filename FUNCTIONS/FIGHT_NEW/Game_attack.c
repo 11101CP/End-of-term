@@ -19,6 +19,21 @@ now->type=VERTIC;
 
 }
 
+void clearAttack(STAGE *stage)
+{
+AttackModule *now =stage->attack;
+AttackModule *next;
+
+for (;now!=NULL;now=next)
+{
+    next=now->next;
+    free(now);
+}
+
+
+
+}
+
 void addAttack(STAGE *stage)
 {
 AttackModule *now =stage->attack;
