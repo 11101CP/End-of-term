@@ -77,4 +77,5 @@ void LoadDrawResource(RESOURCE *res,CONFIG *config)
     res->bitmaps[PressedExit]=al_load_bitmap("././assets/PressedExit.png");
     res->bitmaps[Arrow]=al_load_bitmap("././assets/Arrow.png");
     res->bitmaps[Skeleton]=al_load_bitmap("././assets/Skeleton.png");
+    res->bitmaps[CrackedEgg]=al_load_bitmap("././assets/CrackedEgg.png");
 }

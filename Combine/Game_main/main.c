@@ -11,13 +11,25 @@ int main()
     if( ! configUI(&config,&res) )
         return 0;
 
-    if(config.fullscreen)
-        al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
-        res.display=al_create_display(160*config.unit,90*config.unit);
+        if(config.fullscreen)
+        {
+            al_set_new_display_flags(ALLEGRO_WINDOWED);
+            al_set_new_display_flags(ALLEGRO_RESIZABLE);
+            res.display=al_create_display(160*config.unit,90*config.unit);
+            al_set_display_flag(res.display, ALLEGRO_FRAMELESS, true);
+            al_set_display_flag(res.display, ALLEGRO_MAXIMIZED, true);
+        }
+    else res.display=al_create_display(160*config.unit,90*config.unit);
 
     //res.font=al_load_font("./assets/SoukouMincho.ttf",config.unit*15,0);
 
-    Windows(&res,&config);
+    while(1)
+    {
+       if( Windows(&res,&config))
+            StageDetect(&res,&config);
+       else break;
+    }
+
 
 
 //    gameSetUp(&config,&res,10); //stage boss 1

@@ -36,6 +36,7 @@ ExitButton,
 PressedExit,
 Arrow,
 Skeleton,
+CrackedEgg,
 InterfaceNumber
 }INTERFACE_BITMAP;
 

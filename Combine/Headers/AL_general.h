@@ -35,11 +35,12 @@ int progress;
 
 }GAMEDATA;
 void drawMenu( RESOURCE *res, CONFIG *config,unsigned short control);
-void drawStageMenu( RESOURCE *res, CONFIG *config);
+void drawStageMenu( RESOURCE *res, CONFIG *config,unsigned short control);
 void drawSettingPage(RESOURCE *res, CONFIG *config,unsigned short control);
 bool Windows(RESOURCE *res,CONFIG *config);
 void Input(RESOURCE *res,CONFIG *config);
 void Rank(CONFIG *config);
+int SettingDetect(RESOURCE *res, CONFIG *config);
 
 
 
