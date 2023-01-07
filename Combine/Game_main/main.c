@@ -27,6 +27,8 @@ int main()
     {
        if( Windows(&res,&config))
             StageDetect(&res,&config);
+            if(0==StageDetect(&res,&config))
+                SettingDetect(&res,&config);
        else break;
     }
 

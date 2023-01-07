@@ -66,8 +66,9 @@ void destroyBossFightResource(RESOURCE *res)
 void LoadDrawResource(RESOURCE *res,CONFIG *config)
 {
     res->bitmaps=calloc(InterfaceNumber,sizeof(ALLEGRO_BITMAP*));
-    res->fonts=calloc(1,sizeof(ALLEGRO_FONT*));
+    res->fonts=calloc(2,sizeof(ALLEGRO_FONT*));
     res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config->unit*15,0);
+    res->fonts[1]=al_load_font("./assets/SoukouMincho.ttf",config->unit*6,0);
     res->bitmaps[Cover]=al_load_bitmap("./assets/cover.png");
     res->bitmaps[Egg]=al_load_bitmap("./assets/egg.png");
     res->bitmaps[BreakEgg]=al_load_bitmap("./assets/breakedegg.png");

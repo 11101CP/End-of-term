@@ -530,10 +530,10 @@
 	"Common.h"
 	"Loading_enum.h"
 
-1672992769 source:c:\users\lidinglun\desktop\sexybanana\combine\allegro_general\al_general.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\allegro_general\al_general.c
 	"AL_general.h"
 
-1673081457 c:\users\lidinglun\desktop\sexybanana\combine\headers\al_general.h
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\al_general.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<allegro5/allegro_audio.h>
@@ -544,69 +544,74 @@
 	<allegro5/allegro_primitives.h>
 	"Common.h"
 
-1673005849 c:\users\lidinglun\desktop\sexybanana\combine\headers\common.h
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\common.h
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 
-1673073351 source:c:\users\lidinglun\desktop\sexybanana\combine\game_main\main.c
+1673096746 source:c:\users\lidinglun\desktop\sexybanana\combine\game_main\main.c
 	"AL_general.h"
 	"config_struct.h"
 
-1673006243 c:\users\lidinglun\desktop\sexybanana\combine\headers\config_struct.h
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\config_struct.h
 	"AL_general.h"
 	"common.h"
 	"GUI_general.h"
 
-1672992769 c:\users\lidinglun\desktop\sexybanana\combine\headers\gui_general.h
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\gui_general.h
 	"AL_general.h"
 	"common.h"
 
-1673006304 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_build.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_build.c
 	"config_struct.h"
 	"GUI_general.h"
 	"AL_general.h"
 
-1673006243 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_draw.c
-	"AL_general.h"
-	"config_struct.h"
-	"GUI_general.h"
-	"Common.h"
-
-1673006405 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_window.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_draw.c
 	"AL_general.h"
 	"config_struct.h"
 	"GUI_general.h"
 	"Common.h"
 
-1672992769 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_general.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_general.c
 	"AL_general.h"
 	"GUI_general.h"
 	"Common.h"
 
-1672992769 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_mouse.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_mouse.c
 	"AL_general.h"
 	"GUI_general.h"
 
-1673007134 source:c:\users\lidinglun\desktop\sexybanana\combine\input.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\input.c
 	"Common.h"
 	"AL_general.h"
 	<stdio.h>
 	<time.h>
 
-1673076191 source:c:\users\lidinglun\desktop\sexybanana\combine\loading\loading_assets.c
+1673102971 source:c:\users\lidinglun\desktop\sexybanana\combine\loading\loading_assets.c
 	"AL_general.h"
 	"Loading_enum.h"
 	"Common.h"
 
-1673076094 c:\users\lidinglun\desktop\sexybanana\combine\headers\loading_enum.h
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\loading_enum.h
 
-1673007180 source:c:\users\lidinglun\desktop\sexybanana\combine\rank.c
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\rank.c
 	"Common.h"
 	"AL_general.h"
 
-1673007258 source:c:\users\lidinglun\desktop\sexybanana\combine\timer.c
+1673093911 source:c:\users\lidinglun\desktop\sexybanana\combine\timer.c
 	"AL_general.h"
 	<stdio.h>
 	<time.h>
+
+1673103053 source:c:\users\lidinglun\desktop\sexybanana\combine\aldraw.c
+	"AL_general.h"
+	"Common.h"
+	"Loading_enum.h"
 
