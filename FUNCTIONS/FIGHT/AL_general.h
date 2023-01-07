@@ -11,8 +11,18 @@
 #include <allegro5/allegro_primitives.h>
 
 
+typedef struct
+{
+ALLEGRO_DISPLAY *display;
+
+
+
+}RESOURCE;
+
 void install_al(void);
 void destroy_al(void);
+
+
 
 
 #endif // AL_GENERAL_H_

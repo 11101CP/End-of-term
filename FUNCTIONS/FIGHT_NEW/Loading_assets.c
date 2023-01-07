@@ -16,6 +16,9 @@ void loadBossFightResource(RESOURCE *res,CONFIG *config)
     res->bitmaps[Life]=al_load_bitmap("./assets/life.png");
     res->bitmaps[Death]=al_load_bitmap("./assets/death.png");
     res->bitmaps[Death1]=al_load_bitmap("./assets/death1.png");
+    res->bitmaps[Target]=al_load_bitmap("./assets/lever.png");
+    res->bitmaps[Effect]=al_load_bitmap("./assets/effect.png");
+
 
     res->fonts=calloc(1,sizeof(ALLEGRO_FONT*));
     res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config->unit*15,0);

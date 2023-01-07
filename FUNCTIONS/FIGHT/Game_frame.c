@@ -1,8 +1,8 @@
 #include "Common.h"
 #include "AL_general.h"
-#include "GAME_frame.h"
+#include "Game_frame.h"
 
-void stageBOOS (BOX ***box);
+void stageBoss (BOX ***box);
 bool Game(CONFIG *config)
 {
     bool shift=true;
@@ -41,11 +41,11 @@ bool Game(CONFIG *config)
     while(1)
     {
         al_clear_to_color(al_map_rgb(250,250,250));
-        al_draw_filled_rectangle(box[0][0]->x,box[0][0]->y,box[8][8]->x+9*unit,box[8][8]->y+9*unit,al_map_rgb(50,50,50));
+        al_draw_filled_rectangle(40*unit ,0,120*unit,unit*90,al_map_rgb(50,50,50));
 
         //al_wait_for_event(event_queue, &events);
 
-        al_rest(0.1);
+        al_rest(0.2);
         for (int x=0;x<9;x++)
             for(int y=0;y<9;y++)
                {
@@ -62,22 +62,51 @@ bool Game(CONFIG *config)
                 if (box[x][y]->y<=4*unit)
                     {//box->temp=
                         box[x][y]->y=76*unit;
-                        int temp;
+
                         int dy=y+1;
                         if (dy==9)
                             dy=0;
-                        temp= box[x][y]->state;
-                        box[x][y]->state=box[x][dy]->state;
-                        box[x][dy]->state=temp;
-                        dy=y-8;
-                        if (dy<0)
-                            dy=8+dy;
-                        int dy1=dy-1;
-                        if (dy1<0)
-                            dy1=8;
-                        temp= box[x][dy]->state;
-                        box[x][dy]->state=box[x][dy1]->state;
-                        box[x][dy1]->state=temp;
+
+                        dy=dy+1;
+                        if (dy==9)
+                            dy=0;
+                            box[x][dy]->state=BLOCK;
+                            dy=dy+1;
+                            if (dy==9)
+                            dy=0;
+                            dy=dy+1;
+                            if (dy==9)
+                            dy=0;
+
+                            dy=dy+1;
+                            if (dy==9)
+                            dy=0;
+
+                            dy=dy+1;
+                            if (dy==9)
+                            dy=0;
+                            dy=dy+1;
+                            if (dy==9)
+                            dy=0;
+                        box[x][dy]->state=1;
+//
+//                        int temp;
+//                        int dy=y+1;
+//                        if (dy==9)
+//                            dy=0;
+//                        temp= box[x][y]->state;
+//                        box[x][y]->state=box[x][dy]->state;
+//                        box[x][dy]->state=temp;
+//
+//                        dy=y+4;
+//                        if (dy=9)
+//                            dy=0;
+//                        int dy1=dy+1;
+//                        if (dy1=9)
+//                            dy1=0;
+//                        temp= box[x][dy]->state;
+//                        box[x][dy]->state=box[x][dy1]->state;
+//                        box[x][dy1]->state=temp;
 
                     }
 
@@ -98,8 +127,7 @@ bool Game(CONFIG *config)
                 break;
             case ALLEGRO_EVENT_KEY_CHAR:
 
-            char c = events.keyboard.unichar;
-            printf("¦r²Å¡G%d\n", c);
+
 
             }
 
@@ -108,10 +136,10 @@ bool Game(CONFIG *config)
 
 
 
-    al_draw_filled_rectangle(0,0,160*unit,13*unit,al_map_rgb(0,0,0));
-    al_draw_filled_rectangle(0,76*unit,160*unit,90*unit,al_map_rgb(0,0,0));
+   // al_draw_filled_rectangle(0,0,160*unit,13*unit,al_map_rgb(0,0,0));
+    //al_draw_filled_rectangle(0,76*unit,160*unit,90*unit,al_map_rgb(0,0,0));
     al_flip_display();
-    system("pause");
+
 
     }
 

@@ -6,7 +6,8 @@
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 {
     BOX*** box=stage->box;
-    al_draw_scaled_bitmap(res->bitmaps[Background],0,0,1649,940,0,0,160*config->unit,90*config->unit,0);
+
+    al_draw_scaled_bitmap(res->bitmaps[Background],0,0,1649,940,0,0,(160*config->unit),(90*config->unit),0);
 
     al_draw_scaled_bitmap(res->bitmaps[Belt],0,0,400,1125,stage->boxStartX+stage->length,stage->boxStartY-stage->length-config->unit*(al_get_timer_count(res->timers[BeltSheft])%9),stage->length*7,stage->length*12,0);
 
@@ -29,6 +30,9 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
     BOX*** box=stage->box;
     int x,y;
 
+if(stage->chara->state==CH_ATTACK)
+    al_draw_scaled_bitmap(res->bitmaps[Effect],208*stage->chara->step,0,208,208,box[stage->chara->x][stage->chara->y]->x-stage->length/2,
+                          box[stage->chara->x][stage->chara->y]->y,stage->length,stage->length,0);
 
 
 for (x=0;x<stage->boxNumX;x++)
@@ -43,8 +47,17 @@ for (x=0;x<stage->boxNumX;x++)
                 //al_draw_scaled_bitmap(res->background,0,0,1000,1000,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
         }
         }
+int flip=0;
+for (int i=0;i<2;i++)
+    {
+    if (stage->target[i].HP<=0)
+        flip=1;
+    x=stage->target[i].x;
+    y=stage->target[i].y;
 
-
+    if (stage->target[i].vulnerable)
+        al_draw_scaled_bitmap(res->bitmaps[Target],0,0,200,200,box[x][y]->x,box[x][y]->y,stage->length,stage->length,flip);
+    }
 }//end of draw object
 
 
@@ -84,6 +97,7 @@ if(!chara->vulnerable)
 else if(chara->state==CH_ATTACK)
 {
     al_draw_scaled_bitmap(res->bitmaps[Chara],180*chara->step,360,180,180,x+chara->offsetX,y+chara->offsetY,stage->length,stage->length,chara->facingRight);
+    if(!chara->vulnerable)
     al_draw_tinted_scaled_bitmap(res->bitmaps[Chara],al_map_rgba(100,0,0,100),180*chara->step,360,180,180,x+chara->offsetX,y+chara->offsetY,stage->length,stage->length,chara->facingRight);
 
 } //chara->state==CH_ATTACK

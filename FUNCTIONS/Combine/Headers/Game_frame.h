@@ -38,16 +38,6 @@ ALLEGRO_TIMER *timer;
 
 }CHARA;
 
-typedef struct
-{
-int x;
-int y;
-bool vulnerable;
-int HP;
-
-}AttackTarget;
-
-
 typedef enum
 {
 
@@ -103,12 +93,9 @@ int boxStartY;
 int boxNumX;
 int boxNumY;
 AttackModule *attack;
-AttackTarget *target;
 CHARA *chara;
 
-
 }STAGE;
-
 
 
 

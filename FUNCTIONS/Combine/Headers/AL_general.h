@@ -20,24 +20,25 @@ typedef struct
 ALLEGRO_DISPLAY *display;
 ALLEGRO_EVENT_QUEUE *queues;
 
-ALLEGRO_BITMAP  **bitmaps;
-ALLEGRO_FONT    **fonts;
-ALLEGRO_SAMPLE  **samples;
-ALLEGRO_TIMER   **timers;
+ALLEGRO_BITMAP **bitmaps;
+ALLEGRO_FONT   **fonts;
+ALLEGRO_SAMPLE **samples;
+ALLEGRO_TIMER  **timers;
+
+ALLEGRO_EVENT_SOURCE *user_src;
 
 }RESOURCE;
 
-typedef enum
+typedef struct
 {
-Background,
-Belt,
-Chara,
-Death,
-Saw,
-Layer,
-Life,
-BitmapsBoss
-} BITMAPS;
+int progress;
+
+}GAMEDATA;
+
+
+
+
+
 
 
 

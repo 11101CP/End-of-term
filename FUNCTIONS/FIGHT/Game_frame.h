@@ -52,7 +52,9 @@ int length; //box edge
 int boxNumX;
 int boxNumY;
 
-}stage;
+}STAGE;
+
+
 
 bool Game(CONFIG *config);
 void buildBox (BOX ****box,int x,int y);

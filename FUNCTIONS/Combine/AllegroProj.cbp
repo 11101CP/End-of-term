@@ -114,10 +114,6 @@
 			<Add directory="D:/AllegroLib_5.2.8/lib" />
 			<Add directory="C:/AllegroLib_5.2.8/lib" />
 		</Linker>
-		<Unit filename="AL_general.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="AL_general.h" />
 		<Unit filename="Allegro_general/AL_general.c">
 			<Option compilerVar="CC" />
 		</Unit>

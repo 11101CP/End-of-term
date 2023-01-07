@@ -10,12 +10,26 @@ void loadChara (STAGE *stage)
     stage->chara->facingRight=0;
     stage->chara->step=0;
     stage->chara->state=CH_STAY;
-    stage->chara->life=40;
+    stage->chara->life=4;
     stage->chara->timer=al_create_timer(1.5);
     stage->chara->vulnerable=true;
     stage->chara->offsetX=0;
     stage->chara->offsetY=0;
     stage->chara->controllable=true;
+
+    stage->target=calloc(2,sizeof(AttackTarget));
+
+    stage->target[0].HP =5;
+    stage->target[0].x  =0;
+    stage->target[0].y  =4;
+    stage->target[0].vulnerable=false;
+
+
+    stage->target[1].HP =5;
+    stage->target[1].x  =8;
+    stage->target[1].y  =4;
+    stage->target[1].vulnerable=false;
+
 }
 
 

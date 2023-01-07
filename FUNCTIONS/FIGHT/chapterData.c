@@ -3,6 +3,16 @@
 #include "AL_general.h"
 #include "GAME_frame.h"
 
+
+void setStage(STAGE *stage,CONFIG *config)
+{
+stage->boxNumX=9;
+stage->boxNumY=9;
+buildBox (&stage->box,stage->boxNumX,stage->boxNumY);
+loadBox  (stage->box,stage->boxNumX,stage->boxNumY, config->unit);
+
+}
+
 BOX*** loadStage (int chapter)
 {
 

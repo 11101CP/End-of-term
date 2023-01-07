@@ -433,3 +433,64 @@
 	"AL_general.h"
 	"GAME_frame.h"
 
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\al_general.c
+	"AL_general.h"
+
+1672558321 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1672557257 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\chapterdata.c
+	"Game_frame.h"
+	"Common.h"
+	"AL_general.h"
+	"GAME_frame.h"
+
+1672557713 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\game_frame.h
+	"common.h"
+
+1672559065 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"GAME_frame.h"
+
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\gamedata.c
+	"Common.h"
+	"AL_general.h"
+	"GAME_frame.h"
+
+1672564181 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\main.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\movecharacter.c
+	"Game_frame.h"
+	"Common.h"
+	"AL_general.h"
+	"GAME_frame.h"
+
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\stage1.c
+	"Game_frame.h"
+
+1672565748 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\game_frame.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672564157 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight\bossfight.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+

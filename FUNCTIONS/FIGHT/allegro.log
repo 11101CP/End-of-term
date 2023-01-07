@@ -1,207 +1,350 @@
-stdio    D         file_stdio.c:110  file_stdio_fopen                 [   0.00000] opening C:\Users\YU\Downloads\end-of-term\BranchPico\FUNCTIONS\FIGHT\bin\Debug\allegro5.cfg r
+stdio    D         file_stdio.c:110  file_stdio_fopen                 [   0.00000] opening C:\Users\YU\Downloads\End-of-term\BranchPicio\FUNCTIONS\FIGHT\bin\Debug\allegro5.cfg r
 system   D            wsystem.c:889  _al_win_safe_load_library        [   0.00000] PathFindOnPath found: C:\Windows\system32\shcore.dll
 system   D            wsystem.c:795  load_library_at_path             [   0.00000] Calling LoadLibrary C:\Windows\system32\shcore.dll
 system   I            wsystem.c:798  load_library_at_path             [   0.00000] Loaded C:\Windows\system32\shcore.dll
 system   I             system.c:271  al_install_system                [   0.00000] Allegro version: 5.2.8
-audio-dsound I           dsound.cpp:275  _dsound_open                     [   0.00033] Starting DirectSound...
-audio-dsound D           dsound.cpp:288  _dsound_open                     [   0.03389] DirectSoundCreate8 succeeded
-audio-dsound I           dsound.cpp:77   get_window                       [   0.03397] Using desktop window: 0000000000010010
-audio    I              audio.c:391  do_install_audio                 [   0.03416] Using DirectSound driver
-audio-dsound D           dsound.cpp:322  _dsound_allocate_voice           [   0.03431] Allocating voice
-audio-dsound D           dsound.cpp:381  _dsound_allocate_voice           [   0.03435] Allocated voice
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03438] added dtor for voice 00000232a214d610, func 00007fff69885312
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03442] added dtor for mixer 00000232a214d7b0, func 00007fff6988050f
-audio-dsound D           dsound.cpp:477  _dsound_start_voice              [   0.03446] Starting voice
-audio-dsound D           dsound.cpp:505  _dsound_start_voice              [   0.03449] CreateSoundBuffer
-audio-dsound D           dsound.cpp:513  _dsound_start_voice              [   0.03713] CreateSoundBuffer succeeded
-audio-dsound D           dsound.cpp:519  _dsound_start_voice              [   0.03720] Starting _dsound_update thread
-audio-dsound I           dsound.cpp:529  _dsound_start_voice              [   0.03731] Voice started
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03736] added dtor for sample_instance 00000232a214e0e0, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03741] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03744] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03747] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03750] added dtor for sample_instance 00000232a214e200, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03762] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03767] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03770] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03773] added dtor for sample_instance 00000232a214de00, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03776] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03779] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03782] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03785] added dtor for sample_instance 00000232a214df20, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03788] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03791] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03794] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03798] added dtor for sample_instance 00000232a214e620, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03801] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03810] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03813] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03816] added dtor for sample_instance 00000232a214e740, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03820] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03822] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03825] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03828] added dtor for sample_instance 00000232a214e860, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03831] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03834] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03836] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03839] added dtor for sample_instance 00000232a214e980, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03843] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03846] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03849] 
-dtor     D               dtor.c:196  _al_register_destructor          [   0.03852] added dtor for sample_instance 00000232a214ebb0, func 00007fff698790dc
-audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.03855] sample matrix:
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03858] 
-audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.03861] 
-system   D            wsystem.c:889  _al_win_safe_load_library        [   0.03905] PathFindOnPath found: C:\Windows\system32\d3d9.dll
-system   D            wsystem.c:795  load_library_at_path             [   0.03910] Calling LoadLibrary C:\Windows\system32\d3d9.dll
-system   I            wsystem.c:798  load_library_at_path             [   0.04613] Loaded C:\Windows\system32\d3d9.dll
-d3d      I         d3d_disp.cpp:679  d3d_init_display                 [   0.05514] Render-to-texture: 1
-d3d      I         d3d_disp.cpp:1780 d3d_create_display_locked        [   0.05626] faux_fullscreen=0
-d3d      D         d3d_disp.cpp:1781 d3d_create_display_locked        [   0.05635] al_display=00000232a3913410
-d3d      D         d3d_disp.cpp:1782 d3d_create_display_locked        [   0.05639] al_display->vt=00000232a39132a0
-d3d      I d3d_display_formats.cpp:144  _al_d3d_generate_display_format_list [   0.06044] found 64 format combinations
-display  D   display_settings.c:214  debug_display_settings           [   0.06062] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06071] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06078] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06085] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06091] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06098] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06104] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06110] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06116] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06123] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06131] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06139] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06145] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06151] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06157] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06163] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06169] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06176] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06182] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06189] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06195] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06202] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06208] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06214] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06219] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06222] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06225] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06229] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06232] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06235] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06239] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06244] Score is : 897
-display  D   display_settings.c:214  debug_display_settings           [   0.06248] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+audio-dsound I           dsound.cpp:275  _dsound_open                     [   0.00029] Starting DirectSound...
+audio-dsound D           dsound.cpp:288  _dsound_open                     [   0.03746] DirectSoundCreate8 succeeded
+audio-dsound I           dsound.cpp:77   get_window                       [   0.03754] Using desktop window: 0000000000010010
+audio    I              audio.c:391  do_install_audio                 [   0.03800] Using DirectSound driver
+audio-dsound D           dsound.cpp:322  _dsound_allocate_voice           [   0.03818] Allocating voice
+audio-dsound D           dsound.cpp:381  _dsound_allocate_voice           [   0.03823] Allocated voice
+dtor     D               dtor.c:196  _al_register_destructor          [   0.03828] added dtor for voice 000001e798ce3f20, func 00007fff769a5312
+dtor     D               dtor.c:196  _al_register_destructor          [   0.03833] added dtor for mixer 000001e7974adb70, func 00007fff769a050f
+audio-dsound D           dsound.cpp:477  _dsound_start_voice              [   0.03837] Starting voice
+audio-dsound D           dsound.cpp:505  _dsound_start_voice              [   0.03840] CreateSoundBuffer
+audio-dsound D           dsound.cpp:513  _dsound_start_voice              [   0.04238] CreateSoundBuffer succeeded
+audio-dsound D           dsound.cpp:519  _dsound_start_voice              [   0.04262] Starting _dsound_update thread
+audio-dsound I           dsound.cpp:529  _dsound_start_voice              [   0.04304] Voice started
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04325] added dtor for sample_instance 000001e7974ae090, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04339] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04358] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04365] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04376] added dtor for sample_instance 000001e7974ae1b0, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04395] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04409] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04417] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04426] added dtor for sample_instance 000001e7974addb0, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04434] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04440] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04447] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04454] added dtor for sample_instance 000001e7974aded0, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04461] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04467] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04473] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04480] added dtor for sample_instance 000001e7974ae5d0, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04488] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04505] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04508] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04511] added dtor for sample_instance 000001e7974ae6f0, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04514] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04519] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04524] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04530] added dtor for sample_instance 000001e7974ae810, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04542] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04545] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04548] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04551] added dtor for sample_instance 000001e7974ae930, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04554] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04557] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04559] 
+dtor     D               dtor.c:196  _al_register_destructor          [   0.04562] added dtor for sample_instance 000001e7974aeb60, func 00007fff769990dc
+audio    D          kcm_mixer.c:121  _al_rechannel_matrix             [   0.04565] sample matrix:
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04568] 
+audio    D          kcm_mixer.c:127  _al_rechannel_matrix             [   0.04571] 
+system   D            wsystem.c:889  _al_win_safe_load_library        [   0.04616] PathFindOnPath found: C:\Windows\system32\d3d9.dll
+system   D            wsystem.c:795  load_library_at_path             [   0.04622] Calling LoadLibrary C:\Windows\system32\d3d9.dll
+system   I            wsystem.c:798  load_library_at_path             [   0.04944] Loaded C:\Windows\system32\d3d9.dll
+d3d      I         d3d_disp.cpp:679  d3d_init_display                 [   0.05571] Render-to-texture: 1
+d3d      I         d3d_disp.cpp:1780 d3d_create_display_locked        [   0.05641] faux_fullscreen=0
+d3d      D         d3d_disp.cpp:1781 d3d_create_display_locked        [   0.05645] al_display=000001e798cf4380
+d3d      D         d3d_disp.cpp:1782 d3d_create_display_locked        [   0.05647] al_display->vt=000001e798cf4210
+d3d      I d3d_display_formats.cpp:144  _al_d3d_generate_display_format_list [   0.05812] found 64 format combinations
+display  D   display_settings.c:214  debug_display_settings           [   0.05821] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05826] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05829] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05833] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05836] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05839] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05842] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05845] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05848] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05851] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05861] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05873] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05882] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05886] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05892] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05897] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05903] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05910] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05914] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05917] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05920] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05923] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05926] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05930] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05932] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05936] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05939] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05942] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05944] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05947] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05950] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.05953] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.05956] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.05959] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.05963] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.05966] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.05969] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.05972] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.05975] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.05978] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.05981] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.05984] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06005] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06010] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06014] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06017] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06021] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06024] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06027] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06030] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06033] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06036] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06039] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06042] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06045] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06048] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06052] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06055] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06058] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06061] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06064] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06067] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06071] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06074] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06077] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06080] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06084] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06087] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06090] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06092] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06096] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06099] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06102] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06106] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06110] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06113] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06116] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06120] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06123] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06126] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06129] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06132] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06135] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06138] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06141] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06144] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06147] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06149] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06152] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06155] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06158] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06161] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06164] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06167] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06170] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.06173] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.06176] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06179] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06182] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06190] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06196] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06200] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06202] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06205] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06208] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06212] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06215] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06218] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06221] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06223] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06226] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06229] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06231] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06233] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06235] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06237] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06238] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06240] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06242] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06244] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06245] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06247] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06249] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06251] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06252] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.06254] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.06256] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
 display  D   display_settings.c:400  _al_score_display_settings       [   0.06259] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06263] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06266] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06269] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06273] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06276] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06279] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06283] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06286] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06289] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06292] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06295] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06300] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06303] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06307] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06309] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06313] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06316] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06319] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06322] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06325] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06328] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06332] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06335] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06338] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06341] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06345] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06348] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06351] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06354] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06358] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06361] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06364] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06367] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06370] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06374] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06376] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06378] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06380] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06381] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06389] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06391] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06393] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06395] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06402] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06409] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06413] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06419] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06422] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06426] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06430] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06433] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06450] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06453] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06457] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06459] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06462] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06465] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06467] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06470] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06473] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06475] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:529  _al_score_display_settings       [   0.06478] Score is : 769
-display  D   display_settings.c:214  debug_display_settings           [   0.06481] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06484] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06487] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06491] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06495] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06499] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06502] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06505] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06508] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06512] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06516] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06519] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06522] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06533] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06547] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06552] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06555] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06558] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06561] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06564] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06567] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06570] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06573] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06577] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06580] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06583] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06586] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06589] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06593] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06597] Single Buffer requirement not met.
-display  D   display_settings.c:214  debug_display_settings           [   0.06600] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
-display  D   display_settings.c:400  _al_score_display_settings       [   0.06603] Single Buffer requirement not met.
-d3d      D         d3d_disp.cpp:1677 d3d_create_display_internals     [   0.06607] Trying format 0.
-d3d      I         d3d_disp.cpp:1353 d3d_display_thread_proc          [   0.06912] Chose a display format: 23
-d3d      I         d3d_disp.cpp:1422 d3d_display_thread_proc          [   0.06918] Normal window.
-d3d      I         d3d_disp.cpp:786  d3d_create_device                [   0.10188] Using no depth stencil buffer
-d3d      D         d3d_disp.cpp:848  d3d_create_device                [   0.12182] BeginScene succeeded in create_device
-d3d      D         d3d_disp.cpp:856  d3d_create_device                [   0.12192] Success
-d3d      D         d3d_disp.cpp:1703 d3d_create_display_internals     [   0.12201] Resumed after wait.
-d3d      I         d3d_disp.cpp:1736 d3d_create_display_internals     [   0.12211] Format 0 succeeded.
-d3d      D         d3d_disp.cpp:1767 d3d_create_display_internals     [   0.12222] Returning d3d_display: 00000232a3913410
-d3d      D         d3d_disp.cpp:1792 d3d_create_display_locked        [   0.12227] al_display=00000232a3913410
-d3d      D         d3d_disp.cpp:1793 d3d_create_display_locked        [   0.12231] al_display->vt=00000232a39132a0
-system   D            wsystem.c:889  _al_win_safe_load_library        [   0.12285] PathFindOnPath found: C:\Windows\system32\d3dx9_43.dll
-system   D            wsystem.c:795  load_library_at_path             [   0.12291] Calling LoadLibrary C:\Windows\system32\d3dx9_43.dll
-system   I            wsystem.c:798  load_library_at_path             [   0.12349] Loaded C:\Windows\system32\d3dx9_43.dll
-d3dx9    I        d3d_d3dx9.cpp:88   _imp_load_d3dx9_module_version   [   0.12358] Module "d3dx9_43.dll" loaded.
-dtor     D               dtor.c:196  _al_register_destructor          [   0.12370] added dtor for queue 00000232a3910b80, func 00007fff6974cc4e
-dtor     D               dtor.c:196  _al_register_destructor          [   0.12374] added dtor for timer 00000232a395f020, func 00007fff69760dc2
+d3d      D         d3d_disp.cpp:1677 d3d_create_display_internals     [   0.06263] Trying format 0.
+d3d      I         d3d_disp.cpp:1353 d3d_display_thread_proc          [   0.06291] Chose a display format: 23
+d3d      I         d3d_disp.cpp:1422 d3d_display_thread_proc          [   0.06296] Normal window.
+d3d      I         d3d_disp.cpp:786  d3d_create_device                [   0.12308] Using no depth stencil buffer
+d3d      D         d3d_disp.cpp:848  d3d_create_device                [   0.13793] BeginScene succeeded in create_device
+d3d      D         d3d_disp.cpp:856  d3d_create_device                [   0.13800] Success
+d3d      D         d3d_disp.cpp:1703 d3d_create_display_internals     [   0.13807] Resumed after wait.
+d3d      I         d3d_disp.cpp:1736 d3d_create_display_internals     [   0.13813] Format 0 succeeded.
+d3d      D         d3d_disp.cpp:1767 d3d_create_display_internals     [   0.13819] Returning d3d_display: 000001e798cf4380
+d3d      D         d3d_disp.cpp:1792 d3d_create_display_locked        [   0.13823] al_display=000001e798cf4380
+d3d      D         d3d_disp.cpp:1793 d3d_create_display_locked        [   0.13827] al_display->vt=000001e798cf4210
+system   D            wsystem.c:889  _al_win_safe_load_library        [   0.13861] PathFindOnPath found: C:\Windows\system32\d3dx9_43.dll
+system   D            wsystem.c:795  load_library_at_path             [   0.13866] Calling LoadLibrary C:\Windows\system32\d3dx9_43.dll
+system   I            wsystem.c:798  load_library_at_path             [   0.13925] Loaded C:\Windows\system32\d3dx9_43.dll
+d3dx9    I        d3d_d3dx9.cpp:88   _imp_load_d3dx9_module_version   [   0.13934] Module "d3dx9_43.dll" loaded.
+d3d      I         d3d_disp.cpp:1780 d3d_create_display_locked        [   0.14056] faux_fullscreen=0
+d3d      D         d3d_disp.cpp:1781 d3d_create_display_locked        [   0.14067] al_display=000001e798dcb060
+d3d      D         d3d_disp.cpp:1782 d3d_create_display_locked        [   0.14071] al_display->vt=000001e798cf4210
+d3d      I d3d_display_formats.cpp:144  _al_d3d_generate_display_format_list [   0.14079] found 64 format combinations
+display  D   display_settings.c:214  debug_display_settings           [   0.14082] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14085] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14088] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14091] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14093] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14096] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14099] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14102] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14105] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14108] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14111] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14114] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14116] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14119] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14122] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14125] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14128] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14132] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14134] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14137] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14142] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14150] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14157] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14160] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14166] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14169] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14172] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14175] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14178] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14181] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14183] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14187] Score is : 897
+display  D   display_settings.c:214  debug_display_settings           [   0.14189] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14193] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14199] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14206] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14210] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14216] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14223] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14232] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14236] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14242] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14247] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14252] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14256] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14259] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14262] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14265] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14268] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14271] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14274] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14277] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14280] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14284] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14287] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14290] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14293] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14296] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14299] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14303] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14306] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14309] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14311] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14314] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14317] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14320] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14323] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14327] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14330] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14333] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14336] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14339] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14341] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14344] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14347] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14350] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14353] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14355] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14358] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14361] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14364] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14367] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14370] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14373] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14376] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14380] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14383] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14386] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14389] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14392] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14395] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14398] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14401] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14404] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14407] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:529  _al_score_display_settings       [   0.14410] Score is : 769
+display  D   display_settings.c:214  debug_display_settings           [   0.14413] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14416] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14419] color: 32 (rgba 8880), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14422] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14425] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14428] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14431] color: 32 (rgba 8880), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14434] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14437] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14440] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14443] color: 32 (rgba 8880), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14446] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14449] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14452] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14456] color: 32 (rgba 8880), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14459] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14462] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14465] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14469] color: 16 (rgba 5650), depth: 0, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14473] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14476] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14480] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14485] color: 16 (rgba 5650), depth: 24, stencil: 8, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14489] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14491] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14494] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14498] color: 16 (rgba 5650), depth: 24, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14501] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14503] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14506] Single Buffer requirement not met.
+display  D   display_settings.c:214  debug_display_settings           [   0.14509] color: 16 (rgba 5650), depth: 16, stencil: 0, acc: 0000, samples: 0/0
+display  D   display_settings.c:400  _al_score_display_settings       [   0.14513] Single Buffer requirement not met.
+d3d      D         d3d_disp.cpp:1677 d3d_create_display_internals     [   0.14516] Trying format 0.
+d3d      I         d3d_disp.cpp:1353 d3d_display_thread_proc          [   0.14622] Chose a display format: 23
+d3d      I         d3d_disp.cpp:1422 d3d_display_thread_proc          [   0.14650] Normal window.
+d3d      I         d3d_disp.cpp:786  d3d_create_device                [   0.20871] Using no depth stencil buffer
+d3d      D         d3d_disp.cpp:848  d3d_create_device                [   0.22052] BeginScene succeeded in create_device
+d3d      D         d3d_disp.cpp:856  d3d_create_device                [   0.22060] Success
+d3d      D         d3d_disp.cpp:1703 d3d_create_display_internals     [   0.22068] Resumed after wait.
+d3d      I         d3d_disp.cpp:1736 d3d_create_display_internals     [   0.22075] Format 0 succeeded.
+d3d      D         d3d_disp.cpp:1767 d3d_create_display_internals     [   0.22079] Returning d3d_display: 000001e798dcb060
+d3d      D         d3d_disp.cpp:1792 d3d_create_display_locked        [   0.22083] al_display=000001e798dcb060
+d3d      D         d3d_disp.cpp:1793 d3d_create_display_locked        [   0.22087] al_display->vt=000001e798cf4210
+dtor     D               dtor.c:196  _al_register_destructor          [   0.22112] added dtor for queue 000001e798cf09b0, func 00007fff7686cc4e
+dtor     D               dtor.c:196  _al_register_destructor          [   0.22119] added dtor for timer 000001e799ed5e40, func 00007fff76880dc2

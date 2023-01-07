@@ -18,8 +18,12 @@ void charaOperate(STAGE *stage,CONFIG *config)
     else if (stage->chara->offsetY<0)
     stage->chara->offsetY+=config->unit;
 
-    if (stage->chara->offsetX==0&stage->chara->offsetY==0)
+   // if (stage->chara->offsetX==0&stage->chara->offsetY==0)
+     //   stage->chara->controllable=true;
+
+    if (stage->chara->step>3)
         stage->chara->controllable=true;
+
 
 }
 
@@ -72,7 +76,7 @@ void detectCharaDamage(STAGE *stage,RESOURCE *res)
 }
 
 
-void controlChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
+void controlChara_Boss (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 {
     CHARA* chara =stage->chara;
     int x=chara->x;

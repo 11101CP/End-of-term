@@ -13,7 +13,7 @@ bool gameSetUp(CONFIG *config,RESOURCE *res,int stageChoose)
 {
     STAGE stage;
     stage.progess=0;
-
+    bool exit=false;
 
 
     //loadStageRes
@@ -26,7 +26,7 @@ loadBossFightResource(res,config);
 
 
 
-while(1)
+while(!exit)
 {
 
 loadStage(&stage,config,stageChoose);

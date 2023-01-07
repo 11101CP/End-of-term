@@ -19,6 +19,7 @@ int unit;
 float musicGain;
 float soundGain;
 bool fullscreen;
+int stage;
 }CONFIG;
 
 

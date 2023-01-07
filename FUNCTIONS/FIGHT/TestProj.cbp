@@ -126,6 +126,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game_frame.h" />
+		<Unit filename="bossFight.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="chapterData.c">
 			<Option compilerVar="CC" />
 		</Unit>

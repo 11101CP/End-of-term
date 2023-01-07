@@ -12,8 +12,6 @@ Layer,
 Life,
 Death,
 Death1,
-Target,
-Effect,
 BossBitmapsNumber
 
 } BOSS_BITMAPS;
