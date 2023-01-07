@@ -76,6 +76,7 @@ BOX ***box;
 int length; //box edge
 int boxNumX;
 int boxNumY;
+CHARA *chara;
 
 }STAGE;
 
@@ -99,7 +100,7 @@ void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config);
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config );
 void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config );
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config );
-void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
+void moveChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
 void detectCharaDamage(CHARA *chara,STAGE *stage);
 
 

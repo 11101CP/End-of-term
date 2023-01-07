@@ -773,7 +773,7 @@
 	<allegro5/allegro_native_dialog.h>
 	<allegro5/allegro_primitives.h>
 
-1673016269 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\bossfight.c
+1673099520 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\bossfight.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -783,16 +783,16 @@
 	<stdlib.h>
 	<stdbool.h>
 
-1673015709 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.h
+1673073012 c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.h
 	"AL_general.h"
 	"common.h"
 
-1673016339 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_draw.c
+1673101486 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_draw.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1673016269 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.c
+1673097060 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\game_frame.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -808,6 +808,6 @@
 	"Common.h"
 	"AL_general.h"
 
-1673013509 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\temp.c
+1673097924 source:c:\users\user\desktop\school shit\hongan\final-allegro\e04\end-of-term(toost)\functions\puzzle_new\temp.c
 	"Game_frame.h"
 

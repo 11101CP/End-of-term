@@ -12,10 +12,12 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     bool exit=false;
     bool shift=true;
     CHARA chara;
-    chara.x=1;/**start**/
+    chara.x=6;/**start**/
     chara.y=5;
     chara.facingRight=0;
     chara.step=0;
+    chara.vulnerable=false;
+    stage->chara = &chara;
 
     ALLEGRO_TIMER* timer = NULL;
     ALLEGRO_TIMER* refresh = NULL;
@@ -48,7 +50,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                 switch(events.type)
                 {
                 case ALLEGRO_EVENT_KEY_DOWN:
-                    moveChara(&chara,stage,&events.keyboard);
+                    moveChara(stage,&events.keyboard);
                     if (events.keyboard.keycode==ALLEGRO_KEY_ESCAPE)
                     break;//SETTING;
 

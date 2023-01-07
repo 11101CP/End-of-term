@@ -17,9 +17,12 @@ bool gameSetUp(CONFIG *config,RESOURCE *res)
     bool mode=true;
     //stageBOSS (stage.box);/**start(4,4) stage9x9**/
     //stage1(stage.box);/**start (6,1) stage 9x8**/
-    stage2(stage.box);/**start (1,5) stage 9x8**/
+    //stage2(stage.box);/**start (1,5) stage 9x8**/
     //stage3(stage.box);/**start (8,3) stage 10x10**/
     //stage4(stage.box);/**start (1,1) stage 10x7**/
+    //stage5(stage.box);/**start (1,3) stage 8x9**/
+    //stage6(stage.box);/**start (3,1) stage 9x10**/
+    stage7(stage.box);/**start (6,5) stage 8x9**/
     //stage9(stage.box);/**start (2,7) stage 11x9**/
 
 
@@ -39,8 +42,8 @@ void loadStage(STAGE *stage ,CONFIG *config)
 
     //Åª¨ú .dat ±q config->stage
 
-    stage->boxNumX=9;/**stage**/
-    stage->boxNumY=8;
+    stage->boxNumX=8;/**stage**/
+    stage->boxNumY=9;
     stage->length=config->unit*9;
     buildBox(&stage->box,stage->boxNumX,stage->boxNumY);
     loadBox (stage->box,stage->boxNumX,stage->boxNumY,config->unit);

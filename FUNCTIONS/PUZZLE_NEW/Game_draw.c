@@ -12,14 +12,50 @@ case BLOCK:
 break;
 }
 
-void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
+void moveChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 {
+CHARA* chara =stage->chara;
+int x=chara->x;
+int y=chara->y;
+int nextX;
+int nextY;
+int nextNextX;
+int nextNextY;
+//int offsetX=0;
+//int offsetY=0;
     switch(keyboard->keycode)
     {
     case ALLEGRO_KEY_UP:
-        if(stage->box[chara->x][chara->y-1]->state)
-        switch(stage->box[chara->x][chara->y-1]->state)
+        nextX=x;
+        nextY=y-1;
+        nextNextY=y-2;
+
+        if(stage->box[chara->x][nextY]->element)
+        switch(stage->box[chara->x][nextY]->element)
         {
+        case KEY:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_UP:
+                stage->box[chara->x][nextY]->element=EMPTY;
+                chara->vulnerable=true;
+                break;
+        }
+        }
+        if(stage->box[chara->x][nextY]->state)
+        switch(stage->box[chara->x][nextY]->state)
+        {
+        case DOOR:
+        if(chara->vulnerable==true)
+            switch(keyboard->keycode)
+            {
+            case ALLEGRO_KEY_UP:
+            stage->box[chara->x][nextY]->state=EMPTY;
+            break;
+            }
+        else
+            return 0;
+        break;
         case BOUNDARY:
         return 0;
         break;
@@ -27,13 +63,13 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_UP:
-                if(stage->box[chara->x][chara->y-2]->state==EMPTY)
+                if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
-                 stage->box[chara->x][chara->y-1]->state=EMPTY;
-                 stage->box[chara->x][chara->y-2]->state=MONSTER;
+                 stage->box[chara->x][nextY]->state=EMPTY;
+                 stage->box[chara->x][nextNextY]->state=MONSTER;
                 }
                 else
-                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 stage->box[chara->x][nextY]->state=EMPTY;
                  return 0;
                 break;
         }
@@ -42,15 +78,15 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_UP:
-                if(stage->box[chara->x][chara->y-2]->state==EMPTY)
+                if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
-                 stage->box[chara->x][chara->y-1]->state=EMPTY;
-                 stage->box[chara->x][chara->y-2]->state=BLOCK;
+                 stage->box[chara->x][nextY]->state=EMPTY;
+                 stage->box[chara->x][nextNextY]->state=BLOCK;
                 }
-                else if(stage->box[chara->x][chara->y-2]->state)
+                else if(stage->box[chara->x][nextNextY]->state)
                  return 0;
                 else
-                 stage->box[chara->x][chara->y-1]->state=EMPTY;
+                 stage->box[chara->x][nextY]->state=EMPTY;
                  return 0;
                 break;
         }
@@ -60,32 +96,58 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->step=0;
         break;/******************************/
     case ALLEGRO_KEY_DOWN:
-        if(stage->box[chara->x][chara->y+1]->state)
-        switch(stage->box[chara->x][chara->y+1]->state)
+        nextX=x;
+        nextY=y+1;
+        nextNextY=y+2;
+        if(stage->box[chara->x][nextY]->element)
+        switch(stage->box[chara->x][nextY]->element)
         {
+        case KEY:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_DOWN:
+                stage->box[chara->x][nextY]->element=EMPTY;
+                chara->vulnerable=true;
+                break;
+        }
+        }
+        if(stage->box[chara->x][nextY]->state)
+        switch(stage->box[chara->x][nextY]->state)
+        {
+        case DOOR:
+        if(chara->vulnerable==true)
+            switch(keyboard->keycode)
+            {
+            case ALLEGRO_KEY_DOWN:
+            stage->box[chara->x][nextY]->state=EMPTY;
+            break;
+            }
+        else
+            return 0;
+        break;
         case BOUNDARY:
         return 0;
         break;
         case MONSTER:
-                if(stage->box[chara->x][chara->y+2]->state==EMPTY)
+                if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
-                 stage->box[chara->x][chara->y+1]->state=EMPTY;
-                 stage->box[chara->x][chara->y+2]->state=MONSTER;
+                 stage->box[chara->x][nextY]->state=EMPTY;
+                 stage->box[chara->x][nextNextY]->state=MONSTER;
                 }
                 else
-                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 stage->box[chara->x][nextY]->state=EMPTY;
                  return 0;
                 break;
         case BLOCK:
-                if(stage->box[chara->x][chara->y+2]->state==EMPTY)
+                if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
-                 stage->box[chara->x][chara->y+1]->state=EMPTY;
-                 stage->box[chara->x][chara->y+2]->state=BLOCK;
+                 stage->box[chara->x][nextY]->state=EMPTY;
+                 stage->box[chara->x][nextNextY]->state=BLOCK;
                 }
-                else if(stage->box[chara->x][chara->y+2]->state)
+                else if(stage->box[chara->x][nextNextY]->state)
                  return 0;
                 else
-                 stage->box[chara->x][chara->y+1]->state=EMPTY;
+                 stage->box[chara->x][nextY]->state=EMPTY;
                  return 0;
                 break;
         }
@@ -94,35 +156,61 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->step=0;
         break;/******************************/
     case ALLEGRO_KEY_LEFT:
-        if(stage->box[chara->x-1][chara->y]->state)
-            switch(stage->box[chara->x-1][chara->y]->state)
+        nextX=x-1;
+        nextNextX=x-2;
+        nextY=y;
+        if(stage->box[nextX][chara->y]->element)
+        switch(stage->box[nextX][chara->y]->element)
+        {
+        case KEY:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_LEFT:
+                stage->box[nextX][chara->y]->element=EMPTY;
+                chara->vulnerable=true;
+                break;
+        }
+        }
+        if(stage->box[nextX][chara->y]->state)
+            switch(stage->box[nextX][chara->y]->state)
             {
+            case DOOR:
+            if(chara->vulnerable==true)
+            switch(keyboard->keycode)
+            {
+            case ALLEGRO_KEY_LEFT:
+            stage->box[nextX][chara->y]->state=EMPTY;
+            break;
+            }
+            else
+            return 0;
+            break;
             case BOUNDARY:
                 return 0;
                 break;
             case MONSTER:
-                if(stage->box[chara->x-2][chara->y]->state==EMPTY)
+                if(stage->box[nextNextX][chara->y]->state==EMPTY)
                 {
-                    stage->box[chara->x-1][chara->y]->state=EMPTY;
-                    stage->box[chara->x-2][chara->y]->state=MONSTER;
+                    stage->box[nextX][chara->y]->state=EMPTY;
+                    stage->box[nextNextX][chara->y]->state=MONSTER;
                 }
                 else
-                    stage->box[chara->x-1][chara->y]->state=EMPTY;
+                    stage->box[nextX][chara->y]->state=EMPTY;
                 return 0;
                 break;
             case BLOCK:
                 switch(keyboard->keycode)
                 {
                 case ALLEGRO_KEY_LEFT:
-                    if(stage->box[chara->x-2][chara->y]->state==EMPTY)
+                    if(stage->box[nextNextX][chara->y]->state==EMPTY)
                     {
-                    stage->box[chara->x-1][chara->y]->state=EMPTY;
-                    stage->box[chara->x-2][chara->y]->state=BLOCK;
+                    stage->box[nextX][chara->y]->state=EMPTY;
+                    stage->box[nextNextX][chara->y]->state=BLOCK;
                     }
-                    else if(stage->box[chara->x-2][chara->y]->state)
+                    else if(stage->box[nextNextX][chara->y]->state)
                         return 0;
                     else
-                        //stage->box[chara->x-1][chara->y]->state=EMPTY;
+                        //stage->box[nextX][chara->y]->state=EMPTY;
                     return 0;
                     break;
             }
@@ -133,9 +221,35 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->step=0;
         break;/******************************/
     case ALLEGRO_KEY_RIGHT:
-        if(stage->box[chara->x+1][chara->y]->state)
-        switch(stage->box[chara->x+1][chara->y]->state)
+        nextX=x+1;
+        nextNextX=x+2;
+        nextY=y;
+        if(stage->box[nextX][chara->y]->element)
+        switch(stage->box[nextX][chara->y]->element)
         {
+        case KEY:
+        switch(keyboard->keycode)
+        {
+            case ALLEGRO_KEY_RIGHT:
+                stage->box[nextX][chara->y]->element=EMPTY;
+                chara->vulnerable=true;
+                break;
+        }
+        }
+        if(stage->box[nextX][chara->y]->state)
+        switch(stage->box[nextX][chara->y]->state)
+        {
+    case DOOR:
+            if(chara->vulnerable==true)
+            switch(keyboard->keycode)
+            {
+            case ALLEGRO_KEY_RIGHT:
+            stage->box[nextX][chara->y]->state=EMPTY;
+            break;
+            }
+            else
+            return 0;
+            break;
     case BOUNDARY:
         return 0;
         break;
@@ -143,13 +257,13 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_RIGHT:
-                if(stage->box[chara->x+2][chara->y]->state==EMPTY)
+                if(stage->box[nextNextX][chara->y]->state==EMPTY)
                 {
-                 stage->box[chara->x+1][chara->y]->state=EMPTY;
-                 stage->box[chara->x+2][chara->y]->state=MONSTER;
+                 stage->box[nextX][chara->y]->state=EMPTY;
+                 stage->box[nextNextX][chara->y]->state=MONSTER;
                 }
                 else
-                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 stage->box[nextX][chara->y]->state=EMPTY;
                  return 0;
                 break;
         }
@@ -158,15 +272,15 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_RIGHT:
-                if(stage->box[chara->x+2][chara->y]->state==EMPTY)
+                if(stage->box[nextNextX][chara->y]->state==EMPTY)
                 {
-                 stage->box[chara->x+1][chara->y]->state=EMPTY;
-                 stage->box[chara->x+2][chara->y]->state=BLOCK;
+                 stage->box[nextX][chara->y]->state=EMPTY;
+                 stage->box[nextNextX][chara->y]->state=BLOCK;
                 }
-                else if(stage->box[chara->x+2][chara->y]->state)
+                else if(stage->box[nextNextX][chara->y]->state)
                  return 0;
                 else
-                 stage->box[chara->x+1][chara->y]->state=EMPTY;
+                 stage->box[nextX][chara->y]->state=EMPTY;
                  return 0;
                 break;
         }
@@ -177,6 +291,7 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
         chara->step=0;
         break;
     }
+
 }
 
 
@@ -184,8 +299,10 @@ void moveChara (CHARA *chara,STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard)
 
 void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config)
 {
-al_draw_scaled_bitmap(res->chara,180*chara->step,0,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
+
+    al_draw_scaled_bitmap(res->chara,180*chara->step,0,180,180,stage->box[chara->x][chara->y]->x,stage->box[chara->x][chara->y]->y,
                       stage->length,stage->length,chara->facingRight);
+
 }
 
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
@@ -195,9 +312,6 @@ al_clear_to_color(al_map_rgb(150,150,150));
 for (x=0;x<stage->boxNumX;x++)
     for(y=0;y<stage->boxNumY;y++)
         al_draw_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgb(0,0,0),1);
-
-
-
 
 }
 void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
@@ -210,7 +324,6 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
 //al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][6]->x,box[1][6]->y,stage->length*7,stage->length*7,0);
 //al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][8]->x,box[1][8]->y,stage->length*7,stage->length*7,0);
 
-
 for (x=0;x<stage->boxNumX;x++)
     for(y=0;y<stage->boxNumY;y++)
     {
@@ -222,7 +335,7 @@ for (x=0;x<stage->boxNumX;x++)
             case TRAP:
                 al_draw_scaled_bitmap(res->trap,0,0,1000,1000,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
                 break;
-    }
+        }
         switch(box[x][y]->state)
         {
             case BOUNDARY:
@@ -241,10 +354,6 @@ for (x=0;x<stage->boxNumX;x++)
                 al_draw_filled_rectangle(box[x][y]->x,box[x][y]->y,box[x][y]->x+stage->length,box[x][y]->y+stage->length,al_map_rgba(0,105,255,5));
                 break;
         }
-
-
-
-
 }
 }
 
@@ -252,8 +361,6 @@ void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config )
 {
     BOX*** box=stage->box;
     int x,y;
-
-
 for (x=0;x<stage->boxNumX;x++)
     for(y=0;y<stage->boxNumY;y++)
       {stage->box[x][y]->y-=config->unit;
@@ -271,17 +378,9 @@ for (x=0;x<stage->boxNumX;x++)
 
 
             }
-
-
-
         if(box[x][y]->y<0)
             {
                 stage->box[x][y]->y=stage->box[x][y]->y+config->unit*81;
             }
-
-
         }
-
-
-
 }
