@@ -141,8 +141,12 @@
 		<Unit filename="Headers/AL_general.h" />
 		<Unit filename="Headers/Common.h" />
 		<Unit filename="Headers/GUI_general.h" />
+		<Unit filename="Headers/Loading_enum.h" />
 		<Unit filename="Headers/config_struct.h" />
 		<Unit filename="Input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="loading/Loading_assets.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="rank.c">
