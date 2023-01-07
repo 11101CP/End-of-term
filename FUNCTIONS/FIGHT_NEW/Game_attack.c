@@ -1,6 +1,7 @@
 #include "Common.h"
 #include "AL_general.h"
 #include "Game_frame.h"
+#include "Loading_enum.h"
 
 void loadAttack(STAGE *stage)
 {
@@ -57,7 +58,17 @@ for (int i=0;i<4;i++)
     {
         if (now->step%4==3)
     {
-    al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
+    //al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
+    int length=stage->length*(1+res->temp);
+    if (length>=config->unit*160)
+    length=config->unit*160;
+
+//if(al_get_timer_count(res->timers[AttackTime])%3)
+    al_draw_scaled_bitmap(res->bitmaps[Attack],0,0,960,60,0,box[0][now->y]->y,length,stage->length,0);
+//else
+    al_draw_scaled_bitmap(res->bitmaps[Attack],0,0,960,60,160*config->unit-length,box[0][now->y]->y,length,stage->length,1);
+
+
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=HURT;
     }

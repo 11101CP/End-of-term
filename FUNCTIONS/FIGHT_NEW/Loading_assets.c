@@ -18,6 +18,7 @@ void loadBossFightResource(RESOURCE *res,CONFIG *config)
     res->bitmaps[Death1]=al_load_bitmap("./assets/death1.png");
     res->bitmaps[Target]=al_load_bitmap("./assets/lever.png");
     res->bitmaps[Effect]=al_load_bitmap("./assets/effect.png");
+    res->bitmaps[Attack]=al_load_bitmap("./assets/Attack.png");
 
 
     res->fonts=calloc(1,sizeof(ALLEGRO_FONT*));
@@ -28,7 +29,7 @@ void loadBossFightResource(RESOURCE *res,CONFIG *config)
 //    res->samples=calloc();
 
     res->timers=calloc(BossTimerNumber,sizeof(ALLEGRO_TIMER*));
-    res->timers[FPS]=al_create_timer(1.0 /60);
+    res->timers[FPS]=al_create_timer(1.0 /90);
     res->timers[AttackTime] = al_create_timer(1.0/3 );//refresh
     res->timers[Refresh]=al_create_timer(1.0/24);
     res->timers[Second]=al_create_timer(1.0);

@@ -73,6 +73,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
                     if(events.timer.source==res->timers[FPS])
                     {
+                        res->temp++;
                     al_flip_display();
 
                     charaOperate(stage,config);
@@ -136,6 +137,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
                     if(events.timer.source==res->timers[AttackTime])
                     {
+                        res->temp=0;
                     //loadAttack;
                     //stage->
                     addAttack(stage);

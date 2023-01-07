@@ -14,6 +14,7 @@ Death,
 Death1,
 Target,
 Effect,
+Attack,
 BossBitmapsNumber
 
 } BOSS_BITMAPS;

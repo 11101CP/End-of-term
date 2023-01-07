@@ -26,6 +26,7 @@ ALLEGRO_SAMPLE **samples;
 ALLEGRO_TIMER  **timers;
 
 ALLEGRO_EVENT_SOURCE *user_src;
+int temp; //attack
 
 }RESOURCE;
 
