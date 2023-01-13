@@ -12,8 +12,9 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     bool exit=false;
     bool shift=true;
     CHARA chara;
-    chara.x=6;/**start**/
-    chara.y=5;
+    chara.x=1;/**start**/
+    chara.y=3;
+    chara.life=23;
     chara.facingRight=0;
     chara.step=0;
     chara.vulnerable=false;
@@ -38,8 +39,13 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     al_start_timer(refresh);
 
 
+    if(chara.life==0)
+    printf("X");
+    else
+    printf("%d\n",chara.life);
     while(!exit)
     {
+
 
     if(!al_is_event_queue_empty(event_queue))
         {
@@ -51,12 +57,15 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                 {
                 case ALLEGRO_EVENT_KEY_DOWN:
                     moveChara(stage,&events.keyboard);
+                    if(chara.life==0)
+                        printf("X");
+                    else
+                        printf("%d\n",chara.life);
                     if (events.keyboard.keycode==ALLEGRO_KEY_ESCAPE)
                     break;//SETTING;
 
                     break;
                 case ALLEGRO_EVENT_DISPLAY_CLOSE:
-                    puts("Oops");
                     exit=true;
                     break;
                 case ALLEGRO_EVENT_TIMER:
@@ -67,8 +76,8 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     drawMap(stage,res,config);
                     drawObject(stage,res,config);
                     drawChara(&chara,stage,res,config);
+                    //al_draw_textf(res->fonts,al_map_rgb(255,255,255),0,0,0,"%d",chara.life);
                     detectCharaDamage(&chara,stage);
-                    printf("1");
 
 
 
@@ -77,7 +86,6 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
-                    {printf("\nboing\n");
                     //boxShift(stage,res,config);
                     if(++chara.step==14)
                         chara.step=0;
@@ -116,4 +124,4 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     }
 
 
-}
+

@@ -22,7 +22,11 @@ typedef enum
 
 KEY=1,
 
-TRAP
+TRAP,
+
+FlexibleTrapOn,
+
+FlexibleTrapOff
 
 }ELEMENT;
 
@@ -61,11 +65,13 @@ DEATH
 
 typedef struct
 {
+
 int x;
 int y;
 STATE state;
 ELEMENT element;
-DAMAGE damage ;
+bool damage ;
+
 }BOX;
 
 typedef struct

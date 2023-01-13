@@ -8,7 +8,7 @@ int main()
 
     al_setup();
     CONFIG config;
-    config.unit=12;
+    config.unit=8;
     config.stage=9;
 
   //  (config,);
@@ -18,7 +18,12 @@ int main()
     res.block=al_load_bitmap("./Brick.png");
     res.belt=al_load_bitmap("./belt.png");
     res.chara=al_load_bitmap("./duck.png");
+    res.fonts=al_load_font("./Type,ttf",config.unit*5,0);
+    res.FlexSpikeOn=al_load_bitmap("./SpikeOn.png");
+    res.FlexSpikeOff=al_load_bitmap("./SpikeOff.png");
 
+
+    //al_draw_text(res.fonts,al_map_rgb(255,255,255),0,0,0,"50");
 
     gameSetUp(&config,&res);
 

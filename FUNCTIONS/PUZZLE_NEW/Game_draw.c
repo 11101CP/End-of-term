@@ -23,6 +23,7 @@ int nextNextX;
 int nextNextY;
 //int offsetX=0;
 //int offsetY=0;
+
     switch(keyboard->keycode)
     {
     case ALLEGRO_KEY_UP:
@@ -54,12 +55,16 @@ int nextNextY;
             break;
             }
         else
+        {
+            chara->life--;
             return 0;
+        }
         break;
         case BOUNDARY:
         return 0;
         break;
         case MONSTER:
+        chara->life--;
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_UP:
@@ -70,11 +75,14 @@ int nextNextY;
                 }
                 else
                  stage->box[chara->x][nextY]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         }
         break;
         case BLOCK:
+        chara->life--;
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_UP:
@@ -84,13 +92,20 @@ int nextNextY;
                  stage->box[chara->x][nextNextY]->state=BLOCK;
                 }
                 else if(stage->box[chara->x][nextNextY]->state)
-                 return 0;
+                {
+                if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
+                return 0;
+                }
                 else
                  stage->box[chara->x][nextY]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         }
         }
+        chara->life--;
         chara->y--;
         chara->state=CH_MOVE;
         chara->step=0;
@@ -123,12 +138,14 @@ int nextNextY;
             break;
             }
         else
+            chara->life--;
             return 0;
         break;
         case BOUNDARY:
         return 0;
         break;
         case MONSTER:
+            chara->life--;
                 if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
                  stage->box[chara->x][nextY]->state=EMPTY;
@@ -136,21 +153,32 @@ int nextNextY;
                 }
                 else
                  stage->box[chara->x][nextY]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         case BLOCK:
+            chara->life--;
                 if(stage->box[chara->x][nextNextY]->state==EMPTY)
                 {
                  stage->box[chara->x][nextY]->state=EMPTY;
                  stage->box[chara->x][nextNextY]->state=BLOCK;
                 }
                 else if(stage->box[chara->x][nextNextY]->state)
-                 return 0;
+                {
+                if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
+                return 0;
+                }
                 else
                  stage->box[chara->x][nextY]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         }
+
+        chara->life--;
         chara->y++;
         chara->state=CH_MOVE;
         chara->step=0;
@@ -168,8 +196,8 @@ int nextNextY;
             case ALLEGRO_KEY_LEFT:
                 stage->box[nextX][chara->y]->element=EMPTY;
                 chara->vulnerable=true;
-                break;
         }
+        break;
         }
         if(stage->box[nextX][chara->y]->state)
             switch(stage->box[nextX][chara->y]->state)
@@ -183,12 +211,14 @@ int nextNextY;
             break;
             }
             else
+            chara->life--;
             return 0;
             break;
             case BOUNDARY:
                 return 0;
                 break;
             case MONSTER:
+                chara->life--;
                 if(stage->box[nextNextX][chara->y]->state==EMPTY)
                 {
                     stage->box[nextX][chara->y]->state=EMPTY;
@@ -196,9 +226,12 @@ int nextNextY;
                 }
                 else
                     stage->box[nextX][chara->y]->state=EMPTY;
+                if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                 return 0;
                 break;
             case BLOCK:
+                chara->life--;
                 switch(keyboard->keycode)
                 {
                 case ALLEGRO_KEY_LEFT:
@@ -208,13 +241,18 @@ int nextNextY;
                     stage->box[nextNextX][chara->y]->state=BLOCK;
                     }
                     else if(stage->box[nextNextX][chara->y]->state)
+                    {
+                        if(stage->box[chara->x][chara->y]->element==TRAP)
+                        chara->life--;
                         return 0;
+                    }
                     else
                         //stage->box[nextX][chara->y]->state=EMPTY;
                     return 0;
                     break;
             }
         }
+        chara->life--;
         chara->x--;
         chara->facingRight=1;
         chara->state=CH_MOVE;
@@ -239,7 +277,7 @@ int nextNextY;
         if(stage->box[nextX][chara->y]->state)
         switch(stage->box[nextX][chara->y]->state)
         {
-    case DOOR:
+        case DOOR:
             if(chara->vulnerable==true)
             switch(keyboard->keycode)
             {
@@ -248,12 +286,14 @@ int nextNextY;
             break;
             }
             else
+            chara->life--;
             return 0;
             break;
-    case BOUNDARY:
-        return 0;
-        break;
-    case MONSTER:
+        case BOUNDARY:
+            return 0;
+            break;
+        case MONSTER:
+            chara->life--;
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_RIGHT:
@@ -264,11 +304,14 @@ int nextNextY;
                 }
                 else
                  stage->box[nextX][chara->y]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         }
         break;
     case BLOCK:
+        chara->life--;
         switch(keyboard->keycode)
         {
             case ALLEGRO_KEY_RIGHT:
@@ -281,16 +324,21 @@ int nextNextY;
                  return 0;
                 else
                  stage->box[nextX][chara->y]->state=EMPTY;
+                 if(stage->box[chara->x][chara->y]->element==TRAP)
+                chara->life--;
                  return 0;
                 break;
         }
         }
+        chara->life--;
         chara->x++;
         chara->facingRight=0;
         chara->state=CH_MOVE;
         chara->step=0;
         break;
     }
+     if(stage->box[chara->x][chara->y]->element==TRAP)
+            chara->life--;
 
 }
 
@@ -318,11 +366,6 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
 {
     BOX*** box=stage->box;
     int x,y;
-//al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][0]->x,box[1][0]->y,stage->length*7,stage->length*7,0);
-//al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][2]->x,box[1][2]->y,stage->length*7,stage->length*7,0);
-//al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][4]->x,box[1][4]->y,stage->length*7,stage->length*7,0);
-//al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][6]->x,box[1][6]->y,stage->length*7,stage->length*7,0);
-//al_draw_scaled_bitmap(res->belt,0,0,400,658,box[1][8]->x,box[1][8]->y,stage->length*7,stage->length*7,0);
 
 for (x=0;x<stage->boxNumX;x++)
     for(y=0;y<stage->boxNumY;y++)
@@ -335,6 +378,11 @@ for (x=0;x<stage->boxNumX;x++)
             case TRAP:
                 al_draw_scaled_bitmap(res->trap,0,0,1000,1000,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
                 break;
+            case FlexibleTrapOn:
+                al_draw_scaled_bitmap(res->FlexSpikeOn,0,0,448,710,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
+                break;
+            case FlexibleTrapOff:
+                al_draw_scaled_bitmap(res->FlexSpikeOff,0,0,448,710,box[x][y]->x,box[x][y]->y,stage->length,stage->length,0);
         }
         switch(box[x][y]->state)
         {

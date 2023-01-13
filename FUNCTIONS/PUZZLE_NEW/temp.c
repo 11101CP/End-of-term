@@ -219,13 +219,20 @@ void stage5(BOX ***box) //Breathing trap.
     box[5][2]->state=BLOCK;
     box[5][3]->state=BLOCK;
     box[4][2]->state=DOOR;
-    box[1][6]->element=TRAP;/**closed**/
-    box[3][6]->element=TRAP;/**closed**/
-    box[6][6]->element=TRAP;/**closed**/
-    box[6][4]->element=TRAP;/**closed**/
-    box[4][4]->element=TRAP;/**closed**/
-    box[3][3]->element=TRAP;/**closed**/
+    box[1][6]->element=FlexibleTrapOff;/**closed**/
+    box[3][6]->element=FlexibleTrapOff;/**closed**/
+    box[6][6]->element=FlexibleTrapOff;/**closed**/
+    box[6][4]->element=FlexibleTrapOff;/**closed**/
+    box[4][4]->element=FlexibleTrapOff;/**closed**/
+    box[3][3]->element=FlexibleTrapOff;/**closed**/
     box[5][1]->state=EXIT;
+
+    box[1][6]->damage=false;/**closed**/
+    box[3][6]->damage=false;/**closed**/
+    box[6][6]->damage=false;/**closed**/
+    box[6][4]->damage=false;/**closed**/
+    box[4][4]->damage=false;/**closed**/
+    box[3][3]->damage=false;/**closed**/
 }
 
 void stage6(BOX ***box) //Breathing trap.
@@ -270,7 +277,7 @@ void stage6(BOX ***box) //Breathing trap.
     box[3][4]->element=TRAP;/**closed**/
 }
 
-void stage7(BOX ***box)
+void stage7(BOX ***box) //Breathing trap.
 {
     int x,y;
     for(x=0;x<8;x++)

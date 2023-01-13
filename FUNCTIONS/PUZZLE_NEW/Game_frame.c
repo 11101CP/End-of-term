@@ -16,14 +16,14 @@ bool gameSetUp(CONFIG *config,RESOURCE *res)
 
     bool mode=true;
     //stageBOSS (stage.box);/**start(4,4) stage9x9**/
-    //stage1(stage.box);/**start (6,1) stage 9x8**/
-    //stage2(stage.box);/**start (1,5) stage 9x8**/
-    //stage3(stage.box);/**start (8,3) stage 10x10**/
-    //stage4(stage.box);/**start (1,1) stage 10x7**/
-    //stage5(stage.box);/**start (1,3) stage 8x9**/
-    //stage6(stage.box);/**start (3,1) stage 9x10**/
-    stage7(stage.box);/**start (6,5) stage 8x9**/
-    //stage9(stage.box);/**start (2,7) stage 11x9**/
+    //stage1(stage.box);/**start (6,1) stage 9x8    life:23**/
+    //stage2(stage.box);/**start (1,5) stage 9x8    life:24**/
+    //stage3(stage.box);/**start (8,3) stage 10x10  life:32**/
+    //stage4(stage.box);/**start (1,1) stage 10x7   life:23**/
+    stage5(stage.box);/**start (1,3) stage 8x9  life:23**/
+    //stage6(stage.box);/**start (3,1) stage 9x10   life:43**/
+    //stage7(stage.box);/**start (6,5) stage 8x9    life:32**/
+    //stage9(stage.box);/**start (2,7) stage 11x9   life:33**/
 
 
 
