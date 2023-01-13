@@ -13,9 +13,9 @@ for (int i=0;i<4;i++)
 now->next=calloc(1,sizeof(AttackModule));
 now->y=2*i;
 now->x=2*i;
-now->step=0;
+now->step=8;
 now=now->next;
-now->type=VERTIC;
+now->type=HORIZON;
 }
 
 }
@@ -38,10 +38,10 @@ for (;now!=NULL;now=next)
 void addAttack(STAGE *stage)
 {
 AttackModule *now =stage->attack;
-for (int i=0;i<4;i++)
+for (;now!=NULL; now=now->next)
 {
-    now->step++;
-    now=now->next;
+    now->step--;
+
 }
 
 }
@@ -56,7 +56,7 @@ for (int i=0;i<4;i++)
 {
     if(now->type==HORIZON)
     {
-        if (now->step%4==3)
+        if (now->step==1)
     {
     //al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
     int length=stage->length*(1+res->temp);
@@ -72,13 +72,13 @@ for (int i=0;i<4;i++)
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=HURT;
     }
-    else if (now->step%4==1)
+    else if (now->step==3)
     {
     al_draw_line(0,box[0][now->y]->y+stage->length/2,190*config->unit,box[0][now->y]->y+stage->length/2,al_map_rgba(150,10,10,1),3*config->unit);
     for(int x=0;x<9;x++)
     box[x][now->y]->damage=NO;
     }
-    else if (now->step%4==0)
+    else if (now->step==0)
     {
 
         for(int y=0;y<9;y++)

@@ -62,7 +62,7 @@ void detectCharaDamage(STAGE *stage,RESOURCE *res)
         al_stop_timer(chara->timer);
        }
 
-    if( stage->box[chara->x][chara->y]->y <= (stage->boxStartY+2*stage->length)||
+    if( stage->box[chara->x][chara->y]->y < (stage->boxStartY+2*stage->length)||
         stage->box[chara->x][chara->y]->y >= (stage->boxStartY+7*stage->length))
         chara->life=0;      //fatal saw
 

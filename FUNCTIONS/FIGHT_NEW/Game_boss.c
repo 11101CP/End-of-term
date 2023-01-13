@@ -32,7 +32,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
     al_start_timer(res->timers[FPS]);
     al_start_timer(res->timers[Refresh]);
-    //al_start_timer(res->timers[BeltSheft]);
+    al_start_timer(res->timers[BeltSheft]);
     al_start_timer(res->timers[Second]);
 
   puts("here");

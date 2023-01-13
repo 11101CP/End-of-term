@@ -6,8 +6,8 @@
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 {
     BOX*** box=stage->box;
-
-    al_draw_scaled_bitmap(res->bitmaps[Background],0,0,1649,940,0,0,(160*config->unit),(90*config->unit),0);
+   al_draw_scaled_rotated_bitmap(res->bitmaps[Background],470,470,80*config->unit,45*config->unit,(160*config->unit)/900.0,(160*config->unit)/940.0,al_get_timer_count(res->timers[Refresh])/80.0,0);
+  // al_draw_scaled_bitmap(res->bitmaps[Background],0,0,1649,940,0,0,(160*config->unit),(90*config->unit),0);
 
     al_draw_scaled_bitmap(res->bitmaps[Belt],0,0,400,1125,stage->boxStartX+stage->length,stage->boxStartY-stage->length-config->unit*(al_get_timer_count(res->timers[BeltSheft])%9),stage->length*7,stage->length*12,0);
 

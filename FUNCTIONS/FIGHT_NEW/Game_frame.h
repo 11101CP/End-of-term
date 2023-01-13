@@ -90,6 +90,15 @@ bool damage;
 
 }BOX;
 
+//typedef struct
+//{
+//CHARA *chara;
+//AttackModule *attack;
+//MONSTERS *target;
+//
+//
+//}OBJECT;
+
 typedef struct
 {
 
@@ -102,9 +111,12 @@ int boxStartX;
 int boxStartY;
 int boxNumX;
 int boxNumY;
+
 AttackModule *attack;
 AttackTarget *target;
 CHARA *chara;
+//OBJECT
+
 
 
 }STAGE;
