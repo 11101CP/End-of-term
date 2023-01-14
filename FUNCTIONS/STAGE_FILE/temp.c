@@ -61,9 +61,9 @@ default:
 }
 
 
-    for(x=0;x<11;x++)
+    for(x=0;x<10;x++)
     {
-        for(y=0;y<9;y++)
+        for(y=0;y<7;y++)
         {
         fread(&tempBox,sizeof(BOX),1,fptr);
         box[x][y]->damage=tempBox.damage;

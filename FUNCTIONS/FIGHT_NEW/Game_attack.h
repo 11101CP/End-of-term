@@ -7,6 +7,7 @@ typedef enum
 HORIZON,
 VERTIC,
 POINT,
+LINE,
 AREA
 
 }ATTACKTYPE;

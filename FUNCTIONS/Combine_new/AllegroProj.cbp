@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AllegroProj" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/AllegroProj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="D:/AllegroLib_5.2.8/include" />
+					<Add directory="C:/AllegroLib_5.2.8/include" />
+					<Add directory="./Headers" />
+					<Add directory="./SpecificEnums" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add option="-lallegro_monolith-debug.dll" />
+					<Add option="-lallegro_acodec-debug.dll" />
+					<Add option="-lallegro_audio-debug.dll" />
+					<Add option="-lallegro_color-debug.dll" />
+					<Add option="-lallegro_dialog-debug.dll" />
+					<Add option="-lallegro_font-debug.dll" />
+					<Add option="-lallegro_image-debug.dll" />
+					<Add option="-lallegro_main-debug.dll" />
+					<Add option="-lallegro_memfile-debug.dll" />
+					<Add option="-lallegro_physfs-debug.dll" />
+					<Add option="-lallegro_primitives-debug.dll" />
+					<Add option="-lallegro_ttf-debug.dll" />
+					<Add option="-lallegro_video-debug.dll" />
+					<Add option="-lallegro-debug.dll" />
+					<Add option="-ldumb" />
+					<Add option="-lFLAC" />
+					<Add option="-lfreetype" />
+					<Add option="-ljpeg" />
+					<Add option="-logg" />
+					<Add option="-lopus" />
+					<Add option="-lopusfile" />
+					<Add option="-lphysfs" />
+					<Add option="-lpng16" />
+					<Add option="-ltheoradec" />
+					<Add option="-lvorbis" />
+					<Add option="-lvorbisfile" />
+					<Add option="-lwebp" />
+					<Add option="-lwebpdecoder" />
+					<Add option="-lwebpdemux" />
+					<Add option="-lzlib" />
+					<Add option="-lstdc++" />
+					<Add directory="D:/AllegroLib_5.2.8/lib" />
+					<Add directory="C:/AllegroLib_5.2.8/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/AllegroProj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:/AllegroLib_5.2.8/include" />
+					<Add directory="./Headers" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lallegro_monolith.dll" />
+					<Add option="-lallegro_acodec.dll" />
+					<Add option="-lallegro_audio.dll" />
+					<Add option="-lallegro_color.dll" />
+					<Add option="-lallegro_dialog.dll" />
+					<Add option="-lallegro_font.dll" />
+					<Add option="-lallegro_image.dll" />
+					<Add option="-lallegro_main.dll" />
+					<Add option="-lallegro_memfile.dll" />
+					<Add option="-lallegro_physfs.dll" />
+					<Add option="-lallegro_primitives.dll" />
+					<Add option="-lallegro_ttf.dll" />
+					<Add option="-lallegro_video.dll" />
+					<Add option="-lallegro.dll" />
+					<Add option="-ldumb" />
+					<Add option="-lFLAC" />
+					<Add option="-lfreetype" />
+					<Add option="-ljpeg" />
+					<Add option="-logg" />
+					<Add option="-lopus" />
+					<Add option="-lopusfile" />
+					<Add option="-lphysfs" />
+					<Add option="-lpng16" />
+					<Add option="-ltheoradec" />
+					<Add option="-lvorbis" />
+					<Add option="-lvorbisfile" />
+					<Add option="-lwebp" />
+					<Add option="-lwebpdecoder" />
+					<Add option="-lwebpdemux" />
+					<Add option="-lzlib" />
+					<Add option="-lstdc++" />
+					<Add directory="C:/AllegroLib_5.2.8/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="D:/AllegroLib_5.2.8/include" />
+			<Add directory="C:/AllegroLib_5.2.8/include" />
+			<Add directory="./Headers" />
+		</Compiler>
+		<Linker>
+			<Add directory="D:/AllegroLib_5.2.8/lib" />
+			<Add directory="C:/AllegroLib_5.2.8/lib" />
+		</Linker>
+		<Unit filename="Allegro_general/AL_general.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUI/GUI_general.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUI/GUI_mouse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game_main/Game_build.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game_main/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Headers/AL_general.h" />
+		<Unit filename="Headers/Common.h" />
+		<Unit filename="Headers/GUI.h" />
+		<Unit filename="Headers/Game_home.h" />
+		<Unit filename="Headers/Game_select.h" />
+		<Unit filename="Headers/Loading_enum.h" />
+		<Unit filename="Headers/config_struct.h" />
+		<Unit filename="Input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SpecificEnums/HomeEnums.h" />
+		<Unit filename="SpecificEnums/SelectEnums.h" />
+		<Unit filename="Window_config/config_build.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_config/config_draw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_config/config_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_home/home_loading.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_home/home_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_select/select_loading.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_select/select_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Window_setting/setting_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="loading/Loading_assets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rank.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -41,7 +41,7 @@ res->queues = al_create_event_queue();
 
 res->fonts  [0]=al_load_font("./assets/arial.ttf",unit*3,0);
 res->bitmaps[0]=al_load_bitmap("./assets/thumbnail.jpg");
-res->bitmaps[1]=al_load_bitmap("./assets/icon.jpg");
+res->bitmaps[1]=al_load_bitmap("./assets/icon.png");
 res->samples[0]=al_load_sample("./assets/Quack.wav");
 }
 

@@ -914,3 +914,50 @@
 1673519447 source:c:\users\yu\downloads\puzzle_new\temp.c
 	"Game_frame.h"
 
+1672830151 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\al_general.c
+	"AL_general.h"
+
+1672830151 c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1673099004 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\bossfight.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1673098495 c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+
+1673533219 c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_frame.h
+	"AL_general.h"
+	"common.h"
+
+1673026254 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672830151 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_load.c
+
+1672830151 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_playing.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672830151 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\main.c
+	"Common.h"
+	"AL_general.h"
+
+1673521294 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\temp.c
+	"Game_frame.h"
+

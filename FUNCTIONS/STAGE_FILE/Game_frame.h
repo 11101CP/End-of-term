@@ -72,7 +72,6 @@ DAMAGE damage ;
 typedef struct
 {
 int stage;
-
 BOX ***box;
 int length; //box edge
 int boxNumX;

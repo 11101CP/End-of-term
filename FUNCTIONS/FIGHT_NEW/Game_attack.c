@@ -11,11 +11,14 @@ AttackModule *now=stage->attack;
 for (int i=0;i<4;i++)
 {
 now->next=calloc(1,sizeof(AttackModule));
-now->y=2*i;
-now->x=2*i;
-now->step=8;
+now->y=2;
+now->x=2;
+now->dx=4;
+now->dy=0;
+now->step=5;
+now->type=LINE;
 now=now->next;
-now->type=HORIZON;
+
 }
 
 }
@@ -153,6 +156,34 @@ for (int i=0;i<4;i++)
 
 
      }
+
+     if(now->type==LINE)
+    {
+        if (now->step==1)
+    {
+    al_draw_line(box[now->x][now->y]->x+stage->length/2,box[now->x][now->y]->y+stage->length/2,
+                 box[now->x+now->dx][now->y+now->dy]->x-stage->length/2,box[now->x+now->dx][now->y+now->dy]->y+stage->length/2,al_map_rgb(255,255,255),3*config->unit);
+    for(int y=0;y<9;y++)
+    box[now->x][y]->damage=HURT;
+    }
+    else if (now->step==3)
+    {
+    al_draw_line(box[now->x][now->y]->x+stage->length/2,box[now->x][now->y]->y+stage->length/2,
+                 box[now->x+now->dx][now->y+now->dy]->x-stage->length/2,box[now->x+now->dx][now->y+now->dy]->y+stage->length/2,al_map_rgba(150,10,10,1),3*config->unit);
+    for(int y=0;y<9;y++)
+    box[now->x][y]->damage=NO;
+    }
+    else if(now->step==0)
+    {
+    for(int y=0;y<9;y++)
+    box[now->x][y]->damage=NO;
+
+    }
+    }
+
+
+
+
 
 
 
