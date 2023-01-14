@@ -927,7 +927,7 @@
 	<allegro5/allegro_native_dialog.h>
 	<allegro5/allegro_primitives.h>
 
-1673099004 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\bossfight.c
+1673702063 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\bossfight.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -938,7 +938,7 @@
 	<stdbool.h>
 	<conio.h>
 
-1673533219 c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_frame.h
+1673700663 c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_frame.h
 	"AL_general.h"
 	"common.h"
 
@@ -958,6 +958,16 @@
 	"Common.h"
 	"AL_general.h"
 
-1673521294 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\temp.c
+1673599184 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\temp.c
+	"Game_frame.h"
+
+1673703467 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\game_frame.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1673702264 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\stage_file\loadstage.c
+	"Common.h"
+	"AL_general.h"
 	"Game_frame.h"
 

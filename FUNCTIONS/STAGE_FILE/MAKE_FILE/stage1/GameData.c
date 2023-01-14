@@ -26,13 +26,9 @@ TRAP
 
 typedef struct
 {
-
-int x;
-int y;
 STATE state;
 ELEMENT element;
 bool damage;
-
 }BOX;
 
 int main()
@@ -50,8 +46,6 @@ int main()
         box[x][y].damage=false;
         box[x][y].element=0;
         box[x][y].state=0;
-        box[x][y].x=40+x*9;
-        box[x][y].y=4+y*9;
     }
 
     FILE *fptr;
@@ -110,10 +104,6 @@ else
         printf("%d ",box[x][y].state);
         puts ("");
         }
-
-
-
-
 
 
 if((fptr = fopen ("./stage.dat","wb+"))==NULL)

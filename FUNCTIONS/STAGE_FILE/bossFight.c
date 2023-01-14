@@ -29,7 +29,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
 
     al_register_event_source(event_queue, al_get_keyboard_event_source());
-    al_register_event_source(event_queue, al_get_display_event_source(res->display));
+    //al_register_event_source(event_queue, al_get_display_event_source(res->display));
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
     al_register_event_source(event_queue, al_get_timer_event_source(refresh));
     al_start_timer(timer);

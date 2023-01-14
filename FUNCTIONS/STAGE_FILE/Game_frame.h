@@ -72,10 +72,18 @@ DAMAGE damage ;
 typedef struct
 {
 int stage;
+int progess;
 BOX ***box;
 int length; //box edge
+
+int boxStartX;
+int boxStartY;
 int boxNumX;
 int boxNumY;
+
+//AttackModule *attack;
+//AttackTarget *target;
+CHARA *chara;
 
 }STAGE;
 

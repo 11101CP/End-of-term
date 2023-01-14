@@ -28,8 +28,6 @@ SPIKYTRAP
 typedef struct
 {
 
-int x;
-int y;
 STATE state;
 ELEMENT element;
 bool damage;
@@ -40,7 +38,7 @@ int main()
 {
     int x,y;
 
-    BOX  box[9][10];
+    BOX  box[8][9];
 
     printf("%d\n",sizeof(BOX));
     printf("%d\n",sizeof(box));
@@ -51,8 +49,7 @@ int main()
         box[x][y].damage=false;
         box[x][y].element=0;
         box[x][y].state=0;
-        box[x][y].x=40+x*9;
-        box[x][y].y=4+y*9;
+
     }
 
 

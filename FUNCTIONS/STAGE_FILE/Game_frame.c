@@ -11,13 +11,18 @@ void buildBox (BOX ****box,int x,int y);
 bool gameSetUp(CONFIG *config,RESOURCE *res)
 {
     STAGE stage;
-    loadStage(&stage,config);
+    //loadStage(&stage,config);
+    loadStageGOOD(&stage ,config,4);
+
+
+    //printf("%d",stage.box[8][7]->x);
+
     //loadStageRes
 
     bool mode=true;
     //stageBOSS (stage.box);/**start(4,4) stage9x9**/
 
-    loadstage (stage.box,config,4);
+    //loadstage (stage.box,config,4);
 
     //stage1(stage.box);/**start (6,1) stage 9x8**/
     //stage2(stage.box);/**start (1,5) stage 9x8**/
