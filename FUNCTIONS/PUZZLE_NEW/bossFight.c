@@ -2,8 +2,6 @@
 #include "AL_general.h"
 #include "Game_frame.h"
 
-
-
 bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 {
 
@@ -12,9 +10,9 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
     bool exit=false;
     bool shift=true;
     CHARA chara;
-    chara.x=1;/**start**/
-    chara.y=3;
-    chara.life=23;
+    chara.x=6;/**start**/
+    chara.y=5;
+    chara.life=33;/**Character life**/
     chara.facingRight=0;
     chara.step=0;
     chara.vulnerable=false;
@@ -40,12 +38,11 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
 
     if(chara.life==0)
-    printf("X");
+    printf("X\n");
     else
     printf("%d\n",chara.life);
     while(!exit)
     {
-
 
     if(!al_is_event_queue_empty(event_queue))
         {
@@ -56,7 +53,15 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                 switch(events.type)
                 {
                 case ALLEGRO_EVENT_KEY_DOWN:
-                    moveChara(stage,&events.keyboard);
+                    if(moveChara(stage,&events.keyboard,res))
+                    {
+                    TrapFunc(stage,res,config);
+                    if (stage->box[stage->chara->x][stage->chara->y]->damage)  //extra
+                    {
+                        al_play_sample(res->CharaHitten,1,0,1,ALLEGRO_PLAYMODE_ONCE,NULL);
+                        stage->chara->life--;
+                    }
+                    }
                     if(chara.life==0)
                         printf("X");
                     else
@@ -76,13 +81,12 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     drawMap(stage,res,config);
                     drawObject(stage,res,config);
                     drawChara(&chara,stage,res,config);
+
+
+
                     //al_draw_textf(res->fonts,al_map_rgb(255,255,255),0,0,0,"%d",chara.life);
-                    detectCharaDamage(&chara,stage);
 
 
-
-                    //al_draw_filled_rectangle(0,0,160*config->unit,22*config->unit,al_map_rgb(0,0,0));
-                    //al_draw_filled_rectangle(0,68*config->unit,160*config->unit,90*config->unit,al_map_rgb(0,0,0));
                     al_flip_display();
                     }
                     if(events.timer.source==refresh)
@@ -93,21 +97,13 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
 
 
-
-
-
-
-
-
-
-                  //  if (shift)
+                    //if (shift)
                         //drawSheftObjext(&stage);
                     //else
 
                     break;
 
                 }
-
 
 
 
@@ -122,6 +118,3 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
    // al_flip_display();
 
     }
-
-
-

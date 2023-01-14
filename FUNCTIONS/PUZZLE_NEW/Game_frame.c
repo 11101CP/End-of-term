@@ -18,11 +18,11 @@ bool gameSetUp(CONFIG *config,RESOURCE *res)
     //stageBOSS (stage.box);/**start(4,4) stage9x9**/
     //stage1(stage.box);/**start (6,1) stage 9x8    life:23**/
     //stage2(stage.box);/**start (1,5) stage 9x8    life:24**/
-    //stage3(stage.box);/**start (8,3) stage 10x10  life:32**/
+    //stage3(stage.box);/**start (8,3) stage 10x10  life:34**/
     //stage4(stage.box);/**start (1,1) stage 10x7   life:23**/
-    stage5(stage.box);/**start (1,3) stage 8x9  life:23**/
+    //stage5(stage.box);/**start (1,3) stage 8x9  life:23**/
     //stage6(stage.box);/**start (3,1) stage 9x10   life:43**/
-    //stage7(stage.box);/**start (6,5) stage 8x9    life:32**/
+    stage7(stage.box);/**start (6,5) stage 8x9    life:32**/
     //stage9(stage.box);/**start (2,7) stage 11x9   life:33**/
 
 
@@ -58,7 +58,6 @@ void loadBox  (BOX ***box,int x,int y,int unit) //stage 1
         {
             box[i][j]->x= (40+9*i)*unit;
             box[i][j]->y= (4+9*j)*unit;
-            //box[i][j]->state=DAMAGE;
             box[i][j]->state = EMPTY;
             box[i][j]->damage = NO;
         }

@@ -17,13 +17,22 @@ void destroy_al(void);
 typedef struct
 {
 ALLEGRO_DISPLAY *display;
-ALLEGRO_BITMAP *trap;
-ALLEGRO_BITMAP *belt;
-ALLEGRO_BITMAP *chara;
-ALLEGRO_BITMAP *block;
-ALLEGRO_BITMAP *FlexSpikeOn;
-ALLEGRO_BITMAP *FlexSpikeOff;
-ALLEGRO_FONT   *fonts;
+ALLEGRO_BITMAP  *trap;
+ALLEGRO_BITMAP  *belt;
+ALLEGRO_BITMAP  *chara;
+ALLEGRO_BITMAP  *block;
+ALLEGRO_BITMAP  *FlexSpikeOn;
+ALLEGRO_BITMAP  *FlexSpikeOff;
+ALLEGRO_FONT    *fonts;
+ALLEGRO_SAMPLE *CharaMove;
+ALLEGRO_SAMPLE *CharaHitten;
+ALLEGRO_SAMPLE *ObjHitten;
+ALLEGRO_SAMPLE *DoorOpen;
+ALLEGRO_SAMPLE *MonsterHitten;
+ALLEGRO_SAMPLE *MonsterDie;
+ALLEGRO_SAMPLE *GamePause;
+ALLEGRO_SAMPLE *GameRestart;
+
 
 }RESOURCE;
 

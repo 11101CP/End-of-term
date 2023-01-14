@@ -24,12 +24,9 @@ KEY=1,
 
 TRAP,
 
-FlexibleTrapOn,
-
-FlexibleTrapOff
+FlexibleTrap
 
 }ELEMENT;
-
 
 typedef enum
 {
@@ -54,6 +51,39 @@ int step;
 bool vulnerable; // also used as an indicator of whether possesses the key.
 
 }CHARA;
+
+typedef enum
+{
+OBJ_STAY,
+OBJ_MOVE,
+OBJ_HURT
+
+}OBJECT_STATE;
+
+typedef enum
+{
+
+OBJ_BLOCK,
+OBJ_KEY,
+OBJ_DOOR,
+OBJ_MONSTER,
+OBJ_EXIT,
+OBJ_TRAP,
+OBJ_FLEXIBLETRAP
+
+}OBJECT_CLASS;
+
+typedef struct object
+{
+    int x;
+    int y;
+    int factinRight;
+    int step;
+    OBJECT_CLASS objClass;
+    OBJECT_STATE objState;
+
+    struct object* next;
+}OBJECT;
 
 typedef enum
 {
@@ -106,9 +136,8 @@ void drawChara (CHARA *chara,STAGE *stage,RESOURCE *res,CONFIG *config);
 void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config );
 void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config );
 void boxShift(STAGE *stage,RESOURCE *res,CONFIG *config );
-void moveChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard);
-void detectCharaDamage(CHARA *chara,STAGE *stage);
-
+bool moveChara (STAGE *stage,ALLEGRO_KEYBOARD_EVENT *keyboard,RESOURCE *res);
+void TrapFunc(STAGE *stage,RESOURCE *res,CONFIG *config );
 
 
 

@@ -97,6 +97,12 @@ void stage2(BOX ***box)
     box[6][3]->element=TRAP;/**opened**/
     box[6][4]->element=TRAP;/**opened**/
 
+    box[2][3]->damage=true;/**opened**/
+    box[4][2]->damage=true;/**opened**/
+    box[5][2]->damage=true;/**opened**/
+    box[5][3]->damage=true;/**opened**/
+    box[6][3]->damage=true;/**opened**/
+    box[6][4]->damage=true;/**opened**/
 }
 void stage3(BOX ***box)
 {
@@ -143,6 +149,14 @@ void stage3(BOX ***box)
     box[1][6]->element=KEY;
     box[4][1]->state=EXIT;
 
+    box[3][4]->damage=true;/**opened**/
+    box[4][3]->damage=true;/**opened**/
+    box[5][3]->damage=true;/**opened**/
+    box[5][4]->damage=true;/**opened**/
+    box[3][6]->damage=true;/**opened**/
+    box[5][6]->damage=true;/**opened**/
+    box[6][5]->damage=true;/**opened**/
+    box[7][5]->damage=true;/**opened**/
 }
 void stage4(BOX ***box)
 {
@@ -219,12 +233,12 @@ void stage5(BOX ***box) //Breathing trap.
     box[5][2]->state=BLOCK;
     box[5][3]->state=BLOCK;
     box[4][2]->state=DOOR;
-    box[1][6]->element=FlexibleTrapOff;/**closed**/
-    box[3][6]->element=FlexibleTrapOff;/**closed**/
-    box[6][6]->element=FlexibleTrapOff;/**closed**/
-    box[6][4]->element=FlexibleTrapOff;/**closed**/
-    box[4][4]->element=FlexibleTrapOff;/**closed**/
-    box[3][3]->element=FlexibleTrapOff;/**closed**/
+    box[1][6]->element=FlexibleTrap;/**closed**/
+    box[3][6]->element=FlexibleTrap;/**closed**/
+    box[6][6]->element=FlexibleTrap;/**closed**/
+    box[6][4]->element=FlexibleTrap;/**closed**/
+    box[4][4]->element=FlexibleTrap;/**closed**/
+    box[3][3]->element=FlexibleTrap;/**closed**/
     box[5][1]->state=EXIT;
 
     box[1][6]->damage=false;/**closed**/
@@ -273,8 +287,11 @@ void stage6(BOX ***box) //Breathing trap.
     box[4][3]->element=KEY;
     box[5][7]->state=DOOR;
     box[6][8]->state=EXIT;
-    box[2][4]->element=TRAP;/**closed**/
-    box[3][4]->element=TRAP;/**closed**/
+    box[2][4]->element=FlexibleTrap;/**closed**/
+    box[3][4]->element=FlexibleTrap;/**closed**/
+
+    box[2][4]->damage=false;/**closed**/
+    box[3][4]->damage=false;/**closed**/
 }
 
 void stage7(BOX ***box) //Breathing trap.
@@ -313,12 +330,19 @@ void stage7(BOX ***box) //Breathing trap.
     box[2][3]->element=KEY;
     box[4][1]->state=EXIT;
     box[5][2]->state=DOOR;
-    box[1][6]->element=TRAP;/**opened**/
-    box[2][7]->element=TRAP;/**opened**/
-    box[4][7]->element=TRAP;/**opened**/
-    box[1][7]->element=TRAP;/**closed**/
-    box[3][7]->element=TRAP;/**closed**/
-    box[4][6]->element=TRAP;/**closed**/
+    box[1][6]->element=FlexibleTrap;/**opened**/
+    box[2][7]->element=FlexibleTrap;/**opened**/
+    box[4][7]->element=FlexibleTrap;/**opened**/
+    box[1][7]->element=FlexibleTrap;/**closed**/
+    box[3][7]->element=FlexibleTrap;/**closed**/
+    box[4][6]->element=FlexibleTrap;/**closed**/
+
+    box[1][6]->damage=true;
+    box[2][7]->damage=true;
+    box[4][7]->damage=true;
+    box[1][7]->damage=false;
+    box[3][7]->damage=false;
+    box[4][6]->damage=false;
 }
 
 void stage9(BOX ***box)
