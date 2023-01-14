@@ -1,0 +1,880 @@
+# depslib dependency file v1.0
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\al_general.c
+	"AL_general.h"
+
+1672829426 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+	"AL_general.h"
+
+1672828370 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672828109 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/clipboard.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/cpu.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/haptic.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/render_state.h"
+	"allegro5/shader.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/touch_input.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1670848385 c:\allegrolib_5.2.8\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alandroidcfg.h"
+	"allegro5/platform/alraspberrypicfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/allegro_sdl_config.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alplatf.h
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1670848388 c:\allegrolib_5.2.8\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1670848388 c:\allegrolib_5.2.8\include\allegro5\platform\alandroidcfg.h
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alraspberrypicfg.h
+	<fcntl.h>
+	<unistd.h>
+	<sys/types.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\alunix.h
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\allegro_sdl_config.h
+	<fcntl.h>
+	<unistd.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+	<limits.h>
+
+1670848389 c:\allegrolib_5.2.8\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\color.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\path.h
+	"allegro5/base.h"
+	"allegro5/utf8.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\blender.h
+	"allegro5/base.h"
+	"allegro5/color.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\clipboard.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/utf8.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\config.h
+	"allegro5/file.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\cpu.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\error.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1670848385 c:\allegrolib_5.2.8\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\fullscreen_mode.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\haptic.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/events.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/mouse.h"
+	"allegro5/touch_input.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\keycodes.h
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\touch_input.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\memory.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\monitor.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\render_state.h
+	"allegro5/base.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\shader.h
+	"allegro5/base.h"
+	"allegro5/transformations.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\timer.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1670848382 c:\allegrolib_5.2.8\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\alcompat.h
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_image.h
+	"allegro5/base.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_native_dialog.h
+	"allegro5/allegro.h"
+
+1670848381 c:\allegrolib_5.2.8\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1672828401 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI_general.h"
+
+1672496396 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672496396 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\headers\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1672831945 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_main\main.c
+	"AL_general.h"
+	"config_struct.h"
+
+1672829426 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_config\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\allegro_general\al_general.c
+	"AL_general.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_general\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672496396 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\gui_general\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1672553620 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\al_general.c
+	"AL_general.h"
+
+1672827177 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+
+1672671702 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_attack.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672664545 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672831535 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_frame.h
+	"AL_general.h"
+	"common.h"
+	"Game_attack.h"
+
+1672663997 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_attack.h
+
+1672831499 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_boss.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672831109 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_chara.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672802081 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_death.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672831507 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_frame.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672682005 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_misc.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672567490 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_playing.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672665871 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\temp.c
+	"Game_frame.h"
+
+1672831789 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_draw.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672831614 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine\game_load.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+
+1672992769 source:c:\users\lidinglun\desktop\end-of-term\combine\allegro_general\al_general.c
+	"AL_general.h"
+
+1673007180 c:\users\lidinglun\desktop\end-of-term\combine\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	"Common.h"
+
+1673009700 source:c:\users\lidinglun\desktop\end-of-term\combine\game_main\main.c
+	"AL_general.h"
+	"config_struct.h"
+
+1673006243 c:\users\lidinglun\desktop\end-of-term\combine\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI_general.h"
+
+1673005849 c:\users\lidinglun\desktop\end-of-term\combine\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1672992769 c:\users\lidinglun\desktop\end-of-term\combine\headers\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1673006243 source:c:\users\lidinglun\desktop\end-of-term\combine\gui_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673006405 source:c:\users\lidinglun\desktop\end-of-term\combine\gui_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672992769 source:c:\users\lidinglun\desktop\end-of-term\combine\gui_general\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1672992769 source:c:\users\lidinglun\desktop\end-of-term\combine\gui_general\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1673006304 source:c:\users\lidinglun\desktop\end-of-term\combine\gui_config\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+	"AL_general.h"
+
+1673007134 source:c:\users\lidinglun\desktop\end-of-term\combine\input.c
+	"Common.h"
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673007180 source:c:\users\lidinglun\desktop\end-of-term\combine\rank.c
+	"Common.h"
+	"AL_general.h"
+
+1673007258 source:c:\users\lidinglun\desktop\end-of-term\combine\timer.c
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673010833 source:c:\users\lidinglun\desktop\end-of-term\combine\loading\loading_assets.c
+	"AL_general.h"
+	"Loading_enum.h"
+	"Common.h"
+
+1673010758 c:\users\lidinglun\desktop\end-of-term\combine\headers\loading_enum.h
+
+1673011616 source:c:\users\lidinglun\desktop\end-of-term\combine\aldraw.c
+	"AL_general.h"
+	"Common.h"
+	"Loading_enum.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\allegro_general\al_general.c
+	"AL_general.h"
+
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	"Common.h"
+
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1673096746 source:c:\users\lidinglun\desktop\sexybanana\combine\game_main\main.c
+	"AL_general.h"
+	"config_struct.h"
+
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI_general.h"
+
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+	"AL_general.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\gui_general\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\input.c
+	"Common.h"
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673102971 source:c:\users\lidinglun\desktop\sexybanana\combine\loading\loading_assets.c
+	"AL_general.h"
+	"Loading_enum.h"
+	"Common.h"
+
+1673082935 c:\users\lidinglun\desktop\sexybanana\combine\headers\loading_enum.h
+
+1673082935 source:c:\users\lidinglun\desktop\sexybanana\combine\rank.c
+	"Common.h"
+	"AL_general.h"
+
+1673093911 source:c:\users\lidinglun\desktop\sexybanana\combine\timer.c
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673103053 source:c:\users\lidinglun\desktop\sexybanana\combine\aldraw.c
+	"AL_general.h"
+	"Common.h"
+	"Loading_enum.h"
+
+1673627440 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\aldraw.c
+	"AL_general.h"
+	"Common.h"
+	"Loading_enum.h"
+
+1673626463 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	"Common.h"
+
+1673598787 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1673635445 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\loading_enum.h
+
+1673627440 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\allegro_general\al_general.c
+	"AL_general.h"
+
+1673676859 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\game_main\main.c
+	"AL_general.h"
+
+1673634562 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI.h"
+
+1673598787 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\gui_general.h
+	"AL_general.h"
+	"common.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui_config\config_build.c
+	"config_struct.h"
+	"GUI_general.h"
+	"AL_general.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui_general\gui_general.c
+	"AL_general.h"
+	"GUI_general.h"
+	"Common.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui_general\gui_mouse.c
+	"AL_general.h"
+	"GUI_general.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\input.c
+	"Common.h"
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673635633 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\loading\loading_assets.c
+	"AL_general.h"
+	"Loading_enum.h"
+	"Common.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\rank.c
+	"Common.h"
+	"AL_general.h"
+
+1673598787 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\timer.c
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673634529 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_config\config_build.c
+	"config_struct.h"
+	"GUI.h"
+	"AL_general.h"
+
+1673634529 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673634279 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673626429 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui\gui_general.c
+	"AL_general.h"
+	"GUI.h"
+	"Common.h"
+
+1673626429 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\gui\gui_mouse.c
+	"AL_general.h"
+	"GUI.h"
+
+1673634687 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\gui.h
+	"AL_general.h"
+	"common.h"
+
+1673634939 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\game_main\game_build.c
+	"AL_general.h"
+	"config_struct.h"
+
+1673674838 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_home\aldraw.c
+	"Game_home.h"
+
+1673674836 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_home\home_window.c
+	"Game_home.h"
+
+1673674568 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\game_home.h
+	"AL_general.h"
+	"Common.h"
+	"HomeEnums.h"
+
+1673672262 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\specificenums\homeenums.h
+
+1673676158 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_home\home_loading.c
+	"Game_home.h"
+
+1673636611 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_home\home_draw.c
+	"Game_home.h"
+
+1673677143 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_select\select_loading.c
+	"Game_select.h"
+
+1673676997 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\headers\game_select.h
+	"AL_general.h"
+	"Common.h"
+	"SelectEnums.h"
+
+1673674486 c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\specificenums\selectenums.h
+
+1673677082 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_select\select_window.c
+	"Game_select.h"
+
+1673675042 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\combine_new\window_setting\setting_window.c
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\allegro_general\al_general.c
+	"AL_general.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	"Common.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\game_main\game_build.c
+	"AL_general.h"
+	"config_struct.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\gui.h
+	"AL_general.h"
+	"common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\game_main\main.c
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\gui\gui_general.c
+	"AL_general.h"
+	"GUI.h"
+	"Common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\gui\gui_mouse.c
+	"AL_general.h"
+	"GUI.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\input.c
+	"Common.h"
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\loading\loading_assets.c
+	"AL_general.h"
+	"Loading_enum.h"
+	"Common.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\loading_enum.h
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\rank.c
+	"Common.h"
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\timer.c
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_config\config_build.c
+	"config_struct.h"
+	"GUI.h"
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_home\home_loading.c
+	"Game_home.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\game_home.h
+	"AL_general.h"
+	"Common.h"
+	"HomeEnums.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\specificenums\homeenums.h
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_home\home_window.c
+	"Game_home.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_select\select_loading.c
+	"Game_select.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\headers\game_select.h
+	"AL_general.h"
+	"Common.h"
+	"SelectEnums.h"
+
+1673677900 c:\users\lidinglun\desktop\branchpico\functions\combine_new\specificenums\selectenums.h
+
+1673680401 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_select\select_window.c
+	"Game_select.h"
+
+1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_setting\setting_window.c
+
