@@ -35,13 +35,22 @@ void loadButton(UIButton *button,float unit)
 
 void loadUIResource(RESOURCE *res,int unit)
 {
+    int i=0;
+    srand(time(NULL));
 res->fonts  =calloc(1,sizeof(ALLEGRO_FONT*));
 res->bitmaps=calloc(2,sizeof(ALLEGRO_BITMAP*));
 res->samples=calloc(1,sizeof(ALLEGRO_SAMPLE*));
 
-
+    i=rand()%4;
+    if(i==0)
+    res->bitmaps[0]=al_load_bitmap("./assets/thumbnail0.png");
+    else if(i==1)
+    res->bitmaps[0]=al_load_bitmap("./assets/thumbnail1.png");
+    else if(i==2)
+    res->bitmaps[0]=al_load_bitmap("./assets/thumbnail2.png");
+    else if(i==3)
+    res->bitmaps[0]=al_load_bitmap("./assets/thumbnail3.png");
 res->fonts  [0]=al_load_font("./assets/arial.ttf",unit*3,0);
-res->bitmaps[0]=al_load_bitmap("./assets/thumbnail.jpg");
 res->bitmaps[1]=al_load_bitmap("./assets/icon.png");
 res->samples[0]=al_load_sample("./assets/Quack.wav");
 
