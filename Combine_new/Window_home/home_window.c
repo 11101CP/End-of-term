@@ -7,15 +7,15 @@ bool HomeWindow(RESOURCE *res, CONFIG *config)
 {
     ALLEGRO_EVENT events;
     bool play=true;
-
     LoadHomeResource(res,config);
 
     drawHomeWindow(res, config, play);
     al_flip_display();
-
+    al_play_sample(res->samples[1],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
     while (1)
     {
     al_wait_for_event(res->queues,&events);
+
 
         if(events.type==ALLEGRO_EVENT_KEY_CHAR)
             {
@@ -29,6 +29,7 @@ bool HomeWindow(RESOURCE *res, CONFIG *config)
                     case ALLEGRO_KEY_A:
                     case ALLEGRO_KEY_S:
                     case ALLEGRO_KEY_D:
+                        al_play_sample(res->samples[0],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                         if(play)
                             play=false;
                         else
@@ -42,6 +43,7 @@ bool HomeWindow(RESOURCE *res, CONFIG *config)
                         destroyHomeResource(res);
                         return play;
                         break;
+
                 }
 
             }

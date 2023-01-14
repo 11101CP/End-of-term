@@ -6,13 +6,12 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
 {
     int unit=config->unit;
     int control = 1;
-
     LoadSelectResource(res,config);
 
     ALLEGRO_EVENT events;
     drawSelectWindow(res,config,control);
     al_flip_display();
-
+    al_play_sample(res->samples[1],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
     while (1)
     {
         al_wait_for_event(res->queues, &events);
@@ -24,6 +23,7 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
                 case ALLEGRO_KEY_W:
                 case ALLEGRO_KEY_DOWN:
                 case ALLEGRO_KEY_S:
+                    al_play_sample(res->samples[0],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                     if (control>8)
                         control=1;
                     else
@@ -32,6 +32,7 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
 
                 case ALLEGRO_KEY_LEFT:
                 case ALLEGRO_KEY_A:
+                    al_play_sample(res->samples[0],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                     if(control<9)
                         {if(--control==0)
                             control=1;}
@@ -42,6 +43,7 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
 
                 case ALLEGRO_KEY_RIGHT:
                 case ALLEGRO_KEY_D:
+                    al_play_sample(res->samples[0],1.0,0.0,1.0,ALLEGRO_PLAYMODE_ONCE,NULL);
                     if(control<9)
                         {if(++control==9)
                             control=8;}
@@ -52,6 +54,7 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
 
                 case ALLEGRO_KEY_ESCAPE:
                     destroySelectResource (res);
+
                     return 0;
                     break;
 
@@ -59,7 +62,6 @@ int SelectWindow (RESOURCE *res, CONFIG *config)
                     destroySelectResource (res);
                     return control;
                     break;
-
             }
             drawSelectWindow(res,config,control);
             al_flip_display();

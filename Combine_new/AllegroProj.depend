@@ -878,3 +878,114 @@
 
 1673677900 source:c:\users\lidinglun\desktop\branchpico\functions\combine_new\window_setting\setting_window.c
 
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\allegro_general\al_general.c
+	"AL_general.h"
+
+1673696978 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\al_general.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_native_dialog.h>
+	<allegro5/allegro_primitives.h>
+	"Common.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\common.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\game_main\game_build.c
+	"AL_general.h"
+	"config_struct.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\config_struct.h
+	"AL_general.h"
+	"common.h"
+	"GUI.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\gui.h
+	"AL_general.h"
+	"common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\game_main\main.c
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\gui\gui_general.c
+	"AL_general.h"
+	"GUI.h"
+	"Common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\gui\gui_mouse.c
+	"AL_general.h"
+	"GUI.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\input.c
+	"Common.h"
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\loading\loading_assets.c
+	"AL_general.h"
+	"Loading_enum.h"
+	"Common.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\loading_enum.h
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\rank.c
+	"Common.h"
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\timer.c
+	"AL_general.h"
+	<stdio.h>
+	<time.h>
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_config\config_build.c
+	"config_struct.h"
+	"GUI.h"
+	"AL_general.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_config\config_draw.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673688451 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_config\config_window.c
+	"AL_general.h"
+	"config_struct.h"
+	"GUI.h"
+	"Common.h"
+
+1673677900 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_setting\setting_window.c
+
+1673696978 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_home\home_loading.c
+	"Game_home.h"
+
+1673687147 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\game_home.h
+	"AL_general.h"
+	"Common.h"
+	"HomeEnums.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\specificenums\homeenums.h
+
+1673696099 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_select\select_loading.c
+	"Game_select.h"
+
+1673687147 c:\users\lidinglun\desktop\sexybanana\combine_new\headers\game_select.h
+	"AL_general.h"
+	"Common.h"
+	"SelectEnums.h"
+
+1673677900 c:\users\lidinglun\desktop\sexybanana\combine_new\specificenums\selectenums.h
+
+1673696978 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_home\home_window.c
+	"Game_home.h"
+
+1673696978 source:c:\users\lidinglun\desktop\sexybanana\combine_new\window_select\select_window.c
+	"Game_select.h"
+

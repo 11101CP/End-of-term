@@ -3,6 +3,7 @@
 
 void LoadHomeResource(RESOURCE *res,CONFIG *config)
 {
+
     res->bitmaps=calloc(HomeBmpNum,sizeof(ALLEGRO_BITMAP*));
     res->bitmaps[Cover]=al_load_bitmap("./assets/cover.png");
     res->bitmaps[PressedPlay]=al_load_bitmap("././assets/PressedPlay.png");
@@ -14,6 +15,10 @@ void LoadHomeResource(RESOURCE *res,CONFIG *config)
     res->fonts[0]=al_load_font("./assets/SoukouMincho.ttf",config->unit*15,0);
     res->fonts[1]=al_load_font("./assets/SoukouMincho.ttf",config->unit*6,0);
 
+    res->samples=calloc(2,sizeof(ALLEGRO_SAMPLE*));
+    res->samples[0]=al_load_sample("./assets/click.wav");
+    res->samples[1]=al_load_sample("./assets/horror.wav");
+
 }
 
 void destroyHomeResource (RESOURCE *res)
@@ -24,7 +29,8 @@ void destroyHomeResource (RESOURCE *res)
         al_destroy_bitmap(res->bitmaps[i]);
     }
     free(res->bitmaps);
-
+    al_stop_sample(res->samples[1]);
+    al_destroy_sample(res->samples[0]);
+    al_destroy_sample(res->samples[1]);
 }
-
 

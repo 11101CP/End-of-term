@@ -24,7 +24,6 @@ ALLEGRO_BITMAP **bitmaps;
 ALLEGRO_FONT   **fonts;
 ALLEGRO_SAMPLE **samples;
 ALLEGRO_TIMER  **timers;
-
 ALLEGRO_EVENT_SOURCE *user_src;
 
 }RESOURCE;

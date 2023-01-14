@@ -11,5 +11,4 @@ void LoadHomeResource(RESOURCE *res,CONFIG *config);
 void destroyHomeResource(RESOURCE *res);
 
 
-
 #endif // GAME_HOME_H_
