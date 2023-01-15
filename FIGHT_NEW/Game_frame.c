@@ -65,15 +65,12 @@ void loadStage(STAGE *stage ,CONFIG *config,int stageChoose)
 
     stage->boxStartX = 40*config->unit;
     stage->boxStartY = 4*config->unit ;
-
-    stage->boxNumX=11;
-    stage->boxNumY=6;
-
+    stage->boxNumX=9;
+    stage->boxNumY=9;
     stage->length=config->unit*9;
 
     buildBox(&stage->box,stage->boxNumX,stage->boxNumY);
     loadBox (stage->box,stage->boxNumX,stage->boxNumY,config->unit);
-
     stage->progess=0;
 
     stageBOSS (stage->box);

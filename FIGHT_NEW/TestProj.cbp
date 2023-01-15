@@ -110,14 +110,15 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game_playerEvent.h" />
+		<Unit filename="Game_setting.h" />
 		<Unit filename="Loading_assets.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Loading_enum.h" />
-		<Unit filename="data.c">
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="main.c">
+		<Unit filename="setting_window.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

@@ -366,9 +366,9 @@
 	"Game_frame.h"
 	"Loading_enum.h"
 
-1672834669 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.h
+1673612075 c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.h
 
-1673597132 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.c
+1673597481 source:c:\users\yu\downloads\end-of-term\branchpicio\functions\fight_new\game_attack.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -416,7 +416,7 @@
 	<allegro5/allegro_native_dialog.h>
 	<allegro5/allegro_primitives.h>
 
-1673613524 source:c:\users\lidinglun\desktop\fight_new\game_attack.c
+1673677900 source:c:\users\lidinglun\desktop\fight_new\game_attack.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -433,18 +433,12 @@
 	"Game_attack.h"
 	"Game_playerEvent.h"
 
-1673602495 c:\users\lidinglun\desktop\fight_new\game_attack.h
+1673677900 c:\users\lidinglun\desktop\fight_new\game_attack.h
 
 1673077318 c:\users\lidinglun\desktop\fight_new\game_playerevent.h
 	<allegro5/allegro.h>
 
 1673597819 c:\users\lidinglun\desktop\fight_new\loading_enum.h
-
-1673613921 source:c:\users\lidinglun\desktop\fight_new\game_boss.c
-	"Common.h"
-	"AL_general.h"
-	"Game_frame.h"
-	"Loading_enum.h"
 
 1673597819 source:c:\users\lidinglun\desktop\fight_new\game_chara.c
 	"Common.h"
@@ -458,18 +452,18 @@
 	"Game_frame.h"
 	"Loading_enum.h"
 
-1673613582 source:c:\users\lidinglun\desktop\fight_new\game_draw.c
+1673597819 source:c:\users\lidinglun\desktop\fight_new\game_draw.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 	"Loading_enum.h"
 
-1673613153 source:c:\users\lidinglun\desktop\fight_new\game_frame.c
+1673077318 source:c:\users\lidinglun\desktop\fight_new\game_frame.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
 
-1673613268 source:c:\users\lidinglun\desktop\fight_new\game_load.c
+1673077318 source:c:\users\lidinglun\desktop\fight_new\game_load.c
 	"Common.h"
 	"AL_general.h"
 	"Game_frame.h"
@@ -480,7 +474,7 @@
 	"Game_frame.h"
 	"Loading_enum.h"
 
-1673606314 source:c:\users\lidinglun\desktop\fight_new\loading_assets.c
+1673597819 source:c:\users\lidinglun\desktop\fight_new\loading_assets.c
 	"AL_general.h"
 	"Game_frame.h"
 	"Loading_enum.h"
@@ -490,5 +484,16 @@
 	"Common.h"
 	"AL_general.h"
 
-1673610464 source:c:\users\lidinglun\desktop\fight_new\data.c
+1673742067 source:c:\users\lidinglun\desktop\fight_new\game_boss.c
+	"Common.h"
+	"AL_general.h"
+	"Game_frame.h"
+	"Loading_enum.h"
+
+1673741365 source:c:\users\lidinglun\desktop\fight_new\setting_window.c
+	"Game_setting.h"
+
+1673741329 c:\users\lidinglun\desktop\fight_new\game_setting.h
+	"AL_general.h"
+	"Common.h"
 

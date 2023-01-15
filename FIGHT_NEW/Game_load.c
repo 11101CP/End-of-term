@@ -49,16 +49,10 @@ void stageBOSS (BOX ***box)
 //
 //    }
 
-    for(y=0;y<6;y++)
+    for(y=0;y<9;y++)
     {
         box[0][y]->state=BOUNDARY;
-        box[10][y]->state=BOUNDARY;
-
-    }
-        for(x=0;x<11;x++)
-    {
-        box[x][0]->state=BOUNDARY;
-        box[x][5]->state=BOUNDARY;
+        box[8][y]->state=BOUNDARY;
 
     }
 

@@ -11,8 +11,8 @@ void drawMap   (STAGE *stage,RESOURCE *res,CONFIG *config )
 
     al_draw_scaled_bitmap(res->bitmaps[Belt],0,0,400,1125,stage->boxStartX+stage->length,stage->boxStartY-stage->length-config->unit*(al_get_timer_count(res->timers[BeltSheft])%9),stage->length*7,stage->length*12,0);
 
-    //al_draw_scaled_bitmap(res->bitmaps[Saw],0,600*(al_get_timer_count(res->timers[Refresh])%2),1688,600,stage->boxStartX+stage->length,stage->boxStartY+stage->length,stage->length*7,stage->length,0);
-   // al_draw_scaled_bitmap(res->bitmaps[Saw],0,600*(al_get_timer_count(res->timers[Refresh])%2),1688,600,stage->boxStartX+stage->length,stage->boxStartY+7*stage->length,stage->length*7,stage->length,0);
+    al_draw_scaled_bitmap(res->bitmaps[Saw],0,600*(al_get_timer_count(res->timers[Refresh])%2),1688,600,stage->boxStartX+stage->length,stage->boxStartY+stage->length,stage->length*7,stage->length,0);
+    al_draw_scaled_bitmap(res->bitmaps[Saw],0,600*(al_get_timer_count(res->timers[Refresh])%2),1688,600,stage->boxStartX+stage->length,stage->boxStartY+7*stage->length,stage->length*7,stage->length,0);
     //al_draw_scaled_bitmap(res->bitmaps[Layer],0,0,960,540,0,0,160*config->unit,90*config->unit,0);
 
 } //end of draw map
@@ -26,7 +26,6 @@ void drawObject(STAGE *stage,RESOURCE *res,CONFIG *config )
      drawChara(stage,res,config);
      drawAttack(stage,res,config);
      drawLifaIndicate (stage,res,config );
-
 
     BOX*** box=stage->box;
     int x,y;

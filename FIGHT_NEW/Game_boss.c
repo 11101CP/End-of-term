@@ -9,8 +9,6 @@
 bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 {
 
-
-
     int i=0,j=0;
     int unit=config->unit;
     bool exit=false;
@@ -34,7 +32,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
 
     al_start_timer(res->timers[FPS]);
     al_start_timer(res->timers[Refresh]);
-    //al_start_timer(res->timers[BeltSheft]);
+    al_start_timer(res->timers[BeltSheft]);
     al_start_timer(res->timers[Second]);
 
   puts("here");
@@ -79,9 +77,12 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     al_flip_display();
 
                     charaOperate(stage,config);
+
                     drawMap(stage,res,config);
                     drawObject(stage,res,config);
-                    //detectCharaDamage(stage,config);
+
+
+                    detectCharaDamage(stage,config);
 
                     if(stage->chara->life<=0)
                         {
@@ -125,7 +126,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                     {
 
                         boxShift(stage,res,config);
-                        if (al_get_timer_count(res->timers[Second])>30&&stage->box[0][0]->y==stage->boxStartY)
+                        if (al_get_timer_count(res->timers[Second])>10&&stage->box[0][0]->y==stage->boxStartY)
                         {
                             al_stop_timer(res->timers[BeltSheft]);
                             al_set_timer_count(res->timers[BeltSheft],0);
@@ -182,7 +183,7 @@ bool Fight(CONFIG *config,STAGE *stage,RESOURCE *res)
                         break;  /** end of event type GameQuit **/
 
                     case GameSetting:
-                        death(res,stage ,config);
+                       SettingDetect(res,config);
                         al_flush_event_queue(res->queues);
                         break;
 
